@@ -1,0 +1,398 @@
+{
+  "site": {
+    "name": "Zyventa",
+    "tagline": "CREATING A HEALTHY TOMORROW",
+    "heroHeadline": "ZYVENTA: Your MEA healthcare bridge!",
+    "heroSubheadline": "We provide world-class support to those who want to enter the most promising markets of Middle East & Africa, with the help of the most dynamic management team. We recognize that our team is what makes us who we are.",
+    "videoSrc": "/assets/videos/Zyventa-Promo-Landscape-V3.mp4",
+    "logo": "/assets/logos/cropped-zyventa-logo-png1.png",
+    "email": "contact@zyventa.com",
+    "phone": "+971 4 221 1234",
+    "address": "Office Number 2211, Al Rehan Block, Omniyat Building Mamzar, Dubai – UAE",
+    "aboutText": "ZYVENTA was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East. ZYVENTA bridges access gaps by partnering with global pharmaceutical and biotechnology companies to deploy and commercialize new pharmaceutical, biologics, and other healthcare solutions in the Middle East and Africa (MEA) Markets.",
+    "aboutSubtext": "At ZYVENTA, we pride ourselves on our comprehensive approach to establishing and enhancing brand presence within the region's dynamic healthcare landscape. Our dedicated team oversees every phase and process necessary to cultivate a strong brand identity and market presence. With meticulous attention to detail, we integrate five essential divisions: Regulation, Marketing, Sales, Distribution, and Supply Chain Management.",
+    "mission": "To bridge healthcare access gaps across the Middle East and Africa by delivering high-quality, innovative pharmaceutical and wellness solutions from global partners directly to regional markets.",
+    "vision": "To become the leading and most trusted healthcare distribution and commercialization partner across the Arabian Gulf, Middle East, and Africa.",
+    "footerDescription": "We serve as a link between international healthcare companies and GCC and the growing markets of the Middle East."
+  },
+  "stats": [
+    {
+      "value": "5",
+      "suffix": "",
+      "label": "Integrated Divisions",
+      "description": "Regulation, Marketing, Sales, Distribution, Supply Chain"
+    },
+    {
+      "value": "100",
+      "suffix": "%",
+      "label": "Compliance & Quality",
+      "description": "Adherence to regional regulatory standards"
+    },
+    {
+      "value": "6",
+      "suffix": "+",
+      "label": "GCC & MEA Markets",
+      "description": "Comprehensive regional presence"
+    },
+    {
+      "value": "20",
+      "suffix": "+",
+      "label": "Global Partner Brands",
+      "description": "Trusted international pharmaceutical collaborations"
+    }
+  ],
+  "distributionDivisions": [
+    {
+      "id": "regulation",
+      "name": "Regulation",
+      "title": "Regulatory Affairs & Compliance",
+      "description": "Our regulatory experts navigate the complexities of compliance and registration requirements, ensuring seamless market entry for our clients.",
+      "points": [
+        "Product registration and dossier submissions",
+        "Compliance with GCC and local health authorities (MOHAP, SFDA, etc.)",
+        "Pharmacovigilance and lifecycle management",
+        "Strategic regulatory roadmap for fast-track market access"
+      ],
+      "image": "/assets/images/prescription-for-medication-and-examination-by-doctor.jpg"
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "title": "Strategic Marketing & Brand Development",
+      "description": "Our dedicated marketing team develops and implements a comprehensive marketing strategy for the products. They are committed to setting and achieving goals through detailed and complex marketing plans focused on building product awareness and demand. The ultimate goal is to bring the product from concept to customer.",
+      "points": [
+        "Integrated multi-channel marketing campaigns",
+        "Digital marketing, healthcare provider outreach, and medical education",
+        "Market research, competitor analysis, and positioning",
+        "Collaborative alignment with frontline medical sales representatives"
+      ],
+      "image": "/assets/images/business-meeting-on-marketing-300x200.jpg"
+    },
+    {
+      "id": "sales",
+      "name": "Sales",
+      "title": "Medical Sales & Field Execution",
+      "description": "Our professional medical sales teams connect your brand with the region's best medical professionals, primary health centres, hospitals, and pharmacies. We ensure high-impact physician engagement and prescription generation.",
+      "points": [
+        "Specialized medical representatives covering major therapeutic areas",
+        "Direct hospital and primary healthcare center detailing",
+        "Continuous doctor engagement and clinical evidence presentation",
+        "Performance-driven sales targets and territory management"
+      ],
+      "image": "/assets/images/group-of-doctors-talking-to-pharmaceutical-sales-representative-300x200.jpg"
+    },
+    {
+      "id": "distribution",
+      "name": "Distribution",
+      "title": "Seamless Wholesale & Pharmacy Distribution",
+      "description": "We offer seamless distribution of pharmaceuticals, nutraceuticals, and OTC consumer health products across hospitals, retail pharmacies, and wholesale networks.",
+      "points": [
+        "Full coverage of UAE and GCC pharmacy chains and independent retailers",
+        "Affordable wholesale rates for bulk medicine purchases",
+        "Direct-to-hospital and government tenders fulfillment",
+        "Robust stock availability and reliable order delivery"
+      ],
+      "image": "/assets/images/warehouse-female-worker-checking-up-stuff-in-a-warehouse-.jpg"
+    },
+    {
+      "id": "supply-chain",
+      "name": "Supply Chain",
+      "title": "Supply Chain Management & Cold Chain Logistics",
+      "description": "With meticulous attention to detail, our supply chain division guarantees temperature-controlled warehousing, GDP compliance, and timely delivery across all destinations.",
+      "points": [
+        "GDP (Good Distribution Practice) certified operations",
+        "Temperature-monitored cold chain storage and transport",
+        "Real-time inventory visibility and demand forecasting",
+        "Optimized multi-modal freight handling and customs clearance"
+      ],
+      "image": "/assets/images/connected-logistics-and-supply-chain-concept-table-tennis-ball-with-plane-trucks-train-and-ship-s-300x200.jpg"
+    }
+  ],
+  "keyServices": [
+    {
+      "title": "Regulation & Compliance",
+      "description": "Navigating registration, compliance, and regulatory affairs with health authorities across GCC and MEA.",
+      "icon": "ShieldCheck"
+    },
+    {
+      "title": "Strategic Marketing",
+      "description": "Comprehensive marketing plans, digital campaigns, and targeted healthcare professional awareness.",
+      "icon": "TrendingUp"
+    },
+    {
+      "title": "Medical Sales & Detailing",
+      "description": "Skilled medical sales representatives engaging physicians, clinics, and hospital departments.",
+      "icon": "Users"
+    },
+    {
+      "title": "Pharmaceutical Distribution",
+      "description": "Seamless wholesale and retail distribution of prescription medications and healthcare items.",
+      "icon": "Truck"
+    },
+    {
+      "title": "Supply Chain & Logistics",
+      "description": "Temperature-controlled warehousing, GDP-compliant logistics, and rapid fulfillment across UAE.",
+      "icon": "Layers"
+    },
+    {
+      "title": "Online Store & E-Commerce",
+      "description": "Direct-to-consumer and B2B online pharmaceutical store offering certified wellness products.",
+      "icon": "ShoppingCart"
+    },
+    {
+      "title": "Bulk Wholesale Medicine",
+      "description": "Competitive wholesale rates for hospitals, clinics, and bulk medicine buyers.",
+      "icon": "Package"
+    },
+    {
+      "title": "Business Development",
+      "description": "Connecting international healthcare innovators with GCC market entry and expansion opportunities.",
+      "icon": "Globe"
+    }
+  ],
+  "partners": [
+    {
+      "name": "Akses Swiss",
+      "logo": "/assets/logos/Akses_SWISS_logo_WEB-2.png"
+    },
+    {
+      "name": "Amdis",
+      "logo": "/assets/logos/Amdis-Logo-1-2.png"
+    },
+    {
+      "name": "Dr. WellMe",
+      "logo": "/assets/logos/Dr._WellMe_Logo_PNG-01-2-1024x1024.png"
+    },
+    {
+      "name": "Jubilant",
+      "logo": "/assets/logos/JUBILANT-LOGO-2.png"
+    },
+    {
+      "name": "Macleods",
+      "logo": "/assets/logos/MACLEODS-LOGO-2.png"
+    },
+    {
+      "name": "Metromed",
+      "logo": "/assets/logos/METROMED-LOGO-png-2.png"
+    },
+    {
+      "name": "Rusan",
+      "logo": "/assets/logos/RUSAN-LOGO-1.png"
+    },
+    {
+      "name": "Yari",
+      "logo": "/assets/logos/yari-logo-1.png"
+    },
+    {
+      "name": "Pharma Bavaria",
+      "logo": "/assets/icons/pharma-bavaria-svg-2.png"
+    },
+    {
+      "name": "ABM Healthcare",
+      "logo": "/assets/logos/ABM-Logo111.png"
+    }
+  ],
+  "journey": [
+    {
+      "year": "Founding Vision",
+      "title": "The MEA Healthcare Link",
+      "description": "ZYVENTA was established to serve as a vital link between international healthcare companies and the burgeoning markets of the Arabian Gulf and Middle East."
+    },
+    {
+      "year": "Division Expansion",
+      "title": "Five Integrated Divisions",
+      "description": "Established end-to-end capabilities spanning Regulation, Marketing, Sales, Distribution, and Supply Chain Management."
+    },
+    {
+      "year": "Portfolio Growth",
+      "title": "Therapeutic & OTC Brands",
+      "description": "Expanded therapeutic footprint into CNS, Dermatology, Orthopedics, and consumer nutraceuticals with leading international partners."
+    },
+    {
+      "year": "Digital Transformation",
+      "title": "Online Store & Bulk Supply",
+      "description": "Launched online digital commerce channels alongside competitive wholesale supply for medical facilities."
+    },
+    {
+      "year": "Today",
+      "title": "Regional Market Leader",
+      "description": "Proudly connecting global healthcare innovation with healthcare providers, pharmacies, and patients across GCC & MEA."
+    }
+  ],
+  "products": [
+    {
+      "id": "nourisil-md",
+      "name": "Nourisil MD - Silicone Scar Gel",
+      "therapy": "Therapy - Derma",
+      "category": "Dermatology",
+      "image": "/assets/images/nourisil.png",
+      "description": "Advanced silicone scar gel designed for scar treatment and skin rejuvenation.",
+      "isStore": true
+    },
+    {
+      "id": "calmi-relax",
+      "name": "Calmi Relax",
+      "therapy": "Therapy - CNS",
+      "category": "Central Nervous System",
+      "image": "/assets/images/calmirelax.png",
+      "description": "Formulated for relaxation and nervous system support.",
+      "isStore": true
+    },
+    {
+      "id": "lipinerve",
+      "name": "Dr.WellMe Lipinerve Dietary Supplement",
+      "therapy": "Therapy - CNS",
+      "category": "Dietary Supplement",
+      "image": "/assets/images/lipinerve.png",
+      "description": "Targeted nutritional dietary supplement supporting nerve health and vitality.",
+      "isStore": true
+    },
+    {
+      "id": "troximetacin",
+      "name": "Troximetacin Gel",
+      "therapy": "Therapy - Ortho",
+      "category": "Orthopedics",
+      "image": "/assets/images/troximetacin.png",
+      "description": "Topical gel formulated for orthopedic pain relief and muscle discomfort.",
+      "isStore": true
+    },
+    {
+      "id": "calmivenal",
+      "name": "Calmivenal Gel",
+      "therapy": "Therapy - Vascular",
+      "category": "Topical Care",
+      "image": "/assets/images/calmivenal.png",
+      "description": "Soothing gel application for targeted vascular and muscular comfort.",
+      "isStore": true
+    },
+    {
+      "id": "calmi-dormin",
+      "name": "Calmi Dormin",
+      "therapy": "Therapy - CNS",
+      "category": "Sleep Support",
+      "image": "/assets/images/calmidormin.png",
+      "description": "Nighttime formulation designed to assist natural sleep rhythms and tranquility.",
+      "isStore": true
+    },
+    {
+      "id": "nevral",
+      "name": "Nevral Tablets",
+      "therapy": "Therapy - CNS",
+      "category": "Neurology",
+      "image": "/assets/images/nevral.png",
+      "description": "Specialized tablets designed for central nervous system support.",
+      "isStore": true
+    },
+    {
+      "id": "brainwell",
+      "name": "Dr.WellMe BrainWell Capsules",
+      "therapy": "Therapy - CNS",
+      "category": "Cognitive Health",
+      "image": "/assets/images/Brainweel.png",
+      "description": "Premium cognitive support capsules formulated with active nutrients.",
+      "isStore": true
+    },
+    {
+      "id": "amlodipine-olmesartan",
+      "name": "Amlodipine and Olmesartan Film Coated Tablets",
+      "therapy": "Therapy - Cardiology",
+      "category": "Bulk Wholesale Medicine",
+      "image": "/assets/images/Descenzil.png",
+      "description": "Affordable wholesale rates for cardiovascular health management in bulk orders.",
+      "isStore": false,
+      "isWholesale": true
+    },
+    {
+      "id": "desvenlafaxine",
+      "name": "Desvenlafaxine Extended Release Tablets 100 mg",
+      "therapy": "Therapy - CNS",
+      "category": "Bulk Wholesale Medicine",
+      "image": "/assets/images/freespirax.png",
+      "description": "Extended-release formulation for psychological and neurological healthcare providers.",
+      "isStore": false,
+      "isWholesale": true
+    },
+    {
+      "id": "lacosamide",
+      "name": "Lacosamide Film Coated Tablets 50 mg",
+      "therapy": "Therapy - Neurology",
+      "category": "Bulk Wholesale Medicine",
+      "image": "/assets/images/PHARMASOL.png",
+      "description": "High-quality neurological medication available at competitive wholesale rates.",
+      "isStore": false,
+      "isWholesale": true
+    },
+    {
+      "id": "febuvent",
+      "name": "Febuvent 80 mg Tablets",
+      "therapy": "Therapy - Internal Medicine",
+      "category": "Bulk Wholesale Medicine",
+      "image": "/assets/images/Descenzil.png",
+      "description": "Quality bulk formulation for healthcare institutions and pharmacies.",
+      "isStore": false,
+      "isWholesale": true
+    }
+  ],
+  "careers": [
+    {
+      "id": "medical-rep",
+      "title": "Medical Representative",
+      "department": "Medical Sales Division",
+      "location": "Dubai, UAE",
+      "type": "Full Time",
+      "description": "Engage healthcare professionals, clinics, and hospitals to promote our specialized pharmaceutical portfolio and build lasting relationships."
+    },
+    {
+      "id": "product-manager",
+      "title": "Product Manager",
+      "department": "Marketing Division",
+      "location": "Dubai, UAE",
+      "type": "Full Time",
+      "description": "Lead product lifecycle management, craft marketing campaigns, analyze competitive dynamics, and align sales strategies across GCC."
+    },
+    {
+      "id": "frontline-executive",
+      "title": "Frontline Office Executive",
+      "department": "Operations & Administration",
+      "location": "Dubai, UAE",
+      "type": "Full Time",
+      "description": "Coordinate administrative processes, client communication, order processing, and support daily operations with excellence."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What regions does Zyventa serve?",
+      "answer": "ZYVENTA serves the Arabian Gulf (GCC) countries and the broader Middle East and Africa (MEA) markets, connecting international healthcare brands with regional distributors, pharmacies, and healthcare systems."
+    },
+    {
+      "question": "What services does Zyventa offer?",
+      "answer": "Zyventa integrates five core divisions: Regulatory Affairs & Compliance, Strategic Marketing, Medical Sales Detailing, Seamless Wholesale & Retail Distribution, and Supply Chain Management / Cold Chain Logistics."
+    },
+    {
+      "question": "How does Zyventa ensure compliance with regulatory requirements?",
+      "answer": "Our in-house regulatory team closely coordinates with regional health authorities including MOHAP (UAE) and other GCC bodies to manage product dossiers, fast-track registration, and maintain rigorous pharmacovigilance standards."
+    },
+    {
+      "question": "What sets Zyventa's marketing strategies apart?",
+      "answer": "Our marketing team combines traditional on-site detailing and medical education with innovative digital marketing strategies, creating comprehensive demand generation from concept to customer."
+    },
+    {
+      "question": "How does Zyventa manage its distribution network?",
+      "answer": "We maintain an integrated distribution network supplying hospitals, government bodies, retail pharmacy chains, and online channels with GDP-certified temperature-controlled storage and logistics."
+    }
+  ],
+  "blogs": [
+    {
+      "slug": "empowering-healthcare-vital-role",
+      "title": "Empowering Healthcare: The Vital Role of a Medicine Distributor and Online Seller",
+      "author": "The Zyventa Team",
+      "date": "March 29, 2024",
+      "excerpt": "In today's ever-evolving healthcare landscape, the importance of effective medicine distribution and online selling cannot be overstated. As a leading player in this field, Zyventa has positioned itself as a vital link between international healthcare companies and the burgeoning markets of the Arabian Gulf and the Middle East.",
+      "content": [
+        "In today's ever-evolving healthcare landscape, the importance of effective medicine distribution and online selling cannot be overstated. As a leading player in this field, Zyventa has positioned itself as a vital link between international healthcare companies and the burgeoning markets of the Arabian Gulf and the Middle East. With a firm commitment to bridging access gaps and promoting innovative healthcare solutions, Zyventa's role goes far beyond simply distributing medications. Therefore, it's about facilitating change and improving lives.",
+        "ZYVENTA was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East. ZYVENTA bridges access gaps by partnering with global pharmaceutical and biotechnology companies to deploy and commercialize new pharmaceutical, biologics, and other healthcare solutions in the Middle East and Africa (MEA) Markets.",
+        "We recognize that our team is what makes us who we are. We pride ourselves on our professional, highly skilled and dedicated staff, each bringing their own unique skills to the business."
+      ]
+    }
+  ]
+}

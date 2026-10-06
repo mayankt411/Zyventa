@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-navy: #0F2A4D;
+    --brand-blue: #027ABB;
+    --brand-green: #03E78B;
+    --brand-accent-green: #49E670;
+    --ink: #14213B;
+    --ink-muted: #64748B;
+    --bg-light: #F8FAFC;
+    --border-color: #E2E8F0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background-color: #FFFFFF;
+  }
+
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Azalea Specific Scrim & Background Video Styles */
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 42, 77, 0.75) 0%, rgba(15, 42, 77, 0.88) 100%);
+  pointer-events: none;
+}
+
+.hero-video-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-video-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Stats Section Background */
+.stats-section {
+  position: relative;
+  width: 100%;
+  padding: 100px 0;
+  background-color: var(--brand-navy);
+  overflow: hidden;
+}
+
+.stats-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  mix-blend-mode: luminosity;
+}
+
+.stats-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(15, 42, 77, 0.6) 0%, rgba(15, 42, 77, 0.95) 100%);
+}
+
+.stats-inner {
+  position: relative;
+  z-index: 10;
+}
+
+/* Infinite Marquee */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 2rem;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: 2rem;
+}
+
+.marquee-container:hover .marquee-ltr,
+.marquee-container:hover .marquee-rtl {
+  animation-play-state: paused;
+}
+
+.marquee-ltr {
+  animation: marquee-ltr 28s linear infinite;
+}
+
+.marquee-rtl {
+  animation: marquee-rtl 28s linear infinite;
+}
+
+@keyframes marquee-ltr {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-rtl {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/* Header Glassmorphism & Solid Scroll States */
+.site-header-transparent {
+  background: transparent;
+  backdrop-filter: blur(0px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+.site-header-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  color: #14213B;
+}
+
+/* Card Hover Interactions */
+.card-hover-effect {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(15, 42, 77, 0.08), 0 10px 10px -5px rgba(15, 42, 77, 0.04);
+}

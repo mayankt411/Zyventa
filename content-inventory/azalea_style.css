@@ -1,0 +1,19 @@
+/*
+Theme Name: Effy Pharma
+Theme URI: https://example.com/effy-pharma
+Author: Effy Pharma
+Author URI: https://example.com
+Description: A clean, modern, fully editable WordPress theme built for pharmaceutical and healthcare distribution companies. Every section on the homepage â hero, stats, brands, awards, services, company journey, partners, and news â is managed through the WordPress admin, with dedicated content types for anything the client needs to add or remove (brand logos, partner logos, journey milestones, award badges, services, and stats).
+Version: 1.0.0
+Requires at least: 5.9
+Requires PHP: 7.4
+Tested up to: 6.6
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: effy-pharma
+Tags: custom-colors, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This is the required WordPress stylesheet header. The theme's actual design
+CSS (compiled Tailwind utilities + component styles) lives in
+assets/css/app.css and is enqueued separately from functions.php.
+*/

@@ -1,0 +1,1322 @@
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-right-6{right:-1.5rem}.-top-6{top:-1.5rem}.bottom-8{bottom:2rem}.bottom-9{bottom:2.25rem}.left-1\/2{left:50%}.right-6{right:1.5rem}.right-8{right:2rem}.-z-10{z-index:-10}.z-20{z-index:20}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-6{margin-bottom:1.5rem}.mt-10{margin-top:2.5rem}.mt-12{margin-top:3rem}.mt-14{margin-top:3.5rem}.mt-16{margin-top:4rem}.mt-2{margin-top:.5rem}.mt-2\.5{margin-top:.625rem}.mt-20{margin-top:5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-7{margin-top:1.75rem}.mt-8{margin-top:2rem}.mt-9{margin-top:2.25rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.inline-grid{display:inline-grid}.hidden{display:none}.aspect-\[16\/9\]{aspect-ratio:16/9}.aspect-\[4\/3\]{aspect-ratio:4/3}.h-2{height:.5rem}.h-28{height:7rem}.h-8{height:2rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-2{width:.5rem}.w-28{width:7rem}.w-8{width:2rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-xl{max-width:36rem}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:.375rem}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-\[2px\]{gap:2px}.gap-\[4px\]{gap:4px}.gap-x-8{-moz-column-gap:2rem;column-gap:2rem}.gap-y-12{row-gap:3rem}.space-y-16>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(4rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(4rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-2\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.625rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.625rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.divide-y>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px*var(--tw-divide-y-reverse))}.divide-slate-200>:not([hidden])~:not([hidden]){--tw-divide-opacity:1;border-color:rgb(226 232 240/var(--tw-divide-opacity,1))}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.border{border-width:1px}.border-white\/20{border-color:hsla(0,0%,100%,.2)}.bg-white\/10{background-color:hsla(0,0%,100%,.1)}.object-cover{-o-object-fit:cover;object-fit:cover}.p-8{padding:2rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-32{padding-top:8rem;padding-bottom:8rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.py-\[100px\]{padding-top:100px;padding-bottom:100px}.pl-4{padding-left:1rem}.pr-5{padding-right:1.25rem}.pt-20{padding-top:5rem}.text-center{text-align:center}.font-heading{font-family:Lexend,sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-\[15px\]{font-size:15px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.08\]{line-height:1.08}.leading-\[1\.12\]{line-height:1.12}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-\[0\.12em\]{letter-spacing:.12em}.tracking-\[0\.14em\]{letter-spacing:.14em}.tracking-\[0\.15em\]{letter-spacing:.15em}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.text-\[\#7C8886\]{--tw-text-opacity:1;color:rgb(124 136 134/var(--tw-text-opacity,1))}.text-accent{--tw-text-opacity:1;color:rgb(24 161 184/var(--tw-text-opacity,1))}.text-ink{--tw-text-opacity:1;color:rgb(20 33 59/var(--tw-text-opacity,1))}.text-ink\/35{color:rgba(20,33,59,.35)}.text-ink\/45{color:rgba(20,33,59,.45)}.text-ink\/50{color:rgba(20,33,59,.5)}.text-ink\/55{color:rgba(20,33,59,.55)}.text-ink\/60{color:rgba(20,33,59,.6)}.text-ink\/65{color:rgba(20,33,59,.65)}.text-ink\/70{color:rgba(20,33,59,.7)}.text-ink\/80{color:rgba(20,33,59,.8)}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.text-white\/40{color:hsla(0,0%,100%,.4)}.text-white\/60{color:hsla(0,0%,100%,.6)}.text-white\/70{color:hsla(0,0%,100%,.7)}.text-white\/80{color:hsla(0,0%,100%,.8)}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}:root{--color-primary:#204476;--color-secondary:#135690;--color-accent:#18a1b8;--color-green:#7cc36c;--color-green-light:#93cd96;--color-green-pale:#b1dbbc;--color-bg:#f8fafc;--color-ink:#14213b}.card-hover{transition:transform .22s ease,box-shadow .22s ease}.card-hover:hover{transform:translateY(-6px);box-shadow:0 20px 40px -12px rgba(20,33,59,.18)}::-moz-selection{background:var(--color-accent);color:#fff}::selection{background:var(--color-accent);color:#fff}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card-hover:hover{transform:none}}.hover\:bg-white\/15:hover{background-color:hsla(0,0%,100%,.15)}.hover\:text-accent:hover{--tw-text-opacity:1;color:rgb(24 161 184/var(--tw-text-opacity,1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:text-white\/90:hover{color:hsla(0,0%,100%,.9)}@media (min-width:640px){.sm\:right-10{right:2.5rem}.sm\:col-span-2{grid-column:span 2/span 2}.sm\:flex{display:flex}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:p-12{padding:3rem}.sm\:px-10{padding-left:2.5rem;padding-right:2.5rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-6xl{font-size:3.75rem;line-height:1}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width:1024px){.lg\:col-span-1{grid-column:span 1/span 1}.lg\:w-\[600px\]{width:600px}.lg\:max-w-none{max-width:none}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}.lg\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.lg\:grid-cols-\[1\.4fr_1fr_1fr_1fr_1fr\]{grid-template-columns:1.4fr 1fr 1fr 1fr 1fr}.lg\:grid-cols-\[1fr_auto\]{grid-template-columns:1fr auto}.lg\:gap-16{gap:4rem}.lg\:divide-x>:not([hidden])~:not([hidden]){--tw-divide-x-reverse:0;border-right-width:calc(1px*var(--tw-divide-x-reverse));border-left-width:calc(1px*(1 - var(--tw-divide-x-reverse)))}.lg\:divide-y-0>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(0px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(0px*var(--tw-divide-y-reverse))}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:py-0{padding-top:0;padding-bottom:0}.lg\:text-6xl{font-size:3.75rem;line-height:1}}/* =====================================================================
+   Effy Pharma â component styles (everything beyond Tailwind utilities).
+   Consolidated from each homepage section, plus the extra rules needed
+   to wire real WordPress content (menus, featured images, admin hints)
+   into the same design.
+   ================================================================== */
+
+html{scroll-behavior:smooth;}
+body{font-family:'Source Sans 3',sans-serif; color:#14213B; background:#F8FAFC;}
+h1,h2,h3,h4,.font-heading{font-family:'Lexend',sans-serif;}
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible{outline:3px solid #18A1B8; outline-offset:2px; border-radius:4px;}
+img{max-width:100%; height:auto; display:block;}
+
+.skip-link{position:absolute; left:-9999px; top:0; background:#fff; color:#204476; padding:12px 20px; z-index:100; border-radius:0 0 8px 0; font-weight:600;}
+.skip-link:focus{left:0;}
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+
+/* ---- Entrance reveal ----
+   Scroll-triggered via IntersectionObserver in main.js (initScrollReveals)
+   â every [data-reveal] element animates in the moment it scrolls into
+   view, not just once on page load, so long pages like About Us feel
+   alive section by section instead of only animating the first screen.
+   Progressive enhancement: the base rule below keeps everything fully
+   visible; the hidden starting state only switches on once main.js
+   confirms it can animate it back in (JS + IntersectionObserver present,
+   no reduce-motion), so a JS failure never leaves content invisible. */
+/* Timing/easing tuned to feel closer to a calmer, editorial "fade-up"
+   reveal (no scale pop) â a slower 1s duration on a constant-speed
+   (linear) curve, rather than a snappy decelerating ease-out. */
+[data-reveal]{opacity:1; transform:none;}
+.js-reveal [data-reveal]{
+  opacity:0; transform:translateY(20px);
+  transition:opacity 1s linear, transform 1s linear;
+  will-change:opacity, transform;
+}
+.js-reveal [data-reveal].is-visible{opacity:1; transform:none;}
+[data-reveal="1"]{transition-delay:0s;}
+[data-reveal="2"]{transition-delay:.14s;}
+[data-reveal="3"]{transition-delay:.24s;}
+[data-reveal="4"]{transition-delay:.32s;}
+[data-reveal="5"]{transition-delay:.4s;}
+[data-reveal="6"]{transition-delay:.48s;}
+[data-reveal="7"]{transition-delay:.56s;}
+
+/* Directional reveal variant â same fade + IntersectionObserver system
+   above (still fades both ways per initScrollReveals), but slides in
+   from the side instead of up. Add data-reveal-from="left"/"right"
+   alongside the existing data-reveal="n" attribute. Currently used by
+   the Awards & Accolades "Leadership Spotlight" section (copy slides
+   in from the left, photo from the right); safe to reuse elsewhere. */
+.js-reveal [data-reveal][data-reveal-from="left"]{transform:translateX(-56px);}
+.js-reveal [data-reveal][data-reveal-from="right"]{transform:translateX(56px);}
+.js-reveal [data-reveal][data-reveal-from="left"].is-visible,
+.js-reveal [data-reveal][data-reveal-from="right"].is-visible{transform:none;}
+
+/* Zoom reveal variant â same fade + IntersectionObserver system above,
+   scales in from slightly smaller instead of sliding. Add
+   data-reveal-from="zoom" alongside the existing data-reveal="n"
+   attribute. Available site-wide via the per-section "Section entrance
+   animation" Customizer control. */
+.js-reveal [data-reveal][data-reveal-from="zoom"]{transform:scale(.92);}
+.js-reveal [data-reveal][data-reveal-from="zoom"].is-visible{transform:scale(1);}
+
+/* Subtle cinematic zoom on full-bleed banner/photo sections â page load
+   only (not scroll-tied), a common polish touch on premium sites. */
+.page-banner-img, .mission-img{ animation:effy-photo-zoom 1.8s cubic-bezier(.16,.84,.44,1) both; }
+@keyframes effy-photo-zoom{
+  0%{ transform:scale(1.08); }
+  100%{ transform:scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  [data-reveal]{opacity:1 !important; transform:none !important; transition:none !important;}
+  .page-banner-img, .mission-img{ animation:none !important; }
+}
+
+/* ---- Buttons ---- */
+.btn{cursor:pointer; transition:transform 200ms ease, background-color 200ms ease, opacity 200ms ease;}
+.btn:hover{transform:translateY(-2px);}
+.btn-primary{background:#18A1B8; color:#fff;}
+.btn-primary:hover{background:#128194;}
+.btn-outline{border:2px solid rgba(255,255,255,.7); color:#fff;}
+.btn-outline:hover{background:rgba(255,255,255,.12); border-color:#fff;}
+/* Secondary button for light-background sections (.btn-outline above is
+   white-on-dark only, e.g. the hero over its video). Same shape, ink-toned
+   border/text at rest, brightens to the teal accent on hover â same
+   dark-on-light hover treatment as .nav-arrow-dark. */
+.btn-outline-dark{border:2px solid rgba(20,33,59,.2); color:#14213B;}
+.btn-outline-dark:hover{background:rgba(24,161,184,.08); border-color:#18A1B8; color:#18A1B8;}
+/* Pharmaceutical page â Section 2 body copy, 4px larger than the theme's
+   standard text-lg (18px) paragraph size used elsewhere. */
+.text-\[22px\]{font-size:22px;}
+/* Pharmaceutical page â Section 3 "Our Pharmacy Network" tiles: a floor
+   height so all 4 boxes read as the same size regardless of how long
+   any one tile's value/label text is (grid rows already stretch to an
+   equal height within a row via .item-card's height:100%, but this
+   floor keeps both mobile 2-up rows matching each other too). */
+.min-h-\[220px\]{min-height:220px;}
+
+/* =====================================================================
+   HERO / VIDEO
+   ================================================================== */
+.hero-video-wrap{position:absolute; inset:0; overflow:hidden;}
+.hero-video-wrap video, .hero-video-wrap .poster-fallback{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+.hero-scrim{
+  position:absolute; inset:0;
+  background:
+    linear-gradient(180deg, rgba(10,22,40,.42) 0%, rgba(10,22,40,.22) 40%, rgba(10,22,40,.5) 100%),
+    linear-gradient(90deg, rgba(10,22,40,.5) 0%, rgba(10,22,40,.08) 55%, rgba(10,22,40,.38) 100%);
+}
+
+/* =====================================================================
+   SITE HEADER â transparent overlay -> solid sticky on scroll
+   ================================================================== */
+.site-header{
+  position:fixed; top:0; left:0; right:0; z-index:50;
+  background:transparent; box-shadow:none;
+  transition:background-color 320ms ease, box-shadow 320ms ease, backdrop-filter 320ms ease, top 320ms ease;
+}
+.site-header .header-inner{ height:88px; transition:height 320ms ease; }
+.site-header.is-scrolled{
+  background:rgba(255,255,255,.97);
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  box-shadow:0 6px 28px -10px rgba(20,33,59,.16);
+}
+.site-header.is-scrolled .header-inner{ height:72px; }
+
+/* On every page except the homepage, the transparent header sat flush
+   against the very top edge of the page banner photo, which read as
+   cramped/"touching the border". Nudging it down a bit while it's still
+   transparent (over the banner) fixes that; once the header goes solid
+   on scroll it settles flush to the top like a normal sticky nav. The
+   homepage hero is untouched â is-home keeps top:0 in both states. */
+body.is-inner-page .site-header{ top:20px; }
+body.is-inner-page .site-header.is-scrolled{ top:0; }
+
+.site-logo-word{ color:#fff; transition:color 280ms ease; }
+.site-header.is-scrolled .site-logo-word{ color:#14213B; }
+.site-logo-tag{ color:rgba(255,255,255,.75); transition:color 280ms ease; }
+.site-header.is-scrolled .site-logo-tag{ color:rgba(20,33,59,.55); }
+.dot-swap{ background:#fff; transition:background-color 280ms ease; }
+.site-header.is-scrolled .dot-swap{ background:#14213B; }
+/* Header logo cross-fade â effy_pharma_header_logo_markup() (inc/
+   template-tags.php) stacks up to two <img> elements (one for the
+   transparent header, one for the sticky/solid header, each with its own
+   optional Customizer upload + adjustable height) in the same CSS Grid
+   cell so they sit exactly on top of each other regardless of which is
+   visible; opacity cross-fades between them based on #siteHeader's
+   is-scrolled class, same transition timing as .site-logo-word/.dot-swap
+   above. Logo display height is set inline by that function rather than
+   here, so it's correct even if this stylesheet is served stale.
+   site-logo-img-auto-recolor is added only to a slot that's falling back
+   to the single main Logo (no dedicated upload for that slot): the same
+   brightness(0) + invert(1) trick as before turns the logo solid white
+   for the transparent header without needing a second logo file â a
+   slot with its own dedicated upload is shown as-is, untouched. */
+.site-logo-swap{ display:inline-grid; grid-template-areas:"logo"; align-items:center; }
+.site-logo-img{ grid-area:logo; transition:opacity 280ms ease; }
+.site-logo-img-sticky{ opacity:0; }
+.site-header.is-scrolled .site-logo-img-transparent{ opacity:0; }
+.site-header.is-scrolled .site-logo-img-sticky{ opacity:1; }
+.site-logo-img-auto-recolor{ filter:brightness(0) invert(1); transition:filter 280ms ease, opacity 280ms ease; }
+.site-header.is-scrolled .site-logo-img-auto-recolor{ filter:none; }
+
+/* Menu button: transparent + white outline over the transparent header,
+   solid white pill once the header goes solid white on scroll â same
+   two-state pattern as the logo and text above, so nothing reads as a
+   floating white box over the hero photo any more. */
+.menu-btn{
+  background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.6);
+  transition:background-color 280ms ease, border-color 280ms ease, color 280ms ease, transform 200ms ease, box-shadow 200ms ease;
+}
+.menu-btn:hover{ transform:translateY(-2px); box-shadow:0 10px 22px -8px rgba(0,0,0,.35); }
+.menu-btn .bar{ display:block; width:16px; height:2px; background:#fff; border-radius:2px; transition:transform 220ms ease, opacity 220ms ease, background-color 280ms ease; }
+.site-header.is-scrolled .menu-btn{ background:#fff; color:#14213B; border-color:transparent; }
+.site-header.is-scrolled .menu-btn:hover{ box-shadow:0 10px 22px -8px rgba(20,33,59,.28); }
+.site-header.is-scrolled .menu-btn .bar{ background:#14213B; }
+.menu-btn.is-open .bar:nth-child(1){ transform:translateY(5px) rotate(45deg); }
+.menu-btn.is-open .bar:nth-child(2){ opacity:0; }
+.menu-btn.is-open .bar:nth-child(3){ transform:translateY(-5px) rotate(-45deg); }
+
+/* =====================================================================
+   PAGE BANNER â reusable inner-page header (About Us, Brands, Career,
+   Contact Us, etc. â see template-parts/page-banner.php). Full-width
+   photo with a left-weighted dark scrim and the page title in large
+   white type, bottom-left, inside a rounded, slightly inset frame. The
+   site's fixed header floats transparently on top of it, exactly like
+   it already does over the homepage hero.
+   ================================================================== */
+.page-banner{ position:relative; width:100%; background:#F8FAFC; }
+.page-banner-frame{ max-width:1800px; margin:0 auto; padding:14px 14px 0; }
+.page-banner-inner{
+  position:relative; overflow:hidden; border-radius:28px;
+  min-height:420px; height:38vw; max-height:640px;
+  background:#0F2A4D;
+}
+.page-banner-img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.page-banner-img-fallback{ background:linear-gradient(135deg,#204476,#135690 55%,#18A1B8); }
+.page-banner-scrim{
+  position:absolute; inset:0;
+  background:
+    linear-gradient(180deg, rgba(10,22,40,.30) 0%, rgba(10,22,40,.04) 32%, rgba(10,22,40,.55) 100%),
+    linear-gradient(90deg, rgba(10,22,40,.72) 0%, rgba(10,22,40,.16) 45%, rgba(10,22,40,.04) 75%);
+}
+.page-banner-content{
+  position:absolute; left:0; right:0; bottom:0; z-index:2;
+  padding:0 28px 36px;
+}
+.page-banner-title{
+  font-family:'Lexend',sans-serif; font-weight:700; color:#fff;
+  font-size:clamp(2.25rem, 5vw, 3.75rem); line-height:1.05; letter-spacing:-.01em;
+  margin:0;
+}
+@media (min-width:640px){
+  .page-banner-frame{ padding:20px 24px 0; }
+  .page-banner-content{ padding:0 48px 52px; }
+}
+@media (min-width:1024px){
+  .page-banner-frame{ padding:24px 32px 0; }
+  .page-banner-content{ padding:0 64px 64px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .page-banner-inner{ transition:none; }
+}
+
+/* ---- Full-screen Menu overlay ---- */
+.menu-panel{
+  position:fixed; inset:0; z-index:45; overflow-y:auto;
+  background:rgba(19,69,127,.92);
+  -webkit-backdrop-filter:blur(16px) saturate(140%); backdrop-filter:blur(16px) saturate(140%);
+  color:#fff;
+  opacity:0; visibility:hidden;
+  transition:opacity 380ms ease, visibility 0s linear 380ms;
+}
+.menu-panel.is-open{ opacity:1; visibility:visible; transition:opacity 380ms ease; }
+.menu-panel-inner{ min-height:100%; display:flex; flex-direction:column; padding-top:130px; padding-bottom:40px; }
+.menu-links{ max-width:440px; }
+.menu-links-list{ list-style:none; margin:0; padding:0; }
+.menu-links-list li{ margin:0; }
+.menu-panel a.menu-link,
+.menu-links-list li > a{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  font-family:'Lexend',sans-serif; font-weight:500; font-size:18px;
+  color:#fff; padding:11px 2px; border-bottom:1px solid rgba(255,255,255,.16);
+  transition:color 180ms ease, padding-left 180ms ease;
+}
+.menu-panel a.menu-link:hover,
+.menu-links-list li > a:hover{ color:#93CD96; padding-left:8px; }
+.menu-admin-hint{ margin-top:16px; font-size:12.5px; color:rgba(255,255,255,.45); }
+
+/* One level of submenu â e.g. "Distribution" with Pharmaceutical, FMCG,
+   E-Commerce, Q-Commerce and Medical Equipment & Logistics underneath it.
+   Always shown (no expand/collapse), just visually demoted: smaller,
+   dimmer, indented under its parent. A small chevron marks which
+   top-level items have one. */
+.menu-links-list .menu-item-has-children > a::after{
+  content:''; width:8px; height:8px; margin-left:auto; flex-shrink:0;
+  border-right:2px solid rgba(255,255,255,.55); border-bottom:2px solid rgba(255,255,255,.55);
+  transform:translateY(-2px) rotate(45deg);
+}
+.menu-links-list .sub-menu{ list-style:none; margin:0 0 6px; padding:2px 0 6px 20px; }
+.menu-links-list .sub-menu li > a{
+  font-size:14.5px; font-weight:400; color:rgba(255,255,255,.68);
+  padding:9px 2px; border-bottom:1px solid rgba(255,255,255,.08);
+}
+.menu-links-list .sub-menu li > a:hover{ color:#93CD96; padding-left:8px; }
+.menu-links-list .sub-menu li:last-child > a{ border-bottom:none; }
+
+.menu-foot{ margin-top:auto; padding-top:40px; border-top:1px solid rgba(255,255,255,.14); display:flex; flex-direction:column; gap:28px; }
+.menu-foot .contact-line{ font-size:14px; color:rgba(255,255,255,.85); line-height:1.7; }
+.menu-foot .contact-line b{ color:#fff; font-weight:600; }
+.social-circle{
+  width:40px; height:40px; border-radius:9999px; border:1px solid rgba(255,255,255,.35);
+  display:flex; align-items:center; justify-content:center; color:#fff; flex-shrink:0;
+  transition:background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+.social-circle:hover{ background:rgba(255,255,255,.14); border-color:#fff; transform:translateY(-2px); }
+
+@media (min-width:640px){
+  .menu-foot{ flex-direction:row; align-items:flex-end; justify-content:space-between; gap:24px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .menu-panel{ transition:none !important; }
+}
+
+/* =====================================================================
+   ABOUT / STATS â full-bleed photo section (template-parts/section-
+   stats.php). Sized to fit its content (no forced full-viewport height â
+   removed so the section doesn't render as mostly empty space on pages
+   with short intro text); the intro paragraph and footnote sit on a dark
+   photo overlay, each stat in its own white card
+   spread across the full width of the section. Background photo comes
+   from "About / Stats Section" -> "Section background photo" in the
+   Customizer; a brand-color gradient shows instead until one is set, the
+   same fallback pattern as .page-banner-img-fallback.
+   ================================================================== */
+.stats-section{
+  position:relative; width:100%; overflow:hidden;
+  display:flex; align-items:center;
+  padding:125px 0;
+}
+.stats-bg-img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.stats-bg-fallback{ background:linear-gradient(135deg,#204476,#135690 55%,#18A1B8); }
+.stats-overlay{
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(10,22,40,.68) 0%, rgba(10,22,40,.58) 100%);
+}
+.stats-inner{ position:relative; z-index:2; width:100%; }
+.stats-intro{ color:rgba(255,255,255,.85); }
+.stats-footnote{ color:rgba(255,255,255,.5); }
+.stats-grid-wrap{ width:100%; max-width:1800px; margin:56px auto 0; padding:0 14px; }
+.stats-grid{
+  display:grid; grid-template-columns:repeat(2,1fr); gap:16px;
+}
+.stat-card{
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; background:#fff; border-radius:20px;
+  padding:36px 20px; min-height:180px;
+  box-shadow:0 20px 45px -18px rgba(10,22,40,.45);
+  transition:transform 260ms ease, box-shadow 260ms ease;
+}
+.stat-card:hover{ transform:translateY(-6px); box-shadow:0 28px 60px -18px rgba(10,22,40,.55); }
+@media (min-width:640px){
+  .stats-grid{ grid-template-columns:repeat(3,1fr); gap:20px; }
+  .stats-grid-wrap{ padding:0 24px; }
+}
+@media (min-width:1024px){
+  .stats-grid{ grid-template-columns:repeat(5,1fr); gap:24px; }
+  .stats-grid-wrap{ padding:0 32px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .stat-card{ transition:none; }
+}
+
+/* =====================================================================
+   About Us page â Stats section variant (template-parts/section-about-
+   stats.php). Same layout as .stats-section above (sized to fit its
+   content, same .stats-grid-wrap / .stats-grid / .stat-card grid) but with
+   no background photo or dark overlay â this page's background, text,
+   box and number/label colors are plain Customizer color pickers
+   instead ("2b. About Us Page â Stats Section (Colors)"), independent
+   of the homepage's "2. About / Stats Section" colors.
+   ================================================================== */
+.about-stats-section{
+  position:relative; width:100%; overflow:hidden;
+  display:flex; align-items:center;
+  padding:125px 0;
+}
+.about-stats-inner{ position:relative; z-index:2; width:100%; }
+
+/* =====================================================================
+   E-Commerce page â final CTA band (template-parts/section-ecommerce-
+   cta.php). Background color comes from the Customizer (a color picker,
+   not a fixed hex) so the client can adjust the brand color used here;
+   an optional background photo sits behind a translucent tint of that
+   same color (see effy_pharma_hex_to_rgba() in inc/template-tags.php)
+   rather than the fixed navy overlay .stats-overlay above uses.
+   Originally built for the FMCG page (as .fmcg-cta-*) and moved here
+   along with the section itself â see section-ecommerce-cta.php.
+   ================================================================== */
+.ecommerce-cta-section{ position:relative; width:100%; overflow:hidden; }
+.ecommerce-cta-bg-img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.ecommerce-cta-overlay{ position:absolute; inset:0; }
+.ecommerce-cta-inner{ position:relative; z-index:2; }
+.ecommerce-cta-btn{ display:inline-block; padding:20px 40px; border-radius:8px; transition:transform 200ms ease, filter 200ms ease; }
+.ecommerce-cta-btn:hover{ transform:translateY(-2px); filter:brightness(0.92); }
+@media (prefers-reduced-motion: reduce){
+  .ecommerce-cta-btn:hover{ transform:none; }
+}
+
+/* =====================================================================
+   OUR BRANDS â tabbed section
+   ================================================================== */
+/* The tab-button row: a horizontally scrollable strip (drag/swipe, or the
+   prev/next arrows next to the heading) rather than a fixed grid, so
+   adding an 8th, 9th... brand just extends the strip sideways instead of
+   wrapping onto an awkward second row once more than 7 logos are added.
+   Same drag/swipe/scroll-snap mechanic as the Testimonials and Awards
+   Gallery sliders (initBrandTabsSlider() in main.js drives the arrows). */
+.brand-tabs-track{
+  display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth;
+  padding-bottom:4px; -ms-overflow-style:none; scrollbar-width:none;
+}
+.brand-tabs-track::-webkit-scrollbar{ display:none; }
+
+.tab-btn{
+  display:flex; align-items:center; justify-content:center;
+  background:#fff; border:2px solid #E2E8F0; border-radius:14px;
+  padding:18px 16px; cursor:pointer; transition:border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  text-align:center; min-height:88px;
+  flex:0 0 auto; width:150px; scroll-snap-align:start;
+}
+.tab-btn:hover{transform:translateY(-2px); border-color:#94D3DE;}
+.tab-btn[aria-selected="true"]{border-color:#18A1B8; box-shadow:0 8px 20px -8px rgba(24,161,184,.35);}
+/* Logo-only tab: fixed height "logo bar", proportional width, never stretched or cropped â
+   works for square marks and wide rectangular logos alike. */
+.tab-logo-img{ max-width:100%; max-height:44px; width:auto; height:auto; object-fit:contain; flex-shrink:0; display:block; }
+.tab-btn .partner-mark{ width:36px; height:36px; } /* generated fallback mark, sized to sit comfortably within the same 44px-tall bar */
+
+.tabpanel{display:none;}
+.tabpanel.active{display:block;}
+.panel-fade{animation:fadeUp .45s ease;}
+@keyframes fadeUp{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;}}
+
+@media (prefers-reduced-motion: reduce){
+  .tab-btn:hover{transform:none;}
+  .panel-fade{animation:none;}
+}
+
+/* =====================================================================
+   DISTRIBUTION CHANNELS â tabbed section (About Us page, section 4)
+   ================================================================== */
+.channel-tabs-row{ display:flex; flex-wrap:wrap; gap:12px; }
+.channel-tab-btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  background:#fff; border:2px solid #E2E8F0; border-radius:999px;
+  padding:14px 26px; cursor:pointer; transition:border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease, background-color 180ms ease, color 180ms ease;
+  font-family:Lexend,sans-serif; font-weight:600; font-size:0.9375rem; color:#14213B; white-space:nowrap;
+}
+.channel-tab-btn:hover{ transform:translateY(-2px); border-color:#94D3DE; }
+.channel-tab-btn[aria-selected="true"]{ background:#204476; border-color:#204476; color:#fff; box-shadow:0 8px 20px -8px rgba(32,68,118,.45); }
+
+/* "More Details" button at the bottom of each panel â gradient pill with
+   a soft colored shadow and a trailing arrow, matching the client's
+   reference button style. Scoped to this one button only. */
+.channel-more-btn{
+  display:inline-flex; align-items:center; gap:10px;
+  background:linear-gradient(135deg, #1FB6CE 0%, #135690 100%);
+  color:#fff; font-weight:600; font-size:0.9375rem;
+  padding:14px 28px; border-radius:999px; border:none; cursor:pointer;
+  box-shadow:0 14px 26px -10px rgba(19,86,144,.55);
+  transition:transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
+}
+.channel-more-btn:hover{ transform:translateY(-2px); box-shadow:0 18px 30px -8px rgba(19,86,144,.6); filter:brightness(1.06); }
+.channel-more-btn-arrow{ flex-shrink:0; }
+
+@media (prefers-reduced-motion: reduce){
+  .channel-tab-btn:hover{transform:none;}
+  .channel-more-btn:hover{transform:none;}
+}
+
+/* =====================================================================
+   AWARDS & ACCOLADES
+   ================================================================== */
+.photo-frame{
+  background:#fff; padding:14px 14px 44px 14px; border-radius:10px;
+  box-shadow:0 25px 50px -12px rgba(0,0,0,.5);
+  transform:rotate(-4deg);
+}
+.photo-frame img, .photo-frame .placeholder-img{ display:block; width:100%; aspect-ratio:1/1; border-radius:2px; object-fit:cover; }
+
+/* Awards Day Gallery â sliding photo strip on the right of the section.
+   Same drag/swipe/scroll-snap mechanic as the Testimonials slider, styled
+   for the dark navy background: a light-on-dark nav-arrow variant, plain
+   photo cards with a bottom scrim + caption overlay instead of a text card. */
+.nav-arrow-light{
+  width:44px; height:44px; border-radius:9999px; border:1px solid rgba(255,255,255,.25);
+  display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.8); flex-shrink:0;
+  transition:border-color 180ms ease, color 180ms ease, background-color 180ms ease, opacity 180ms ease;
+}
+.nav-arrow-light:hover{ border-color:#fff; color:#fff; background:rgba(255,255,255,.08); }
+.nav-arrow-light:disabled{ opacity:.3; cursor:default; }
+.nav-arrow-light:disabled:hover{ border-color:rgba(255,255,255,.25); color:rgba(255,255,255,.8); background:none; }
+
+.awards-gallery-track{
+  display:flex; gap:20px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth;
+  padding-bottom:4px; -ms-overflow-style:none; scrollbar-width:none;
+  flex:1 1 auto; min-height:280px;
+}
+.awards-gallery-track::-webkit-scrollbar{ display:none; }
+.awards-gallery-card{
+  position:relative; scroll-snap-align:start; flex:0 0 auto; align-self:flex-start; width:calc(100% - 20px);
+  aspect-ratio:1/1; border-radius:20px; overflow:hidden; box-shadow:0 25px 50px -15px rgba(0,0,0,.45);
+}
+@media (min-width:640px){ .awards-gallery-card{ width:calc(85% - 14px); } }
+.awards-gallery-card img{ width:100%; height:100%; object-fit:cover; display:block; }
+.awards-gallery-fallback{ width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
+.awards-gallery-scrim{ position:absolute; inset:0; background:linear-gradient(180deg, transparent 45%, rgba(9,17,34,.8) 100%); }
+.awards-gallery-caption{
+  position:absolute; left:20px; right:20px; bottom:18px; color:#fff;
+  font-family:Lexend,sans-serif; font-weight:600; font-size:.9375rem; line-height:1.3;
+}
+
+.back-to-top{
+  width:44px; height:44px; border-radius:9999px; border:1px solid rgba(255,255,255,.25);
+  display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.7);
+  transition:border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+.back-to-top:hover{border-color:#fff; color:#fff; transform:translateY(-2px);}
+@media (prefers-reduced-motion: reduce){ .back-to-top:hover{transform:none;} }
+
+/* =====================================================================
+   WHAT WE DO
+   ================================================================== */
+.item-card{
+  background:#fff; border:1.5px solid #E7ECEF; border-radius:18px;
+  padding:32px 28px; height:100%;
+  transition:transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+.item-card:hover{transform:translateY(-5px); box-shadow:0 20px 40px -14px rgba(20,33,59,.16); border-color:#CFE9EC;}
+.icon-badge{
+  width:56px; height:56px; border-radius:14px; display:flex; align-items:center; justify-content:center;
+  background:#EFF7EE; flex-shrink:0; overflow:hidden;
+}
+.icon-badge img{ width:26px; height:26px; object-fit:contain; }
+@media (prefers-reduced-motion: reduce){ .item-card:hover{transform:none;} }
+
+/* =====================================================================
+   KEY SERVICES (template-parts/section-key-services.php) â the grid
+   itself reuses the "WHAT WE DO" .item-card / .icon-badge styles above,
+   so the two sections read as one system. (Previously a tall "climbing
+   tree" infographic, then a plain 4-column grid â this mobile-carousel
+   pass exists because the plain grid still stacked all 8 cards in one
+   long vertical column on phones, which the client felt took too long to
+   scroll through.) Below the "sm" breakpoint only, the grid becomes a
+   horizontally swipeable, scroll-snapped strip instead â each card
+   ~78% of the screen width so the next one peeks in as a swipe hint.
+   Desktop/tablet (sm and up) keep the plain grid untouched.
+   ================================================================== */
+@media (max-width:639px){
+  .ks-grid{
+    display:flex; flex-wrap:nowrap; align-items:stretch; overflow-x:auto;
+    scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
+    scrollbar-width:none; padding-bottom:6px;
+  }
+  .ks-grid::-webkit-scrollbar{ display:none; }
+  /* .item-card normally sets height:100% (matching WHAT WE DO's own grid
+     rows, where every browser's row-tracks are already equal height) â
+     inside this horizontal flex strip that 100% has nothing to resolve
+     against, so cards were rendering at their own natural (shorter/taller)
+     content height instead of a shared one. height:auto lets the flex
+     container's default cross-axis "stretch" do that job instead, so
+     every card in the strip is exactly as tall as its tallest sibling. */
+  .ks-grid .item-card{ flex:0 0 78%; height:auto; scroll-snap-align:start; }
+}
+
+/* =====================================================================
+   PHARMACY NETWORK â Pharmaceutical page, section 3 (4 stat tiles).
+   Same mobile-carousel treatment as .ks-grid above: below the "sm"
+   breakpoint the 2x2 grid becomes a horizontally swipeable, scroll-
+   snapped strip instead, each card ~78% of the screen width so the next
+   peeks in as a swipe hint; height:auto for the same reason as .ks-grid
+   (see the comment there) so every card in the strip stretches to match
+   its tallest sibling. Desktop/tablet (sm and up) keep the plain grid.
+   ================================================================== */
+@media (max-width:639px){
+  .pharma-network-grid{
+    display:flex; flex-wrap:nowrap; align-items:stretch; overflow-x:auto;
+    scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
+    scrollbar-width:none; padding-bottom:6px;
+  }
+  .pharma-network-grid::-webkit-scrollbar{ display:none; }
+  .pharma-network-grid .item-card{ flex:0 0 78%; height:auto; scroll-snap-align:start; }
+}
+
+/* =====================================================================
+   OUR JOURNEY â scroll timeline
+   ================================================================== */
+.tl-wrap{ position:relative; }
+.tl-track{ position:absolute; top:4px; bottom:4px; left:20px; width:2px; background:#E4E9EC; border-radius:2px; z-index:0; }
+.tl-progress{
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  background:linear-gradient(180deg,#18A1B8 0%,#7CC36C 60%,#93CD96 100%);
+  border-radius:2px; transform:scaleY(0); transform-origin:top center;
+}
+@media (min-width:768px){ .tl-track{ left:50%; transform:translateX(-50%); } }
+
+.tl-row{ position:relative; z-index:1; display:flex; align-items:flex-start; gap:20px; margin-bottom:52px; }
+.tl-row:last-child{ margin-bottom:0; }
+.tl-dot-col{ display:flex; flex-direction:column; align-items:center; width:40px; flex-shrink:0; order:1; }
+.tl-dot{
+  width:16px; height:16px; border-radius:50%; background:#fff; border:3px solid #CBD5D6;
+  transition:border-color .35s ease, background-color .35s ease, transform .35s ease, box-shadow .35s ease;
+  position:relative;
+}
+.tl-row.is-active .tl-dot{ border-color:#18A1B8; background:#18A1B8; transform:scale(1.2); box-shadow:0 0 0 6px rgba(24,161,184,.16); }
+
+.tl-card-wrap{ flex:1; min-width:0; order:2; }
+.tl-spacer{ display:none; }
+.tl-card{
+  background:#F8FAFC; border:1.5px solid #E7ECEF; border-radius:16px; padding:24px 26px;
+  opacity:0; transform:translateY(18px); transition:opacity .55s ease, transform .55s ease, border-color .35s ease, background-color .35s ease;
+}
+.tl-row.is-active .tl-card{ opacity:1; transform:none; border-color:#CFE9EC; background:#fff; box-shadow:0 16px 32px -18px rgba(20,33,59,.14); }
+
+@media (min-width:768px){
+  .tl-row{ gap:0; margin-bottom:64px; }
+  .tl-dot-col{ width:56px; }
+  .tl-dot{ margin-top:2px; }
+  .tl-card-wrap, .tl-spacer{ flex:1; }
+  .tl-card-wrap{ order:1; }
+  .tl-dot-col{ order:2; }
+  .tl-spacer{ display:block; order:3; }
+  .tl-row .tl-card{ margin-right:48px; text-align:right; }
+  .tl-row.tl-reverse .tl-card-wrap{ order:3; }
+  .tl-row.tl-reverse .tl-spacer{ order:1; }
+  .tl-row.tl-reverse .tl-card{ margin-right:0; margin-left:48px; text-align:left; }
+}
+@media (prefers-reduced-motion: reduce){
+  .tl-card{ opacity:1 !important; transform:none !important; }
+  .tl-dot{ border-color:#18A1B8 !important; background:#18A1B8 !important; transform:none !important; }
+  .tl-progress{ transform:scaleY(1) !important; }
+}
+
+/* =====================================================================
+   OUR PARTNERS â marquee
+   ================================================================== */
+.marquee-wrap{
+  position:relative; overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+          mask-image:linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+.marquee-track{ display:flex; align-items:center; width:max-content; animation:marquee-ltr linear infinite; }
+.marquee-track.dir-a{ animation-duration:36s; }
+.marquee-track.dir-b{ animation-duration:44s; }
+@keyframes marquee-ltr{ from{ transform:translateX(-50%); } to{ transform:translateX(0%); } }
+
+.partner-logo{
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  height:96px; padding:0 44px;
+}
+.partner-logo img{ max-width:160px; max-height:72px; width:auto; height:auto; object-fit:contain; }
+.partner-mark{ display:inline-grid; grid-template-columns:repeat(2,1fr); gap:5px; width:42px; height:42px; flex-shrink:0; }
+.partner-mark span{ border-radius:50%; display:block; }
+.marquee-wrap:hover .marquee-track{ animation-play-state:paused; }
+
+@media (prefers-reduced-motion: reduce){
+  .marquee-track{ animation:none !important; transform:translateX(0) !important; }
+}
+
+/* =====================================================================
+   NEWS & UPDATES â carousel
+   ================================================================== */
+.nav-arrow{
+  width:44px; height:44px; border-radius:9999px; border:1px solid rgba(255,255,255,.25);
+  display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.8); flex-shrink:0;
+  transition:border-color 180ms ease, color 180ms ease, background-color 180ms ease, opacity 180ms ease;
+}
+.nav-arrow:hover{ border-color:#fff; color:#fff; background:rgba(255,255,255,.08); }
+.nav-arrow:disabled{ opacity:.3; cursor:default; }
+.nav-arrow:disabled:hover{ border-color:rgba(255,255,255,.25); color:rgba(255,255,255,.8); background:none; }
+
+.news-track{
+  display:flex; gap:24px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth;
+  padding-bottom:8px; -ms-overflow-style:none; scrollbar-width:none;
+}
+.news-track::-webkit-scrollbar{ display:none; }
+.news-card{ scroll-snap-align:start; flex:0 0 auto; width:calc(100% - 24px); background:#fff; border-radius:22px; padding:28px 28px 24px; display:flex; flex-direction:column; }
+@media (min-width:640px){ .news-card{ width:calc(50% - 12px); } }
+@media (min-width:1024px){ .news-card{ width:calc((100% - 48px) / 3); } }
+
+.news-arrow-btn{
+  width:40px; height:40px; border-radius:9999px; background:#14213B; color:#fff; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center; transition:background-color 180ms ease, transform 180ms ease;
+}
+.news-card:hover .news-arrow-btn{ background:#18A1B8; transform:rotate(45deg); }
+
+.news-image{ position:relative; margin-top:22px; border-radius:16px; overflow:hidden; aspect-ratio:1/1; }
+.news-image-img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
+
+@media (prefers-reduced-motion: reduce){
+  .news-track{ scroll-behavior:auto; }
+  .news-card:hover .news-arrow-btn{ transform:none; }
+}
+
+/* =====================================================================
+   TESTIMONIALS â slider
+   ================================================================== */
+.nav-arrow-dark{
+  width:44px; height:44px; border-radius:9999px; border:1px solid rgba(20,33,59,.16);
+  display:flex; align-items:center; justify-content:center; color:rgba(20,33,59,.7); flex-shrink:0;
+  transition:border-color 180ms ease, color 180ms ease, background-color 180ms ease, opacity 180ms ease;
+}
+.nav-arrow-dark:hover{ border-color:#18A1B8; color:#18A1B8; background:rgba(24,161,184,.08); }
+.nav-arrow-dark:disabled{ opacity:.3; cursor:default; }
+.nav-arrow-dark:disabled:hover{ border-color:rgba(20,33,59,.16); color:rgba(20,33,59,.7); background:none; }
+
+.testimonial-track{
+  display:flex; gap:24px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth;
+  padding-bottom:8px; -ms-overflow-style:none; scrollbar-width:none;
+}
+.testimonial-track::-webkit-scrollbar{ display:none; }
+.testimonial-card{
+  scroll-snap-align:start; flex:0 0 auto; width:calc(100% - 24px); background:#fff; border-radius:22px;
+  padding:32px 28px; display:flex; flex-direction:column; border:1px solid rgba(20,33,59,.06);
+}
+@media (min-width:640px){ .testimonial-card{ width:calc(50% - 12px); } }
+@media (min-width:1024px){ .testimonial-card{ width:calc((100% - 48px) / 3); } }
+
+.testimonial-quote{ flex:1 1 auto; }
+.testimonial-person{ display:flex; align-items:center; gap:12px; }
+.testimonial-avatar{
+  width:44px; height:44px; border-radius:50%; flex-shrink:0; overflow:hidden;
+  display:flex; align-items:center; justify-content:center; background:#E4E9EF;
+}
+.testimonial-avatar-img{ width:100%; height:100%; object-fit:cover; }
+
+@media (prefers-reduced-motion: reduce){
+  .testimonial-track{ scroll-behavior:auto; }
+}
+
+/* =====================================================================
+   BRAND LOGOS GALLERY (Brands page)
+   ================================================================== */
+.brand-logos-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+@media (min-width:640px){ .brand-logos-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; } }
+@media (min-width:1024px){ .brand-logos-grid{ grid-template-columns:repeat(6,minmax(0,1fr)); gap:32px; } }
+
+.brand-logo-tile{
+  position:relative; display:flex; align-items:center; justify-content:center;
+  aspect-ratio:2/1; background:#fff; border:1px solid rgba(20,33,59,.08); border-radius:16px;
+  padding:24px; overflow:hidden; transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.brand-logo-tile:hover{ transform:translateY(-6px); box-shadow:0 20px 40px -12px rgba(20,33,59,.18); border-color:rgba(24,161,184,.35); }
+.brand-logo-tile img{ max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; }
+.brand-logo-tile-empty{ color:rgba(20,33,59,.32); text-align:center; }
+
+/* Brands page only (#brand-logos â see section-brands-gallery.php):
+   client asked for the logos themselves to read larger/more prominent
+   within their tile, closer to a reference screenshot they shared.
+   .brand-logo-tile itself is shared with the FMCG Outlet Logos page
+   (also built on .brand-logos-grid) plus the E-Commerce/Q-Commerce logo
+   rows, so this is scoped to the Brands page's own section id rather
+   than changed globally â those other pages keep their current sizing. */
+#brand-logos .brand-logo-tile{ padding:14px; }
+
+@media (prefers-reduced-motion: reduce){
+  .brand-logo-tile:hover{ transform:none; }
+}
+
+/* =====================================================================
+   E-COMMERCE MARKETPLACE LOGOS (E-Commerce page, section 3) â a single
+   row of 7 logos on desktop. Reuses .brand-logo-tile above verbatim for
+   each tile (already a 2:1 box matching the requested 900Ã450 logo
+   size); only the grid itself is new, since grid-cols-7 was never part
+   of this project's precompiled Tailwind bundle (same issue that used to
+   affect the Our Brands tab row, before it became the scrollable
+   .brand-tabs-track further below), so it's a real CSS rule instead of
+   a Tailwind utility class.
+   ================================================================== */
+.ecommerce-logos-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+@media (min-width:640px){ .ecommerce-logos-grid{ grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; } }
+@media (min-width:1024px){ .ecommerce-logos-grid{ grid-template-columns:repeat(7,minmax(0,1fr)); gap:20px; } }
+
+/* Q-Commerce page logos (template-parts/section-qcommerce-logos.php) â
+   same single-row-on-desktop treatment as .ecommerce-logos-grid above,
+   so the platform logos never wrap to a second row once there are more
+   than fit a smaller grid (the client's list grew from 5 to 6 logos and
+   asked for a single row, same as the E-Commerce page's 7). */
+.qcommerce-logos-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+@media (min-width:640px){ .qcommerce-logos-grid{ grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; } }
+@media (min-width:1024px){ .qcommerce-logos-grid{ grid-template-columns:repeat(7,minmax(0,1fr)); gap:20px; } }
+
+/* =====================================================================
+   CAREER CULTURE CARDS (Career page)
+   ================================================================== */
+.career-culture-grid{ display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:20px; }
+@media (min-width:640px){ .career-culture-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; } }
+@media (min-width:1024px){ .career-culture-grid{ grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; } }
+
+.career-culture-card{
+  background:#EAF7FB; border:1.5px solid #B9E4EE; border-radius:18px;
+  padding:32px 26px; transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.career-culture-card:hover{ transform:translateY(-5px); box-shadow:0 20px 40px -14px rgba(20,33,59,.14); border-color:#18A1B8; }
+.career-culture-icon{ width:48px; height:48px; }
+.career-culture-icon svg,
+.career-culture-icon img{ width:48px; height:48px; object-fit:contain; }
+
+@media (prefers-reduced-motion: reduce){
+  .career-culture-card:hover{ transform:none; }
+}
+
+/* =====================================================================
+   CAREER JOB OPENINGS (Career page â sliding vacancy cards)
+   ================================================================== */
+.job-track{
+  display:flex; gap:24px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth;
+  padding-bottom:8px; -ms-overflow-style:none; scrollbar-width:none;
+  cursor:grab; user-select:none;
+}
+.job-track::-webkit-scrollbar{ display:none; }
+.job-track.is-dragging{ cursor:grabbing; scroll-snap-type:none; scroll-behavior:auto; }
+.job-card{
+  scroll-snap-align:start; flex:0 0 auto; width:calc(100% - 24px); background:#fff; border-radius:20px;
+  overflow:hidden; border:1px solid rgba(20,33,59,.08); box-shadow:0 12px 30px -18px rgba(20,33,59,.16);
+  display:flex; flex-direction:column;
+}
+@media (min-width:640px){ .job-card{ width:calc(50% - 12px); } }
+@media (min-width:1024px){ .job-card{ width:calc((100% - 48px) / 3); } }
+
+.job-card-photo{ aspect-ratio:4/3; background:#E4E9EF; display:block; }
+.job-card-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+.job-card-photo-fallback{ width:100%; height:100%; background:linear-gradient(135deg,#14365C,#18A1B8); }
+.job-card-title-link{ color:inherit; text-decoration:none; }
+.job-card-title-link:hover{ color:#18A1B8; }
+
+.job-card-body{ padding:22px 24px 24px; display:flex; flex-direction:column; flex:1 1 auto; }
+.job-card-meta{ margin-top:14px; min-height:38px; }
+.job-card-meta-label{ display:block; font-size:12px; color:rgba(20,33,59,.5); }
+.job-card-meta-value{ display:block; margin-top:2px; font-weight:600; color:#14213B; }
+.job-card-footer{
+  margin-top:16px; padding-top:16px; border-top:1px solid rgba(20,33,59,.08);
+  display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+}
+
+.btn-apply-now{
+  flex-shrink:0; display:inline-flex; align-items:center; justify-content:center;
+  background:#5AC8EE; color:#0B2540; font-weight:700; font-size:14px;
+  padding:10px 20px; border-radius:10px; white-space:nowrap;
+  transition:background-color 200ms ease, transform 200ms ease;
+}
+.btn-apply-now:hover{ background:#3FB8E0; transform:translateY(-2px); }
+
+.job-dots{ display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; }
+.job-dot{
+  width:9px; height:9px; border-radius:50%; background:rgba(24,161,184,.25); border:none; padding:0;
+  cursor:pointer; transition:background-color 200ms ease, transform 200ms ease;
+}
+.job-dot:hover{ background:rgba(24,161,184,.5); }
+.job-dot.is-active{ background:#18A1B8; transform:scale(1.25); }
+
+@media (prefers-reduced-motion: reduce){
+  .job-track{ scroll-behavior:auto; }
+  .btn-apply-now:hover{ transform:none; }
+}
+
+/* =====================================================================
+   SINGLE JOB OPENING (description + application form)
+   ================================================================== */
+.job-single-wrap{ padding:56px 0 100px; }
+.job-single-meta{ display:flex; flex-wrap:wrap; gap:32px; padding-bottom:28px; margin-bottom:36px; border-bottom:1px solid rgba(20,33,59,.08); }
+
+.job-single-grid{ display:grid; grid-template-columns:1fr; gap:40px; align-items:start; }
+@media (min-width:1024px){ .job-single-grid{ grid-template-columns:1fr 420px; gap:56px; } }
+
+.job-single-description{ max-width:64ch; }
+
+.job-apply-card{
+  background:#fff; border:1px solid rgba(20,33,59,.08); border-radius:20px;
+  padding:32px 30px; box-shadow:0 20px 50px -24px rgba(20,33,59,.22);
+}
+@media (min-width:1024px){ .job-apply-card{ position:sticky; top:110px; } }
+
+.job-apply-notice{ margin-top:18px; padding:12px 16px; border-radius:10px; font-size:14px; line-height:1.5; }
+.job-apply-notice--success{ background:#E6F4EA; color:#1E6B34; }
+.job-apply-notice--error{ background:#FBE4E4; color:#8A1F1F; }
+
+.job-apply-form{ margin-top:22px; display:flex; flex-direction:column; gap:18px; }
+.job-apply-field label{ display:block; font-size:13px; font-weight:600; color:#14213B; margin-bottom:6px; }
+.job-apply-required{ color:#D64545; }
+
+.job-apply-form input[type="text"],
+.job-apply-form input[type="email"],
+.job-apply-form input[type="tel"],
+.job-apply-form select,
+.job-apply-form textarea{
+  width:100%; border:1.5px solid rgba(20,33,59,.14); border-radius:10px;
+  padding:11px 14px; font-size:14px; color:#14213B; background:#fff;
+  transition:border-color 180ms ease, box-shadow 180ms ease;
+}
+.job-apply-form input:focus,
+.job-apply-form select:focus,
+.job-apply-form textarea:focus{
+  outline:none; border-color:#18A1B8; box-shadow:0 0 0 3px rgba(24,161,184,.15);
+}
+.job-apply-form textarea{ resize:vertical; min-height:96px; }
+
+.job-apply-phone{ display:flex; gap:8px; }
+.job-apply-phone select{ flex:0 0 auto; width:auto; max-width:130px; }
+.job-apply-phone input{ flex:1 1 auto; min-width:0; }
+
+.job-apply-message-head{ display:flex; align-items:baseline; justify-content:space-between; }
+.job-apply-message-head label{ margin-bottom:0; }
+.job-apply-counter{ font-size:12px; color:rgba(20,33,59,.45); }
+
+.job-apply-file{ position:relative; display:flex; align-items:center; gap:12px; }
+.job-apply-file-btn{
+  flex-shrink:0; display:inline-flex; align-items:center; justify-content:center;
+  background:#5AC8EE; color:#0B2540; font-weight:700; font-size:13px;
+  padding:9px 18px; border-radius:9px; cursor:pointer; margin-bottom:0 !important;
+  transition:background-color 200ms ease;
+}
+.job-apply-file:hover .job-apply-file-btn{ background:#3FB8E0; }
+.job-apply-file:focus-within .job-apply-file-btn{ outline:2px solid #18A1B8; outline-offset:2px; }
+.job-apply-file-name{ font-size:13px; color:rgba(20,33,59,.55); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.job-apply-file-input{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.job-apply-file-hint{ display:block; margin-top:6px; font-size:12px; color:rgba(20,33,59,.4); }
+
+.job-apply-honeypot{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+.job-apply-submit{
+  margin-top:4px; width:100%; background:#18A1B8; color:#fff; font-weight:700; font-size:15px;
+  padding:13px 20px; border-radius:10px; border:none; cursor:pointer;
+  transition:background-color 200ms ease, transform 200ms ease;
+}
+.job-apply-submit:hover{ background:#128194; transform:translateY(-2px); }
+
+@media (prefers-reduced-motion: reduce){
+  .job-apply-submit:hover{ transform:none; }
+}
+
+/* =====================================================================
+   CONTACT PAGE (enquiry form + map + info cards)
+   ================================================================== */
+.contact-form-notice{ margin-bottom:28px; padding:14px 18px; border-radius:10px; font-size:14px; line-height:1.5; }
+.contact-form-notice--success{ background:#E6F4EA; color:#1E6B34; }
+.contact-form-notice--error{ background:#FBE4E4; color:#8A1F1F; }
+
+.contact-grid{ display:grid; grid-template-columns:1fr; gap:40px; align-items:start; }
+@media (min-width:1024px){ .contact-grid{ grid-template-columns:1fr 1fr; gap:56px; } }
+
+.contact-form{ margin-top:0; }
+.contact-form-row{ display:grid; grid-template-columns:1fr; gap:18px; }
+@media (min-width:560px){ .contact-form-row{ grid-template-columns:1fr 1fr; } }
+
+.contact-form-submit{
+  margin-top:4px; display:inline-flex; align-items:center; justify-content:center;
+  background:#5AC8EE; color:#0B2540; font-weight:700; font-size:15px;
+  padding:12px 30px; border-radius:9px; border:none; cursor:pointer;
+  transition:background-color 200ms ease, transform 200ms ease;
+}
+.contact-form-submit:hover{ background:#3FB8E0; transform:translateY(-2px); }
+
+.contact-map-wrap{
+  position:relative; width:100%; min-height:340px; border-radius:20px; overflow:hidden;
+  box-shadow:0 20px 50px -24px rgba(20,33,59,.22); border:1px solid rgba(20,33,59,.08);
+}
+@media (min-width:1024px){ .contact-map-wrap{ min-height:100%; } }
+.contact-map-frame{ position:absolute; inset:0; width:100%; height:100%; min-height:340px; border:0; }
+.contact-map-fallback{
+  position:absolute; inset:0; min-height:340px;
+  background:linear-gradient(135deg,#18A1B8 0%,#14213B 100%);
+}
+
+.contact-info-cards{ margin-top:56px; display:grid; grid-template-columns:1fr; gap:20px; }
+@media (min-width:640px){ .contact-info-cards{ grid-template-columns:repeat(2,1fr); } }
+@media (min-width:1024px){ .contact-info-cards{ grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); } }
+
+.contact-info-card{
+  display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px; padding:28px 26px;
+  border:1px solid rgba(20,33,59,.12); border-radius:20px;
+  transition:border-color 200ms ease, box-shadow 200ms ease;
+}
+.contact-info-card:hover{ border-color:#18A1B8; box-shadow:0 14px 34px -22px rgba(20,33,59,.25); }
+.contact-info-icon{
+  flex-shrink:0; width:44px; height:44px; border-radius:12px; background:#5AC8EE;
+  display:flex; align-items:center; justify-content:center;
+}
+.contact-info-label{
+  font-family:'Lexend',sans-serif; font-size:11.5px; font-weight:700; letter-spacing:.06em;
+  text-transform:uppercase; color:rgba(20,33,59,.45); margin-top:-6px;
+}
+.contact-info-text{ font-size:16.5px; line-height:1.55; color:#14213B; text-decoration:none; text-align:center; }
+a.contact-info-text:hover{ color:#18A1B8; }
+
+/* =====================================================================
+   FOOTER
+   ================================================================== */
+.footer-upper{ background:#F3F7F5; }
+.footer-lower{ background:#14213B; }
+.footer-col-title{ font-family:'Lexend',sans-serif; font-weight:700; font-size:15px; color:#14213B; margin-bottom:14px; }
+.footer-link-list{ list-style:none; margin:0; padding:0; }
+.footer-link-list li{ margin:0; }
+.footer-link,
+.footer-link-list li > a{ display:block; font-size:14.5px; color:rgba(20,33,59,.68); padding:5px 0; transition:color 160ms ease, padding-left 160ms ease; }
+.footer-link:hover,
+.footer-link-list li > a:hover{ color:#18A1B8; padding-left:3px; }
+
+.footer-info-line{ font-size:14px; color:rgba(20,33,59,.68); line-height:1.7; }
+.footer-info-line b{ color:#14213B; font-weight:600; }
+.footer-info-line a{ color:inherit; }
+.footer-info-line a:hover{ color:#18A1B8; }
+.footer-admin-hint{ font-size:12.5px; color:rgba(20,33,59,.4); }
+
+.footer-social{
+  width:38px; height:38px; border-radius:9999px; background:#135690; color:#fff;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  transition:background-color 180ms ease, transform 180ms ease;
+}
+.footer-social:hover{ background:#18A1B8; transform:translateY(-2px); }
+
+.footer-legal-list{ list-style:none; margin:0; padding:0; display:flex; align-items:center; gap:24px; flex-wrap:wrap; justify-content:center; }
+.footer-bottom-link,
+.footer-legal-list li > a{ color:rgba(255,255,255,.72); font-size:13.5px; transition:color 160ms ease; }
+.footer-bottom-link:hover,
+.footer-legal-list li > a:hover{ color:#fff; }
+.footer-copyright{ color:rgba(255,255,255,.45); font-size:13.5px; }
+.footer-credit a{ color:rgba(255,255,255,.65); font-weight:600; transition:color 160ms ease; }
+.footer-credit a:hover{ color:#fff; }
+
+/* =====================================================================
+   GENERIC PAGES (single post / page / search / 404)
+   ================================================================== */
+/* 88px clears the fixed header on templates with no page banner above it
+   (404.php, index.php, search.php, single.php â plain <main class="generic-content">).
+   page.php / page-about-us.php put the banner OUTSIDE this class instead
+   and apply it only to the wrapper below the banner, so the banner itself
+   starts at the true top of the page â see the note in page.php. */
+.generic-content{ padding-top:88px; }
+.prose-content{ font-size:17px; }
+@media (min-width:1024px){ .prose-content{ font-size:18px; } }
+.prose-content p{ margin-bottom:1.25em; }
+.prose-content h2, .prose-content h3{ font-weight:700; color:#14213B; margin-top:1.75em; margin-bottom:.6em; }
+.prose-content a{ color:#18A1B8; text-decoration:underline; }
+.prose-content ul, .prose-content ol{ margin:0 0 1.25em 1.25em; }
+.prose-content img{ border-radius:14px; margin:1.5em 0; }
+.generic-post-card h2 a{ color:inherit; }
+
+/* =====================================================================
+   ABOUT US â story + presence map (page-about-us.php)
+   ================================================================== */
+.about-presence{
+  background:#EFF7EE; min-height:100vh;
+  display:flex; align-items:center; padding:88px 0 100px;
+}
+.about-presence-copy{ font-size:1.0625rem; }
+.about-presence-copy p{ margin-bottom:1.4em; }
+.about-presence-copy p:last-child{ margin-bottom:0; }
+.world-map-wrap{ position:relative; width:100%; color:#1F3326; }
+.world-map-wrap svg:first-child{ width:100%; height:auto; display:block; }
+.world-map-pin{
+  position:absolute; width:22px; height:28px; margin-left:-11px; margin-top:-28px;
+  color:#7CC36C; cursor:default;
+}
+.world-map-pin.is-hq{ color:#204476; width:26px; height:33px; margin-left:-13px; margin-top:-33px; }
+.world-map-pin svg{ width:100%; height:100%; filter:drop-shadow(0 2px 4px rgba(15,42,77,.28)); }
+
+/* Right-side replacement image (Customizer "Right-side image" field) â
+   shown instead of the world map once a photo is uploaded. Same rounded
+   photo-card treatment (no decorative circle) used elsewhere in the theme. */
+.presence-photo-wrap{ position:relative; }
+.presence-photo-frame{ border-radius:1rem; aspect-ratio:4/3; overflow:hidden; box-shadow:0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1); }
+.presence-photo-frame img{ width:100%; height:100%; object-fit:cover; }
+
+/* Feature checklist (the 4 short tags under the description) â a real
+   row/column gap here since the matching Tailwind gap-* utility classes
+   were never compiled into this bundle (see the note on purged/precompiled
+   Tailwind classes elsewhere in this file); a bit tighter on mobile,
+   roomier on desktop where the grid is two columns. */
+.presence-features{ row-gap:18px; column-gap:28px; }
+@media (min-width:640px){
+  .presence-features{ row-gap:22px; }
+}
+
+/* =====================================================================
+   MESSAGE FROM THE MD â About Us page, section 5
+   ================================================================== */
+.md-message-copy p{ margin-bottom:1.1em; }
+.md-message-copy p:last-child{ margin-bottom:0; }
+.md-message-photo-frame{
+  position:relative; z-index:1; aspect-ratio:4/5; max-width:420px; margin-left:auto;
+}
+@media (max-width:1023px){
+  .md-message-photo-frame{ margin-left:0; margin-right:auto; }
+}
+
+/* =====================================================================
+   OUR MISSION â About Us page, section 6
+   ================================================================== */
+.mission-section{ position:relative; width:100%; overflow:hidden; min-height:480px; background:#0B1524; }
+.mission-img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.mission-img-fallback{ background:linear-gradient(135deg,#0F2A4D,#204476 55%,#135690); }
+.mission-scrim{
+  position:absolute; inset:0;
+  background:linear-gradient(90deg, rgba(6,12,22,.92) 0%, rgba(6,12,22,.80) 32%, rgba(6,12,22,.40) 62%, rgba(6,12,22,.08) 88%);
+}
+.mission-content{ max-width:640px; padding:90px 0; }
+@media (min-width:768px){ .mission-content{ padding:100px 0; } }
+@media (min-width:1024px){ .mission-content{ padding:110px 0; } }
+.mission-copy p{ margin-bottom:1.1em; color:rgba(255,255,255,.88); }
+.mission-copy p:last-child{ margin-bottom:0; }
+
+/* =====================================================================
+   OUR VISION / FUTURE OUTLOOK â About Us page, section 7
+   ================================================================== */
+.vision-outlook-grid{ display:grid; grid-template-columns:1fr; gap:24px; }
+.vision-outlook-card{ padding:40px; }
+@media (min-width:768px){
+  .vision-outlook-grid{ grid-template-columns:1fr 1fr; gap:32px; }
+  .vision-outlook-card{ padding:48px; }
+}
+
+/* =====================================================================
+   COMMENTS â News & Updates single-article "Leave a Reply" section.
+   Same rounded input/focus treatment as the Career apply form and the
+   Contact Us enquiry form, same accent-colored pill submit button, so it
+   doesn't read as a bare, unstyled default WordPress comment form.
+   ================================================================== */
+.comments-area{ border-top:1px solid #E7ECEF; padding-top:2.5em; }
+
+.comment-list{ list-style:none; margin:0 0 40px; padding:0; display:flex; flex-direction:column; gap:22px; }
+.comment-list .children{
+  list-style:none; margin:22px 0 0; padding-left:32px; display:flex; flex-direction:column; gap:22px;
+  border-left:2px solid #EEF2F5;
+}
+
+.comment-body{
+  background:#F8FAFC; border:1px solid rgba(20,33,59,.07); border-radius:16px; padding:22px 24px;
+}
+.comment-meta{ display:flex; align-items:center; gap:12px; }
+.comment-author{ display:flex; align-items:center; gap:12px; }
+.comment-author .avatar{ border-radius:9999px; width:44px; height:44px; flex-shrink:0; }
+.comment-author .fn{ font-family:'Lexend',sans-serif; font-weight:700; font-style:normal; font-size:14px; color:#14213B; }
+.comment-author .says{ display:none; }
+.comment-metadata{ margin-left:auto; font-size:12px; color:rgba(20,33,59,.45); }
+.comment-metadata a{ color:inherit; text-decoration:none; }
+.comment-metadata a:hover{ color:#18A1B8; }
+.comment-content{ margin-top:14px; font-size:14px; line-height:1.7; color:rgba(20,33,59,.75); }
+.comment-content p{ margin:0 0 12px; }
+.comment-content p:last-child{ margin-bottom:0; }
+.comment .reply{ margin-top:14px; }
+.comment-reply-link{
+  display:inline-flex; align-items:center; font-family:'Lexend',sans-serif; font-weight:600;
+  font-size:12px; color:#18A1B8; text-decoration:none;
+}
+.comment-reply-link:hover{ text-decoration:underline; }
+.comment-awaiting-moderation{ display:block; margin-top:10px; font-size:12px; font-style:italic; color:rgba(20,33,59,.5); }
+
+.comments-pagination.nav-links{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:36px; }
+.comments-pagination a{ font-family:'Lexend',sans-serif; font-weight:600; font-size:13px; color:#18A1B8; text-decoration:none; }
+.comments-pagination a:hover{ text-decoration:underline; }
+
+.comment-reply-title{ margin:0 0 20px; }
+.comment-reply-title small{ margin-left:10px; font-size:13px; font-weight:500; }
+.comment-reply-title small a{ color:#18A1B8; text-decoration:none; }
+
+.comment-form .required{ color:#D64545; }
+.comment-form p{ margin:0 0 18px; }
+.comment-form label{ display:block; font-size:13px; font-weight:600; color:#14213B; margin-bottom:6px; }
+
+.comment-form-comment,
+.comment-form-author,
+.comment-form-email{ margin-bottom:18px; }
+@media (min-width:560px){
+  .comment-form{ display:grid; grid-template-columns:1fr 1fr; gap:0 18px; }
+  .comment-form-comment{ grid-column:1/-1; }
+  .comment-form-cookies-consent,
+  .comment-form-submit,
+  .form-submit{ grid-column:1/-1; }
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea{
+  width:100%; border:1.5px solid rgba(20,33,59,.14); border-radius:10px;
+  padding:11px 14px; font-size:14px; color:#14213B; background:#fff;
+  transition:border-color 180ms ease, box-shadow 180ms ease;
+}
+.comment-form input:focus,
+.comment-form textarea:focus{
+  outline:none; border-color:#18A1B8; box-shadow:0 0 0 3px rgba(24,161,184,.15);
+}
+.comment-form textarea{ resize:vertical; min-height:120px; }
+
+.comment-form-cookies-consent{
+  display:flex; align-items:flex-start; gap:8px; font-size:12.5px; color:rgba(20,33,59,.6); line-height:1.5;
+}
+.comment-form-cookies-consent input{ margin-top:3px; flex-shrink:0; }
+.comment-form-cookies-consent label{ margin:0; font-size:inherit; font-weight:400; color:inherit; }
+
+.comment-form-submit{ margin-top:4px; }
+.comment-form-submit,
+button.comment-form-submit{
+  display:inline-flex; align-items:center; justify-content:center;
+  background:#18A1B8; color:#fff; font-family:'Lexend',sans-serif; font-weight:700; font-size:14px;
+  padding:12px 30px; border-radius:9999px; border:none; cursor:pointer;
+  transition:background-color 200ms ease, transform 200ms ease;
+}
+.comment-form-submit:hover{ background:#128194; transform:translateY(-2px); }
+
+@media (prefers-reduced-motion: reduce){
+  .comment-form-submit:hover{ transform:none; }
+}
+
+/* =====================================================================
+   NEWS PAGE â page-news.php (banner + template-parts/section-news-list.php).
+   A large "Latest" featured article (unfiltered first page only), a
+   category-pill + search toolbar, every remaining published News article
+   as a 3-column card grid (2 on tablet, 1 on mobile â see the grid
+   utility classes in the markup itself), and pagination once there are
+   more than 9 articles.
+   ================================================================== */
+
+/* Featured article */
+.news-list-featured{
+  display:grid; grid-template-columns:1fr; gap:0; margin-bottom:56px;
+  background:#fff; border:1px solid rgba(20,33,59,.08); border-radius:24px; overflow:hidden;
+  box-shadow:0 24px 48px -20px rgba(20,33,59,.16);
+}
+@media (min-width:1024px){ .news-list-featured{ grid-template-columns:1.05fr 1fr; } }
+.news-list-featured-image{ position:relative; display:block; width:100%; aspect-ratio:16/10; background:#0F2A4D; min-width:0; }
+.news-list-featured-image-img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.news-list-featured-body{ padding:36px 32px 40px; display:flex; flex-direction:column; min-width:0; }
+@media (min-width:1024px){ .news-list-featured-body{ padding:48px 56px; justify-content:center; } }
+.news-list-featured-eyebrow{
+  display:inline-flex; align-self:flex-start; align-items:center; padding:6px 14px; border-radius:9999px;
+  background:rgba(24,161,184,.12); color:#127689; font-family:'Lexend',sans-serif; font-weight:700;
+  font-size:12px; letter-spacing:.04em; text-transform:uppercase;
+}
+.news-list-featured-date{ margin-top:16px; font-size:14px; color:rgba(20,33,59,.45); }
+.news-list-featured-title{ margin-top:10px; font-family:'Lexend',sans-serif; font-weight:700; font-size:clamp(1.5rem,2.4vw,2rem); line-height:1.2; color:#14213B; }
+.news-list-featured-title a{ color:inherit; text-decoration:none; }
+.news-list-featured-title a:hover{ color:#18A1B8; }
+.news-list-featured-excerpt{ margin-top:16px; font-size:15px; line-height:1.7; color:rgba(20,33,59,.65); }
+.news-list-featured-body .channel-more-btn{ margin-top:26px; align-self:flex-start; }
+
+/* Filter/search toolbar */
+.news-list-toolbar{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-bottom:8px; }
+.news-list-filter-pills{ display:flex; flex-wrap:wrap; gap:10px; }
+.news-list-filter-pill{
+  display:inline-flex; align-items:center; padding:10px 20px; border-radius:9999px;
+  background:#fff; border:1.5px solid rgba(20,33,59,.14); color:#14213B; text-decoration:none;
+  font-family:'Lexend',sans-serif; font-weight:600; font-size:13.5px; white-space:nowrap;
+  transition:border-color 180ms ease, background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+.news-list-filter-pill:hover{ border-color:#94D3DE; transform:translateY(-1px); }
+.news-list-filter-pill.is-active{ background:#204476; border-color:#204476; color:#fff; }
+
+.news-list-search-form{
+  display:flex; align-items:center; gap:8px; background:#fff; border:1.5px solid rgba(20,33,59,.14);
+  border-radius:9999px; padding:6px 8px 6px 16px; min-width:0; flex:0 1 320px;
+  transition:border-color 180ms ease, box-shadow 180ms ease;
+}
+.news-list-search-form:focus-within{ border-color:#18A1B8; box-shadow:0 0 0 3px rgba(24,161,184,.15); }
+.news-list-search-icon{ flex-shrink:0; color:rgba(20,33,59,.4); }
+.news-list-search-form input[type="search"]{
+  flex:1 1 auto; min-width:0; border:none; outline:none; background:transparent; font-size:14px; color:#14213B;
+}
+.news-list-search-submit{
+  flex-shrink:0; border:none; cursor:pointer; background:#18A1B8; color:#fff; border-radius:9999px;
+  padding:9px 18px; font-family:'Lexend',sans-serif; font-weight:600; font-size:13px;
+  transition:background-color 180ms ease;
+}
+.news-list-search-submit:hover{ background:#127689; }
+
+.news-list-filter-summary{ margin-top:18px; font-size:14px; color:rgba(20,33,59,.55); }
+.news-list-filter-clear{ margin-left:10px; color:#18A1B8; font-weight:600; text-decoration:none; }
+.news-list-filter-clear:hover{ text-decoration:underline; }
+
+.news-list-card{
+  background:#fff; border:1px solid rgba(20,33,59,.08); border-radius:20px; overflow:hidden;
+  display:flex; flex-direction:column; transition:transform .22s ease, box-shadow .22s ease;
+}
+.news-list-card:hover{ transform:translateY(-6px); box-shadow:0 20px 40px -12px rgba(20,33,59,.18); }
+
+.news-list-card-image{ position:relative; display:block; aspect-ratio:16/9; background:#0F2A4D; }
+.news-list-card-image-img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+
+.news-list-card-body{ padding:24px 24px 28px; display:flex; flex-direction:column; flex:1 1 auto; }
+
+.news-list-card-link{
+  margin-top:auto; padding-top:18px; display:inline-flex; align-items:center; gap:6px; align-self:flex-start;
+  font-family:'Lexend',sans-serif; font-weight:600; font-size:13px; color:#18A1B8; text-decoration:none;
+  transition:gap 180ms ease;
+}
+.news-list-card-link:hover{ gap:10px; }
+
+.news-list-pagination{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px; }
+.news-list-pagination .page-numbers{
+  display:inline-flex; align-items:center; justify-content:center; min-width:40px; height:40px; padding:0 14px;
+  border-radius:9999px; font-family:'Lexend',sans-serif; font-weight:600; font-size:13px; color:#14213B;
+  border:1.5px solid rgba(20,33,59,.14); text-decoration:none;
+  transition:background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+.news-list-pagination a.page-numbers:hover{ border-color:#18A1B8; color:#18A1B8; }
+.news-list-pagination .page-numbers.current{ background:#18A1B8; border-color:#18A1B8; color:#fff; }
+.news-list-pagination .page-numbers.dots{ border-color:transparent; color:rgba(20,33,59,.4); }
+
+@media (prefers-reduced-motion: reduce){
+  .news-list-card:hover{ transform:none; }
+}
+
+/* =====================================================================
+   FMCG OUTLET GALLERY (FMCG page, section 5) â auto-sliding photo strip
+   + click-to-enlarge popup
+   ================================================================== */
+.marquee-track .fmcg-gallery-card{ margin:0 10px; }
+.fmcg-gallery-card{
+  position:relative; flex:0 0 auto; width:240px; aspect-ratio:4/3;
+  border-radius:16px; overflow:hidden; padding:0; border:0; background:#fff; cursor:pointer;
+  box-shadow:0 15px 35px -18px rgba(20,33,59,.35);
+  transition:transform 220ms ease, box-shadow 220ms ease;
+}
+@media (min-width:640px){ .fmcg-gallery-card{ width:300px; } }
+.fmcg-gallery-card:hover, .fmcg-gallery-card:focus-visible{
+  transform:translateY(-5px); box-shadow:0 22px 45px -18px rgba(20,33,59,.45); outline:none;
+}
+.fmcg-gallery-card img{ width:100%; height:100%; object-fit:cover; display:block; }
+.fmcg-gallery-fallback{ width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
+
+.fmcg-lightbox{
+  position:fixed; inset:0; z-index:70; display:flex; align-items:center; justify-content:center; padding:24px;
+  background:rgba(9,17,34,.92);
+  opacity:0; visibility:hidden; transition:opacity 260ms ease, visibility 0s linear 260ms;
+}
+.fmcg-lightbox.is-open{ opacity:1; visibility:visible; transition:opacity 260ms ease; }
+.fmcg-lightbox-figure{ max-width:min(920px,92vw); max-height:88vh; margin:0; display:flex; flex-direction:column; align-items:center; }
+.fmcg-lightbox-figure img{
+  max-width:100%; max-height:78vh; width:auto; height:auto; border-radius:8px;
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.6);
+}
+.fmcg-lightbox-caption{ margin-top:16px; color:#fff; font-family:'Lexend',sans-serif; font-size:.9375rem; text-align:center; }
+.fmcg-lightbox-close,
+.fmcg-lightbox-nav{
+  position:absolute; width:44px; height:44px; border-radius:9999px; border:1px solid rgba(255,255,255,.3);
+  display:flex; align-items:center; justify-content:center; color:#fff;
+  transition:border-color 180ms ease, background-color 180ms ease;
+}
+.fmcg-lightbox-close:hover,
+.fmcg-lightbox-nav:hover{ border-color:#fff; background:rgba(255,255,255,.1); }
+.fmcg-lightbox-close{ top:20px; right:20px; }
+.fmcg-lightbox-nav{ top:50%; transform:translateY(-50%); }
+.fmcg-lightbox-prev{ left:20px; }
+.fmcg-lightbox-next{ right:20px; }
+
+@media (prefers-reduced-motion: reduce){
+  .fmcg-gallery-card{ transition:none; }
+  .fmcg-gallery-card:hover, .fmcg-gallery-card:focus-visible{ transform:none; }
+  .fmcg-lightbox{ transition:none; }
+}

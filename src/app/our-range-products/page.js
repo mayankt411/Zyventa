@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Search, Package, Sparkles, ArrowRight, CheckCircle2, ShoppingBag, Eye, Pill, Activity, ShieldCheck, Filter } from 'lucide-react';
+import { Search, Package, ArrowRight, CheckCircle2, ShoppingBag, Pill, Activity, ShieldCheck, Filter } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import ProductDetailModal from '@/components/ProductDetailModal';
 
@@ -238,16 +238,7 @@ export default function OurRangeProductsPage() {
                   </div>
 
                   {/* Card Action Buttons */}
-                  <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
-                    <button
-                      type="button"
-                      onClick={() => setActiveProductModal(product)}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold bg-brand-navy text-white hover:bg-brand-blue transition-colors shadow-sm"
-                    >
-                      <Eye className="w-3.5 h-3.5 text-brand-green" />
-                      <span>Clinical Details</span>
-                    </button>
-
+                  <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-end gap-2">
                     <button
                       type="button"
                       onClick={() => setActiveProductModal(product)}

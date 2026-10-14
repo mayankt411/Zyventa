@@ -12,7 +12,7 @@ export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const pathname = usePathname();
 
-  const isHomePage = pathname === '/';
+  const isHomePage = false; // all pages use the solid header
 
   useEffect(() => {
     const handleScroll = () => {

@@ -26,6 +26,7 @@ module.exports = {
           accentGreen: '#49E670',
           emerald: '#10B981',
           lightBg: '#F8FAFC',
+          paper: '#F5F3EE',
           cardBg: '#FFFFFF',
           ink: '#14213B',
           muted: '#64748B',
@@ -39,6 +40,7 @@ module.exports = {
         }
       },
       fontFamily: {
+        display: ['Fraunces', 'Georgia', 'Times New Roman', 'serif'],
         heading: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },

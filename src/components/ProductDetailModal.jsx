@@ -3,16 +3,13 @@
 import { useState } from 'react';
 import { 
   X, 
-  Sparkles, 
   ShieldCheck, 
   Pill, 
   Package, 
   CheckCircle2, 
-  Clock, 
   Info, 
   ArrowRight, 
   Activity, 
-  HeartPulse,
   Send
 } from 'lucide-react';
 
@@ -139,45 +136,6 @@ export default function ProductDetailModal({ product, onClose, onInquire }) {
                 </div>
                 <p className="text-sm sm:text-base font-semibold text-ink">
                   {product.composition}
-                </p>
-              </div>
-            )}
-
-            {/* Clinical Indications */}
-            {product.indication && (
-              <div className="p-4 sm:p-5 rounded-2xl bg-cyan-50/40 border border-cyan-100">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-cyan-700 mb-1.5">
-                  <HeartPulse className="w-4 h-4 text-cyan-600" />
-                  <span>Therapeutic Indication</span>
-                </div>
-                <p className="text-sm sm:text-base text-slate-800 leading-relaxed">
-                  {product.indication}
-                </p>
-              </div>
-            )}
-
-            {/* Clinical Features / Advantages */}
-            {product.features && (
-              <div className="p-4 sm:p-5 rounded-2xl bg-emerald-50/40 border border-emerald-100">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-700 mb-1.5">
-                  <Sparkles className="w-4 h-4 text-emerald-600" />
-                  <span>Key Features & Clinical Benefits</span>
-                </div>
-                <p className="text-sm sm:text-base text-slate-800 leading-relaxed">
-                  {product.features}
-                </p>
-              </div>
-            )}
-
-            {/* Usage Instructions */}
-            {product.usage && (
-              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
-                  <Clock className="w-4 h-4 text-brand-blue" />
-                  <span>Dosage & Administration Guidelines</span>
-                </div>
-                <p className="text-sm text-slate-700 leading-relaxed">
-                  {product.usage}
                 </p>
               </div>
             )}

@@ -46,7 +46,7 @@
       "id": "regulation",
       "name": "Regulation",
       "title": "Regulatory Affairs & Compliance",
-      "description": "Our regulatory experts navigate the complexities of compliance and registration requirements, ensuring seamless market entry for our clients.",
+      "description": "Product registration and compliance with health authorities, for smooth market entry.",
       "points": [
         "Product registration and dossier submissions",
         "Compliance with GCC and local health authorities (MOHAP, SFDA, etc.)",
@@ -59,7 +59,7 @@
       "id": "marketing",
       "name": "Marketing",
       "title": "Strategic Marketing & Brand Development",
-      "description": "Our dedicated marketing team develops and implements a comprehensive marketing strategy for the products. They are committed to setting and achieving goals through detailed and complex marketing plans focused on building product awareness and demand. The ultimate goal is to bring the product from concept to customer.",
+      "description": "Marketing plans that build awareness and demand, taking your product from concept to customer.",
       "points": [
         "Integrated multi-channel marketing campaigns",
         "Digital marketing, healthcare provider outreach, and medical education",
@@ -72,7 +72,7 @@
       "id": "sales",
       "name": "Sales",
       "title": "Medical Sales & Field Execution",
-      "description": "Our professional medical sales teams connect your brand with the region's best medical professionals, primary health centres, hospitals, and pharmacies. We ensure high-impact physician engagement and prescription generation.",
+      "description": "Medical sales teams that connect your brand with physicians, health centres, hospitals and pharmacies.",
       "points": [
         "Specialized medical representatives covering major therapeutic areas",
         "Direct hospital and primary healthcare center detailing",
@@ -85,7 +85,7 @@
       "id": "distribution",
       "name": "Distribution",
       "title": "Seamless Wholesale & Pharmacy Distribution",
-      "description": "We offer seamless distribution of pharmaceuticals, nutraceuticals, and OTC consumer health products across hospitals, retail pharmacies, and wholesale networks.",
+      "description": "Distribution of pharmaceuticals, nutraceuticals and OTC products to hospitals, pharmacies and wholesalers.",
       "points": [
         "Full coverage of UAE and GCC pharmacy chains and independent retailers",
         "Affordable wholesale rates for bulk medicine purchases",
@@ -98,7 +98,7 @@
       "id": "supply-chain",
       "name": "Supply Chain",
       "title": "Supply Chain Management & Cold Chain Logistics",
-      "description": "With meticulous attention to detail, our supply chain division guarantees temperature-controlled warehousing, GDP compliance, and timely delivery across all destinations.",
+      "description": "Temperature-controlled warehousing, GDP-compliant handling and timely delivery.",
       "points": [
         "GDP (Good Distribution Practice) certified operations",
         "Temperature-monitored cold chain storage and transport",
@@ -597,32 +597,6 @@
       "therapy": "Therapy - CNS & Neurology",
       "isStore": true,
       "isWholesale": true
-    }
-  ],
-  "careers": [
-    {
-      "id": "medical-rep",
-      "title": "Medical Representative",
-      "department": "Medical Sales Division",
-      "location": "Dubai, UAE",
-      "type": "Full Time",
-      "description": "Engage healthcare professionals, clinics, and hospitals to promote our specialized pharmaceutical portfolio and build lasting relationships."
-    },
-    {
-      "id": "product-manager",
-      "title": "Product Manager",
-      "department": "Marketing Division",
-      "location": "Dubai, UAE",
-      "type": "Full Time",
-      "description": "Lead product lifecycle management, craft marketing campaigns, analyze competitive dynamics, and align sales strategies across GCC."
-    },
-    {
-      "id": "frontline-executive",
-      "title": "Frontline Office Executive",
-      "department": "Operations & Administration",
-      "location": "Dubai, UAE",
-      "type": "Full Time",
-      "description": "Coordinate administrative processes, client communication, order processing, and support daily operations with excellence."
     }
   ],
   "faqs": [

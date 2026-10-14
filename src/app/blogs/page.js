@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Calendar, User, ArrowRight, BookOpen } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
+import PageHeader from '@/components/PageHeader';
 
 export const metadata = {
   title: 'Blogs & Insights - Zyventa',
@@ -9,36 +10,20 @@ export const metadata = {
 
 export default function BlogsPage() {
   return (
-    <div className="pt-20">
+    <div>
       
       {/* Banner */}
-      <section className="relative py-24 sm:py-32 bg-brand-navy text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/80 z-10" />
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/20 text-brand-green text-xs font-semibold uppercase tracking-wider mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-green"></span>
-              <span>Industry Insights</span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading leading-tight">
-              Blogs & Market Insights
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed">
-              ZYVENTA is the connection between your brand and the region&apos;s best medical professionals, primary health centres, hospitals and pharmacies.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader eyebrow="Industry Insights" title={<>Blogs & Market Insights</>}>ZYVENTA is the connection between your brand and the region&apos;s best medical professionals, primary health centres, hospitals and pharmacies.</PageHeader>
 
       {/* Blog Cards Grid */}
-      <section className="py-24 bg-brand-lightBg">
+      <section className="py-24 bg-brand-paper">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {contentData.blogs.map((blog) => (
               <article
                 key={blog.slug}
-                className="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white rounded-sm overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="relative aspect-[16/10] bg-slate-100 overflow-hidden">
@@ -47,7 +32,7 @@ export default function BlogsPage() {
                       alt={blog.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/95 text-brand-navy text-xs font-bold">
+                    <div className="absolute top-4 left-4 px-3 py-1 rounded-sm bg-white/95 text-brand-navy text-xs font-bold">
                       Healthcare Distribution
                     </div>
                   </div>

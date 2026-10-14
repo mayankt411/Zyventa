@@ -49,7 +49,7 @@ export default function ProductDetailModal({ product, onClose, onInquire }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-md overflow-y-auto animate-fade-up">
-      <div className="bg-white rounded-3xl max-w-3xl w-full my-8 shadow-2xl border border-slate-100 overflow-hidden relative flex flex-col max-h-[90vh]">
+      <div className="bg-white rounded-sm max-w-3xl w-full my-8 shadow-2xl border border-slate-100 overflow-hidden relative flex flex-col max-h-[90vh]">
         
         {/* Header Bar */}
         <div className="flex items-center justify-between px-6 sm:px-8 py-5 border-b border-slate-100 bg-slate-50/80 sticky top-0 z-20">
@@ -81,7 +81,7 @@ export default function ProductDetailModal({ product, onClose, onInquire }) {
           <div className="grid sm:grid-cols-12 gap-6 sm:gap-8 items-center">
             
             {/* Product Pack Image */}
-            <div className="sm:col-span-5 bg-gradient-to-br from-slate-50 via-slate-100 to-emerald-50/30 rounded-2xl p-6 border border-slate-100 flex items-center justify-center aspect-square relative group">
+            <div className="sm:col-span-5 bg-gradient-to-br from-slate-50 via-slate-100 to-emerald-50/30 rounded-sm p-6 border border-slate-100 flex items-center justify-center aspect-square relative group">
               <img
                 src={product.image}
                 alt={product.name}
@@ -129,7 +129,7 @@ export default function ProductDetailModal({ product, onClose, onInquire }) {
             
             {/* Active Composition Card */}
             {product.composition && (
-              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div className="p-4 sm:p-5 rounded-sm bg-slate-50 border border-slate-200/80">
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
                   <Pill className="w-4 h-4 text-brand-green" />
                   <span>Active Composition & Ingredients</span>
@@ -142,7 +142,7 @@ export default function ProductDetailModal({ product, onClose, onInquire }) {
 
             {/* Closing Line Note */}
             {product.closingLine && (
-              <div className="p-3.5 rounded-xl bg-gradient-to-r from-brand-navy to-brand-blue text-white text-xs sm:text-sm font-medium flex items-center justify-between">
+              <div className="p-3.5 rounded-sm bg-gradient-to-r from-brand-navy to-brand-blue text-white text-xs sm:text-sm font-medium flex items-center justify-between">
                 <span>✨ {product.closingLine}</span>
               </div>
             )}
@@ -151,14 +151,14 @@ export default function ProductDetailModal({ product, onClose, onInquire }) {
 
           {/* Inquiry Form Accordion */}
           {showInquiryForm ? (
-            <div className="mt-6 p-6 rounded-2xl bg-brand-lightBg border border-slate-200 animate-fade-up">
+            <div className="mt-6 p-6 rounded-sm bg-brand-paper border border-slate-200 animate-fade-up">
               <h4 className="text-base font-bold text-ink mb-4 flex items-center gap-2">
                 <Send className="w-4 h-4 text-brand-green" />
                 <span>Request Wholesale / Order Inquiry for {product.name}</span>
               </h4>
 
               {inquirySubmitted ? (
-                <div className="p-6 rounded-xl bg-brand-green/20 text-brand-navy text-center space-y-1">
+                <div className="p-6 rounded-sm bg-brand-green/20 text-brand-navy text-center space-y-1">
                   <CheckCircle2 className="w-6 h-6 text-brand-green mx-auto" />
                   <p className="font-bold text-sm">Inquiry received successfully!</p>
                   <p className="text-xs text-slate-600">Our medical distribution manager will connect with you.</p>
@@ -172,7 +172,7 @@ export default function ProductDetailModal({ product, onClose, onInquire }) {
                       placeholder="Your Name / Organization"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="px-3.5 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-brand-green bg-white"
+                      className="px-3.5 py-2 rounded-sm border border-slate-200 text-xs focus:outline-none focus:border-brand-green bg-white"
                     />
                     <input
                       required
@@ -180,7 +180,7 @@ export default function ProductDetailModal({ product, onClose, onInquire }) {
                       placeholder="Email Address"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="px-3.5 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-brand-green bg-white"
+                      className="px-3.5 py-2 rounded-sm border border-slate-200 text-xs focus:outline-none focus:border-brand-green bg-white"
                     />
                   </div>
                   <div className="grid sm:grid-cols-2 gap-3">
@@ -189,7 +189,7 @@ export default function ProductDetailModal({ product, onClose, onInquire }) {
                       placeholder="Phone / WhatsApp (+971 ...)"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="px-3.5 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-brand-green bg-white"
+                      className="px-3.5 py-2 rounded-sm border border-slate-200 text-xs focus:outline-none focus:border-brand-green bg-white"
                     />
                     <input
                       type="number"
@@ -197,7 +197,7 @@ export default function ProductDetailModal({ product, onClose, onInquire }) {
                       placeholder="Estimated Units Required"
                       value={formData.quantity}
                       onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
-                      className="px-3.5 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-brand-green bg-white"
+                      className="px-3.5 py-2 rounded-sm border border-slate-200 text-xs focus:outline-none focus:border-brand-green bg-white"
                     />
                   </div>
                   <button

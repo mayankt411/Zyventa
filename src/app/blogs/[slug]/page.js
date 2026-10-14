@@ -15,28 +15,28 @@ export default function SingleBlogPage({ params }) {
     <div className="pt-20">
       
       {/* Header Banner */}
-      <section className="py-20 bg-brand-navy text-white">
+      <section className="py-20 bg-brand-paper text-brand-navy">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/blogs"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-brand-green hover:text-white transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-xs font-semibold text-brand-blue hover:text-brand-navy transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to All Blogs</span>
           </Link>
 
-          <div className="flex items-center gap-4 text-xs text-slate-300 mb-4">
+          <div className="flex items-center gap-4 text-xs text-ink-60 mb-4">
             <span className="flex items-center gap-1.5">
-              <Calendar className="w-4 h-4 text-brand-green" />
+              <Calendar className="w-4 h-4 text-brand-blue" />
               {blog.date}
             </span>
             <span className="flex items-center gap-1.5">
-              <User className="w-4 h-4 text-brand-green" />
+              <User className="w-4 h-4 text-brand-blue" />
               {blog.author}
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl display">
             {blog.title}
           </h1>
         </div>
@@ -47,7 +47,7 @@ export default function SingleBlogPage({ params }) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Featured Image */}
-          <div className="rounded-3xl overflow-hidden shadow-lg border border-slate-100 aspect-[16/9] mb-12 bg-slate-100">
+          <div className="rounded-sm overflow-hidden shadow-lg border border-slate-100 aspect-[16/9] mb-12 bg-slate-100">
             <img
               src="/assets/images/connected-logistics-and-supply-chain-concept-table-tennis-ball-with-plane-trucks-train-and-ship-s-300x200.jpg"
               alt={blog.title}
@@ -63,7 +63,7 @@ export default function SingleBlogPage({ params }) {
               </p>
             ))}
 
-            <blockquote className="p-6 rounded-2xl bg-brand-lightBg border-l-4 border-brand-green italic text-ink font-medium">
+            <blockquote className="p-6 rounded-sm bg-brand-paper border-l-4 border-brand-green italic text-ink font-medium">
               &ldquo;We serve as a link between international healthcare companies and GCC and the growing markets of the Middle East.&rdquo;
             </blockquote>
 
@@ -77,7 +77,7 @@ export default function SingleBlogPage({ params }) {
           </div>
 
           {/* Bottom CTA Box */}
-          <div className="mt-16 p-8 rounded-3xl bg-brand-lightBg border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="mt-16 p-8 rounded-sm bg-brand-paper border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
               <h4 className="text-lg font-bold text-ink font-heading">
                 Looking to expand your pharmaceutical brand?

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Target, Compass, Users, Award, ShieldCheck, HeartPulse, ArrowRight, CheckCircle2 } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
+import PageHeader from '@/components/PageHeader';
 
 export const metadata = {
   title: 'About Us - Zyventa',
@@ -9,32 +10,10 @@ export const metadata = {
 
 export default function AboutUsPage() {
   return (
-    <div className="pt-20">
+    <div>
       
       {/* Page Header Banner */}
-      <section className="relative py-24 sm:py-32 bg-brand-navy text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/80 z-10" />
-        <img
-          src="/assets/images/connected-logistics-and-supply-chain-concept-table-tennis-ball-with-plane-trucks-train-and-ship-s-300x200.jpg"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover opacity-20"
-          aria-hidden="true"
-        />
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/20 text-brand-green text-xs font-semibold uppercase tracking-wider mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-green"></span>
-              <span>About Zyventa</span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading leading-tight">
-              One Stop Solution for Regional Healthcare
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed">
-              ZYVENTA is the connection between your brand and the region&apos;s best medical professionals, primary health centres, hospitals and pharmacies.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader eyebrow="About Zyventa" title={<>One Stop Solution for Regional Healthcare</>}>ZYVENTA is the connection between your brand and the region&apos;s best medical professionals, primary health centres, hospitals and pharmacies.</PageHeader>
 
       {/* Overview & Split Intro */}
       <section className="py-24 bg-white">
@@ -43,7 +22,7 @@ export default function AboutUsPage() {
             
             <div className="lg:col-span-6 space-y-6">
               <p className="flex items-center gap-2 font-heading text-xs font-bold tracking-[0.14em] uppercase text-ink-60">
-                <span className="w-2 h-2 rounded-full bg-brand-green"></span>
+                <span className="w-2 h-2 rounded-sm bg-brand-green"></span>
                 <span>Our Foundation</span>
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-ink font-heading leading-tight">
@@ -58,7 +37,7 @@ export default function AboutUsPage() {
             </div>
 
             <div className="lg:col-span-6 relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-100 aspect-[4/3]">
+              <div className="rounded-sm overflow-hidden shadow-2xl border border-slate-100 bg-slate-100 aspect-[4/3]">
                 <img
                   src="/assets/team/international-medical-team-in-face-masks-having-team-building-300x200.jpg"
                   alt="Zyventa Healthcare Team"
@@ -72,13 +51,13 @@ export default function AboutUsPage() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-24 bg-brand-lightBg border-y border-slate-200/60">
+      <section className="py-24 bg-brand-paper border-y border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             
             {/* Mission Card */}
-            <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300">
-              <div className="w-14 h-14 rounded-2xl bg-brand-navy text-brand-green flex items-center justify-center mb-6">
+            <div className="bg-white rounded-sm p-8 sm:p-12 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300">
+              <div className="w-14 h-14 rounded-sm bg-brand-navy text-brand-green flex items-center justify-center mb-6">
                 <Target className="w-7 h-7" />
               </div>
               <h3 className="text-2xl font-bold text-ink font-heading mb-4">
@@ -90,8 +69,8 @@ export default function AboutUsPage() {
             </div>
 
             {/* Vision Card */}
-            <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300">
-              <div className="w-14 h-14 rounded-2xl bg-brand-navy text-brand-green flex items-center justify-center mb-6">
+            <div className="bg-white rounded-sm p-8 sm:p-12 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300">
+              <div className="w-14 h-14 rounded-sm bg-brand-navy text-brand-green flex items-center justify-center mb-6">
                 <Compass className="w-7 h-7" />
               </div>
               <h3 className="text-2xl font-bold text-ink font-heading mb-4">
@@ -109,7 +88,7 @@ export default function AboutUsPage() {
       {/* Team Philosophy Quote */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <div className="w-12 h-12 mx-auto rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center">
+          <div className="w-12 h-12 mx-auto rounded-sm bg-brand-green/20 text-brand-green flex items-center justify-center">
             <Users className="w-6 h-6" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-ink font-heading">
@@ -121,7 +100,7 @@ export default function AboutUsPage() {
           <div className="pt-4">
             <Link
               href="/contact-us"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold bg-brand-navy text-white hover:bg-brand-blue transition-colors shadow"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-sm text-sm font-semibold bg-brand-navy text-white hover:bg-brand-blue transition-colors shadow"
             >
               <span>Get in Touch With Our Team</span>
               <ArrowRight className="w-4 h-4 text-brand-green" />

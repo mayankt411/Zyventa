@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { ShoppingBag, Sparkles, CheckCircle2, ArrowRight, ShieldCheck, Search, Eye, Pill, Package, Star } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
+import PageHeader from '@/components/PageHeader';
 import ProductDetailModal from '@/components/ProductDetailModal';
 
 export default function OnlineStorePage() {
@@ -28,39 +29,17 @@ export default function OnlineStorePage() {
   });
 
   return (
-    <div className="pt-20">
+    <div>
       
       {/* Banner */}
-      <section className="relative py-20 sm:py-28 bg-brand-navy text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/80 z-10" />
-        <img
-          src="/assets/team/pharmacy-delivery-box-and-people-hands-for-healthcare-package-and-ecommerce-courier-services-shi.jpg"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover opacity-25"
-          aria-hidden="true"
-        />
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-green/20 border border-brand-green/30 text-brand-green text-xs font-bold uppercase tracking-wider">
-              <ShoppingBag className="w-3.5 h-3.5" />
-              <span>Consumer Healthcare & Wellness</span>
-            </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-heading leading-tight">
-              Online Store
-            </h1>
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
-              Certified consumer health formulations, scar care gels, neuro-nutrients, relaxation botanicals, and topical pain relief directly from Zyventa.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader eyebrow="Consumer Healthcare & Wellness" title={<>Online Store</>}>Certified consumer health formulations, scar care gels, neuro-nutrients, relaxation botanicals, and topical pain relief directly from Zyventa.</PageHeader>
 
       {/* Catalog & Filter Section */}
-      <section className="py-16 sm:py-20 bg-brand-lightBg">
+      <section className="py-16 sm:py-20 bg-brand-paper">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Filter Bar */}
-          <div className="p-6 bg-white rounded-3xl border border-slate-200/80 shadow-sm mb-10 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="p-6 bg-white rounded-sm border border-slate-200/80 shadow-sm mb-10 flex flex-col md:flex-row items-center justify-between gap-4">
             
             <div className="relative w-full md:w-80">
               <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
@@ -69,7 +48,7 @@ export default function OnlineStorePage() {
                 placeholder="Search store products..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-brand-green bg-white"
+                className="w-full pl-10 pr-4 py-2.5 rounded-sm bg-slate-50 border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-brand-green bg-white"
               />
             </div>
 
@@ -79,7 +58,7 @@ export default function OnlineStorePage() {
                   key={cat}
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                  className={`px-3.5 py-1.5 rounded-sm text-xs font-bold transition-all ${
                     selectedCategory === cat
                       ? 'bg-brand-navy text-white shadow-sm'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
@@ -97,18 +76,18 @@ export default function OnlineStorePage() {
             {filtered.map((product) => (
               <div
                 key={product.id}
-                className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white rounded-sm p-6 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   {/* Image Box */}
-                  <div className="relative rounded-2xl bg-gradient-to-br from-slate-50 via-slate-100/60 to-emerald-50/30 p-6 flex items-center justify-center border border-slate-100 aspect-square overflow-hidden mb-5">
+                  <div className="relative rounded-sm bg-gradient-to-br from-slate-50 via-slate-100/60 to-emerald-50/30 p-6 flex items-center justify-center border border-slate-100 aspect-square overflow-hidden mb-5">
                     <img
                       src={product.image}
                       alt={product.name}
                       className="max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-110 filter drop-shadow-md"
                       loading="lazy"
                     />
-                    <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 border border-slate-200 text-[11px] font-bold text-brand-blue shadow-sm">
+                    <div className="absolute top-3 left-3 px-3 py-1 rounded-sm bg-white/95 border border-slate-200 text-[11px] font-bold text-brand-blue shadow-sm">
                       {product.category}
                     </div>
                   </div>
@@ -123,7 +102,7 @@ export default function OnlineStorePage() {
                   )}
 
                   {product.composition && (
-                    <div className="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-2 text-xs text-slate-700">
+                    <div className="mt-3 p-2.5 rounded-sm bg-slate-50 border border-slate-100 flex items-start gap-2 text-xs text-slate-700">
                       <Pill className="w-3.5 h-3.5 text-brand-green flex-shrink-0 mt-0.5" />
                       <span className="font-medium line-clamp-1">{product.composition}</span>
                     </div>
@@ -140,7 +119,7 @@ export default function OnlineStorePage() {
                   <button
                     type="button"
                     onClick={() => setActiveModalProduct(product)}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold bg-brand-lightBg hover:bg-slate-200 text-slate-800 transition-colors"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-sm text-xs font-bold bg-brand-paper hover:bg-slate-200 text-slate-800 transition-colors"
                   >
                     <Eye className="w-3.5 h-3.5 text-brand-blue" />
                     <span>View Specs</span>
@@ -149,7 +128,7 @@ export default function OnlineStorePage() {
                   <button
                     type="button"
                     onClick={() => setActiveModalProduct(product)}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold bg-brand-green text-brand-navy hover:bg-brand-accentGreen transition-colors shadow-sm"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-sm text-xs font-bold bg-brand-green text-brand-navy hover:bg-brand-accentGreen transition-colors shadow-sm"
                   >
                     <ShoppingBag className="w-3.5 h-3.5" />
                     <span>Order Online</span>

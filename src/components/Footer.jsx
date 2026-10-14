@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Mail, MapPin, Phone, ArrowRight, CheckCircle2, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Mail, MapPin, Phone, ArrowRight, CheckCircle2, Linkedin, Facebook, Instagram } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 
 export default function Footer() {
@@ -58,7 +58,7 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/zyventa/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-green hover:text-brand-navy flex items-center justify-center transition-colors"
@@ -67,7 +67,7 @@ export default function Footer() {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=100089488054496"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-green hover:text-brand-navy flex items-center justify-center transition-colors"
@@ -76,22 +76,13 @@ export default function Footer() {
                 <Facebook className="w-4 h-4" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/zyventa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-green hover:text-brand-navy flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-green hover:text-brand-navy flex items-center justify-center transition-colors"
-                aria-label="Twitter / X"
-              >
-                <Twitter className="w-4 h-4" />
               </a>
             </div>
           </div>

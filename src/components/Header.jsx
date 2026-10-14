@@ -317,7 +317,7 @@ export default function Header() {
             </Link>
             
             <div className="text-xs text-slate-500 text-center mt-2">
-              Mamzar, Dubai – UAE • contact@zyventa.com
+              Mamzar, Dubai, UAE • contact@zyventa.com
             </div>
           </div>
         </div>

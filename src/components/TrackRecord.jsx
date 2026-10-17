@@ -7,7 +7,7 @@ export default function TrackRecord() {
   const max = Math.max(...portfolioGrowth.map((p) => p.products));
 
   return (
-    <section id="track-record" className="bg-brand-paper py-20 sm:py-28">
+    <section id="track-record" className="bg-brand-sand py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-14 lg:gap-16">
         {/* Portfolio growth */}
         <div className="lg:col-span-5">

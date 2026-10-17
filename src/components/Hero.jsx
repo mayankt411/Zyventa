@@ -36,7 +36,7 @@ export default function Hero() {
               We connect global pharmaceutical and biotechnology companies with the patients who need them, from registration to the pharmacy shelf.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-6">
-              <Link href="/contact-us" className="btn btn-solid">
+              <Link href="/contact-us" className="btn btn-accent">
                 Partner with us <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
               <Link href="/services" className="link-accent">
@@ -72,18 +72,18 @@ export default function Hero() {
         </div>
 
         {/* Key figures */}
-        <dl className="grid grid-cols-2 lg:grid-cols-4 border-b border-brand-border">
+        <dl className="mt-8 grid grid-cols-2 lg:grid-cols-4 bg-brand-navy text-white rounded-md overflow-hidden">
           {contentData.stats.map((stat, i) => (
             <div
               key={stat.label}
-              className={`py-8 sm:py-10 pr-4 ${i % 2 === 1 ? 'pl-6 border-l border-brand-border' : ''} ${i === 2 ? 'lg:pl-6 lg:border-l border-brand-border' : ''}`}
+              className={`py-8 sm:py-10 px-6 border-white/15 ${i % 2 === 1 ? 'border-l' : ''} ${i === 2 ? 'lg:border-l' : ''} ${i >= 2 ? 'border-t lg:border-t-0' : ''}`}
             >
               <dt className="sr-only">{stat.label}</dt>
-              <dd className="font-display text-4xl sm:text-5xl text-brand-navy">
+              <dd className="font-display text-4xl sm:text-5xl text-white">
                 <CountUp value={stat.value} /><span className="text-brand-green">{stat.suffix}</span>
               </dd>
-              <dd className="mt-2 text-sm font-semibold text-ink">{stat.label}</dd>
-              <dd className="mt-1 text-xs sm:text-sm text-ink-60 leading-relaxed">{stat.description}</dd>
+              <dd className="mt-2 text-sm font-semibold text-white">{stat.label}</dd>
+              <dd className="mt-1 text-xs sm:text-sm text-brand-onDarkMuted leading-relaxed">{stat.description}</dd>
             </div>
           ))}
         </dl>

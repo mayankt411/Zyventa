@@ -130,7 +130,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden lg:flex">
-            <Link href="/contact-us" className="btn btn-solid !py-2.5">
+            <Link href="/contact-us" className="btn btn-accent !py-2.5">
               Contact us <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
           </div>
@@ -165,7 +165,7 @@ export default function Header() {
               );
             })}
           </nav>
-          <Link href="/contact-us" className="btn btn-solid w-full justify-center mt-6">
+          <Link href="/contact-us" className="btn btn-accent w-full justify-center mt-6">
             Contact us <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
           <p className="text-xs text-ink-60 text-center mt-4">Mamzar, Dubai, UAE · {contentData.site.email}</p>

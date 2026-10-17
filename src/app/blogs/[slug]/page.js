@@ -20,22 +20,24 @@ export default function SingleBlogPage({ params }) {
   return (
     <div className="pt-20 bg-brand-paper">
       <article>
-        <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20">
-          <Link href="/blogs" className="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue hover:text-brand-navy transition-colors">
-            <ArrowLeft className="w-4 h-4" aria-hidden="true" /> All insights
-          </Link>
-          <div className="mt-10 grid lg:grid-cols-12 gap-8 pb-12 border-b border-brand-border">
-            <h1 className="display lg:col-span-9 text-4xl sm:text-5xl lg:text-6xl">{blog.title}</h1>
-            <dl className="lg:col-span-3 lg:self-end text-sm space-y-3">
-              <div>
-                <dt className="field-label !mb-1">Published</dt>
-                <dd className="text-ink">{blog.date}</dd>
-              </div>
-              <div>
-                <dt className="field-label !mb-1">Author</dt>
-                <dd className="text-ink">{blog.author}</dd>
-              </div>
-            </dl>
+        <header className="bg-brand-navy text-white border-b-4 border-brand-green">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20">
+            <Link href="/blogs" className="inline-flex items-center gap-2 text-sm font-semibold text-brand-green hover:text-white transition-colors">
+              <ArrowLeft className="w-4 h-4" aria-hidden="true" /> All insights
+            </Link>
+            <div className="mt-10 grid lg:grid-cols-12 gap-8 pb-12">
+              <h1 className="display !text-white lg:col-span-9 text-4xl sm:text-5xl lg:text-6xl">{blog.title}</h1>
+              <dl className="lg:col-span-3 lg:self-end text-sm space-y-3">
+                <div>
+                  <dt className="field-label !mb-1 !text-brand-onDarkMuted">Published</dt>
+                  <dd>{blog.date}</dd>
+                </div>
+                <div>
+                  <dt className="field-label !mb-1 !text-brand-onDarkMuted">Author</dt>
+                  <dd>{blog.author}</dd>
+                </div>
+              </dl>
+            </div>
           </div>
         </header>
 

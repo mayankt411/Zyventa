@@ -6,39 +6,39 @@ import { Reveal } from '@/components/Motion';
 // Why global brands partner with Zyventa, and the three partnership models.
 export default function WhyPartner() {
   return (
-    <section id="why-zyventa" className="bg-brand-sand py-20 sm:py-28">
+    <section id="why-zyventa" className="bg-brand-navy text-white py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="grid lg:grid-cols-12 gap-8 items-end">
           <div className="lg:col-span-7">
-            <p className="eyebrow">Why Zyventa</p>
-            <h2 className="display mt-4 text-3xl sm:text-5xl">Why global brands <em>partner</em> with us.</h2>
+            <p className="eyebrow !text-brand-green">Why Zyventa</p>
+            <h2 className="display !text-white mt-4 text-3xl sm:text-5xl">Why global brands <em>partner</em> with us.</h2>
           </div>
-          <p className="lg:col-span-5 text-lg text-ink-80 leading-relaxed">
+          <p className="lg:col-span-5 text-lg text-brand-onDarkMuted leading-relaxed">
             Headquartered in Dubai, with commercial reach into Saudi Arabia, Oman and Bahrain through our own teams and channel partners.
           </p>
         </Reveal>
 
-        <Reveal as="ol" stagger className="mt-14 grid sm:grid-cols-2 lg:grid-cols-5 border-t border-brand-navy">
+        <Reveal as="ol" stagger className="mt-14 grid sm:grid-cols-2 lg:grid-cols-5 border-t border-white/30">
           {contentData.whyPartner.map((item, i) => (
             <li
               key={item.title}
-              className={`py-8 pr-6 border-b border-brand-border lg:border-b-0 ${i > 0 ? 'lg:pl-6 lg:border-l' : ''} border-brand-border`}
+              className={`py-8 pr-6 border-b border-white/15 lg:border-b-0 ${i > 0 ? 'lg:pl-6 lg:border-l' : ''}`}
             >
-              <span className="font-display text-brand-blue">0{i + 1}</span>
-              <h3 className="mt-3 font-display text-xl text-brand-navy">{item.title}</h3>
-              <p className="mt-2 text-sm text-ink-60 leading-relaxed">{item.description}</p>
+              <span className="font-display text-brand-green">0{i + 1}</span>
+              <h3 className="mt-3 font-display text-xl text-white">{item.title}</h3>
+              <p className="mt-2 text-sm text-brand-onDarkMuted leading-relaxed">{item.description}</p>
             </li>
           ))}
         </Reveal>
 
         <div className="mt-16 sm:mt-20">
-          <p className="field-label">Three ways to partner</p>
+          <p className="field-label !text-brand-onDarkMuted">Three ways to partner</p>
           <Reveal stagger className="mt-4 grid md:grid-cols-3 gap-4">
             {contentData.partnerModels.map((model) => (
               <Link
                 key={model.id}
                 href={`/contact-us?type=${model.id}`}
-                className="group block bg-brand-paper rounded-md p-7 border border-brand-border hover:border-brand-navy transition-colors"
+                className="group block bg-white rounded-md p-7 border-t-4 border-brand-green hover:-translate-y-1 transition-transform"
               >
                 <h3 className="font-display text-2xl text-brand-navy">{model.title}</h3>
                 <p className="mt-2 text-sm text-ink-60">{model.description}</p>

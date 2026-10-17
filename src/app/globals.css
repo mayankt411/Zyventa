@@ -241,7 +241,7 @@
 .btn-line { background: transparent; color: rgb(var(--c-navy)); }
 .btn-line:hover { background: rgb(var(--c-navy)); color: rgb(var(--c-paper)); }
 .btn-green, .btn-accent { background: rgb(var(--c-accent)); color: rgb(var(--c-navy-dark)); border-color: rgb(var(--c-accent)); }
-.btn-green:hover, .btn-accent:hover { background: rgb(var(--c-paper)); border-color: rgb(var(--c-paper)); }
+.btn-green:hover, .btn-accent:hover { background: rgb(var(--c-accent-hover)); border-color: rgb(var(--c-accent-hover)); }
 
 /* Underlined text link with an orange rule */
 .link-accent {

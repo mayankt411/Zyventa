@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import Link from 'next/link';
 import { Play, Pause, ArrowRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
+import { CountUp } from '@/components/Motion';
 
 export default function Hero() {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -79,7 +80,7 @@ export default function Hero() {
             >
               <dt className="sr-only">{stat.label}</dt>
               <dd className="font-display text-4xl sm:text-5xl text-brand-navy">
-                {stat.value}<span className="text-brand-green">{stat.suffix}</span>
+                <CountUp value={stat.value} /><span className="text-brand-green">{stat.suffix}</span>
               </dd>
               <dd className="mt-2 text-sm font-semibold text-ink">{stat.label}</dd>
               <dd className="mt-1 text-xs sm:text-sm text-ink-60 leading-relaxed">{stat.description}</dd>

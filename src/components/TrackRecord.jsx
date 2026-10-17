@@ -1,4 +1,5 @@
 import contentData from '@/data/zyventaContent.json';
+import { Reveal, CountUp } from '@/components/Motion';
 
 // Portfolio growth (product counts only) and first-to-market launches.
 export default function TrackRecord() {
@@ -14,20 +15,20 @@ export default function TrackRecord() {
           <h2 className="display mt-4 text-3xl sm:text-4xl">A portfolio that has grown <em>five-fold</em> since 2022.</h2>
 
           <figure className="mt-10" aria-label="Number of products by year">
-            <div className="flex items-end gap-3 sm:gap-5 h-56 border-b border-brand-navy">
+            <Reveal variant="bars" className="flex items-end gap-3 sm:gap-5 h-56 border-b border-brand-navy">
               {portfolioGrowth.map((p, i) => {
                 const isLast = i === portfolioGrowth.length - 1;
                 return (
                   <div key={p.year} className="flex-1 flex flex-col items-center justify-end h-full">
-                    <span className={`font-display text-2xl sm:text-3xl ${isLast ? 'text-brand-navy' : 'text-ink-60'}`}>{p.products}</span>
+                    <CountUp value={p.products} className={`font-display text-2xl sm:text-3xl ${isLast ? 'text-brand-navy' : 'text-ink-60'}`} />
                     <div
-                      className={`mt-2 w-full rounded-t ${isLast ? 'bg-brand-green' : 'bg-brand-navy/80'}`}
+                      className={`bar mt-2 w-full rounded-t ${isLast ? 'bg-brand-green' : 'bg-brand-navy/80'}`}
                       style={{ height: `${(p.products / max) * 75}%` }}
                     />
                   </div>
                 );
               })}
-            </div>
+            </Reveal>
             <div className="flex gap-3 sm:gap-5 mt-3">
               {portfolioGrowth.map((p) => (
                 <span key={p.year} className="flex-1 text-center text-xs font-semibold text-ink-60">{p.year}</span>
@@ -50,7 +51,7 @@ export default function TrackRecord() {
         <div className="lg:col-span-7">
           <div className="bg-brand-navy text-brand-paper rounded-md p-8 sm:p-10">
             <p className="eyebrow !text-brand-green">First to market in the UAE, Oman and KSA</p>
-            <ol className="mt-6 grid sm:grid-cols-2 gap-x-8">
+            <Reveal as="ol" stagger className="mt-6 grid sm:grid-cols-2 gap-x-8">
               {firstToMarket.regionFirsts.map((p, i) => (
                 <li key={p.name} className="grid grid-cols-[2rem_1fr] items-baseline py-3 border-b border-white/15">
                   <span className="font-display text-sm text-brand-green">{String(i + 1).padStart(2, '0')}</span>
@@ -60,10 +61,10 @@ export default function TrackRecord() {
                   </span>
                 </li>
               ))}
-            </ol>
+            </Reveal>
           </div>
 
-          <div className="mt-6 grid sm:grid-cols-2 gap-6">
+          <Reveal stagger className="mt-6 grid sm:grid-cols-2 gap-6">
             <div className="border-t-2 border-brand-green pt-5">
               <p className="field-label">First generic entrant in the UAE</p>
               <p className="font-display text-2xl text-brand-navy">{firstToMarket.firstGenerics.join(' and ')}</p>
@@ -72,7 +73,7 @@ export default function TrackRecord() {
               <p className="field-label">Differentiated UAE firsts</p>
               <p className="text-ink-80">{firstToMarket.uaeFirsts.join(', ')}</p>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

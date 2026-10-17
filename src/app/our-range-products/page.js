@@ -6,6 +6,7 @@ import { ArrowRight, ArrowDown, X } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import ProductDetailModal from '@/components/ProductDetailModal';
 import HomeCta from '@/components/HomeCta';
+import { CountUp, Parallax } from '@/components/Motion';
 import {
   SearchField, ChipGroup, ProductCard, ProductGrid, EmptyState,
   PackCollage, TherapyTiles, Spotlight, therapyStyle,
@@ -75,7 +76,7 @@ export default function OurRangeProductsPage() {
             <dl className="mt-10 grid grid-cols-3 gap-6 border-t border-white/15 pt-6 max-w-lg">
               {stats.map((s) => (
                 <div key={s.label}>
-                  <dd className="font-display text-4xl sm:text-5xl">{s.value}</dd>
+                  <dd className="font-display text-4xl sm:text-5xl"><CountUp value={s.value} /></dd>
                   <dt className="mt-1 text-xs text-brand-onDarkMuted">{s.label}</dt>
                 </div>
               ))}
@@ -90,7 +91,9 @@ export default function OurRangeProductsPage() {
             </div>
           </div>
           <div className="lg:col-span-6 reveal" style={{ animationDelay: '.15s' }}>
-            <PackCollage products={byId(COLLAGE_IDS)} />
+            <Parallax speed={-0.06}>
+              <PackCollage products={byId(COLLAGE_IDS)} />
+            </Parallax>
           </div>
         </div>
       </section>
@@ -132,7 +135,7 @@ export default function OurRangeProductsPage() {
       {/* Catalogue */}
       <section ref={catalogueRef} id="catalogue" className="bg-brand-paper scroll-mt-20">
         {/* Sticky toolbar */}
-        <div className="sticky top-20 z-30 bg-brand-paper/95 backdrop-blur border-b border-brand-border">
+        <div className="sticky top-16 z-30 bg-brand-paper/95 backdrop-blur border-b border-brand-border">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center gap-4">
             <div className="md:w-80">
               <SearchField compact value={searchTerm} onChange={setSearchTerm} placeholder="Search name, ingredient or indication" />

@@ -56,13 +56,13 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 site-header-scrolled ${isScrolled ? 'shadow-[0_8px_24px_-16px_rgb(var(--c-navy)/0.35)]' : ''}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className={`flex items-center justify-between transition-[height] duration-300 ${isScrolled ? 'h-16' : 'h-20'}`}>
           <Link
             href="/"
             className="flex items-center rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green"
             aria-label="Zyventa home"
           >
-            <img src={contentData.site.logo} alt="Zyventa" className="h-10 w-auto object-contain" />
+            <img src={contentData.site.logo} alt="Zyventa" className={`w-auto object-contain transition-[height] duration-300 ${isScrolled ? 'h-8' : 'h-10'}`} />
           </Link>
 
           {/* Desktop navigation */}

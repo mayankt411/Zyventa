@@ -1,5 +1,6 @@
 import { Search, ArrowRight, ArrowUpRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
+import { Reveal } from '@/components/Motion';
 
 const { productBadges } = contentData;
 
@@ -155,7 +156,7 @@ export function PackCollage({ products }) {
 // Therapy-area tiles that double as the main category filter.
 export function TherapyTiles({ categories, products, value, onChange }) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+    <Reveal stagger className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
       {categories.map((cat) => {
         const items = products.filter((p) => p.category === cat);
         const style = therapyStyle(cat);
@@ -190,14 +191,14 @@ export function TherapyTiles({ categories, products, value, onChange }) {
           </button>
         );
       })}
-    </div>
+    </Reveal>
   );
 }
 
 // Large featured cards for first-to-market launches.
 export function Spotlight({ products, onOpen }) {
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <Reveal stagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
       {products.map((p) => {
         const style = therapyStyle(p.category);
         return (
@@ -218,7 +219,7 @@ export function Spotlight({ products, onOpen }) {
           </button>
         );
       })}
-    </div>
+    </Reveal>
   );
 }
 
@@ -274,7 +275,7 @@ export function ProductCard({ product, onOpen, actionLabel }) {
 }
 
 export function ProductGrid({ children }) {
-  return <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">{children}</div>;
+  return <Reveal stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">{children}</Reveal>;
 }
 
 export function EmptyState({ onReset }) {

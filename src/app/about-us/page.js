@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import PageHeader from '@/components/PageHeader';
+import { Reveal } from '@/components/Motion';
 
 export const metadata = {
   title: 'About Us - Zyventa',
@@ -43,14 +44,14 @@ export default function AboutUsPage() {
 
       {/* Mission and vision */}
       <section className="bg-brand-navy text-brand-paper">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2">
+        <Reveal stagger className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2">
           {PRINCIPLES.map((p, i) => (
             <div key={p.label} className={`py-16 sm:py-20 ${i === 0 ? 'md:pr-14' : 'md:pl-14 border-t md:border-t-0 md:border-l border-white/15'}`}>
               <p className="eyebrow !text-brand-green">{p.label}</p>
               <p className="mt-6 font-display text-2xl sm:text-[1.75rem] leading-snug">{p.text}</p>
             </div>
           ))}
-        </div>
+        </Reveal>
       </section>
 
       {/* Footprint and drug store */}

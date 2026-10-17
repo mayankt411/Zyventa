@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import PageHeader from '@/components/PageHeader';
 import HomeCta from '@/components/HomeCta';
+import { Reveal } from '@/components/Motion';
 
 export const metadata = {
   title: 'Services - Zyventa',
@@ -38,7 +39,7 @@ export default function ServicesPage() {
           key={div.id}
           className={`scroll-mt-20 ${idx % 2 ? 'bg-brand-sand' : 'bg-brand-paper'}`}
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             <div className={`lg:col-span-6 ${idx % 2 ? 'lg:order-2' : ''}`}>
               <p className="font-display text-6xl sm:text-7xl text-brand-green leading-none">0{idx + 1}</p>
               <h2 className="display mt-6 text-3xl sm:text-4xl">{div.title}</h2>
@@ -57,7 +58,7 @@ export default function ServicesPage() {
                 <img src={div.image} alt={div.title} className="w-full h-full object-cover" loading="lazy" />
               </div>
             </div>
-          </div>
+          </Reveal>
         </section>
       ))}
 
@@ -70,7 +71,7 @@ export default function ServicesPage() {
               <h2 className="display mt-4 text-3xl sm:text-4xl">Five verticals, one integrated <em>growth engine</em>.</h2>
             </div>
           </div>
-          <ol className="mt-12 grid sm:grid-cols-2 lg:grid-cols-5 border-t border-brand-navy">
+          <Reveal as="ol" stagger className="mt-12 grid sm:grid-cols-2 lg:grid-cols-5 border-t border-brand-navy">
             {contentData.verticals.map((v, i) => (
               <li key={v.title} className={`py-8 pr-6 border-b border-brand-border lg:border-b-0 ${i > 0 ? 'lg:pl-6 lg:border-l' : ''}`}>
                 <span className="font-display text-brand-blue">0{i + 1}</span>
@@ -78,12 +79,12 @@ export default function ServicesPage() {
                 <p className="mt-2 text-sm text-ink-60 leading-relaxed">{v.description}</p>
               </li>
             ))}
-          </ol>
+          </Reveal>
 
           {/* Route to market */}
           <div className="mt-20">
             <p className="field-label">From manufacturer to patient</p>
-            <ol className="mt-4 grid md:grid-cols-5 gap-3">
+            <Reveal as="ol" stagger className="mt-4 grid md:grid-cols-5 gap-3">
               {contentData.businessFlow.map((step, i) => (
                 <li
                   key={step}
@@ -97,7 +98,7 @@ export default function ServicesPage() {
                   <span className="mt-3 font-display text-lg leading-snug">{step}</span>
                 </li>
               ))}
-            </ol>
+            </Reveal>
             <p className="mt-4 text-sm text-ink-60 max-w-3xl">
               Trademarks are owned by Zyventa, or by another marketing authorisation holder with Zyventa holding distribution rights. Our field teams work with doctors to build prescriptions across hospitals and pharmacies.
             </p>

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import PageHeader from '@/components/PageHeader';
+import { Reveal } from '@/components/Motion';
 
 export const metadata = {
   title: 'Blogs & Insights - Zyventa',
@@ -23,7 +24,7 @@ export default function BlogsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Featured article */}
           {featured && (
-            <article className="group grid lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+            <Reveal as="article" className="group grid lg:grid-cols-12 gap-8 lg:gap-14 items-center">
               <Link href={`/blogs/${featured.slug}`} className="lg:col-span-7 block aspect-[16/10] rounded-md overflow-hidden bg-brand-sand">
                 <img src={COVER} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </Link>
@@ -37,12 +38,12 @@ export default function BlogsPage() {
                   Read article <ArrowRight className="w-4 h-4" aria-hidden="true" />
                 </Link>
               </div>
-            </article>
+            </Reveal>
           )}
 
           {/* Remaining articles as an index */}
           {rest.length > 0 && (
-            <ol className="mt-20 border-t border-brand-navy">
+            <Reveal as="ol" stagger className="mt-20 border-t border-brand-navy">
               {rest.map((blog) => (
                 <li key={blog.slug} className="border-b border-brand-border">
                   <Link
@@ -58,7 +59,7 @@ export default function BlogsPage() {
                   </Link>
                 </li>
               ))}
-            </ol>
+            </Reveal>
           )}
         </div>
       </section>

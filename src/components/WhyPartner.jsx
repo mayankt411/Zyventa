@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
+import { Reveal } from '@/components/Motion';
 
 // Why global brands partner with Zyventa, and the three partnership models.
 export default function WhyPartner() {
   return (
     <section id="why-zyventa" className="bg-brand-sand py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-12 gap-8 items-end">
+        <Reveal className="grid lg:grid-cols-12 gap-8 items-end">
           <div className="lg:col-span-7">
             <p className="eyebrow">Why Zyventa</p>
             <h2 className="display mt-4 text-3xl sm:text-5xl">Why global brands <em>partner</em> with us.</h2>
@@ -15,9 +16,9 @@ export default function WhyPartner() {
           <p className="lg:col-span-5 text-lg text-ink-80 leading-relaxed">
             Headquartered in Dubai, with commercial reach into Saudi Arabia, Oman and Bahrain through our own teams and channel partners.
           </p>
-        </div>
+        </Reveal>
 
-        <ol className="mt-14 grid sm:grid-cols-2 lg:grid-cols-5 border-t border-brand-navy">
+        <Reveal as="ol" stagger className="mt-14 grid sm:grid-cols-2 lg:grid-cols-5 border-t border-brand-navy">
           {contentData.whyPartner.map((item, i) => (
             <li
               key={item.title}
@@ -28,11 +29,11 @@ export default function WhyPartner() {
               <p className="mt-2 text-sm text-ink-60 leading-relaxed">{item.description}</p>
             </li>
           ))}
-        </ol>
+        </Reveal>
 
         <div className="mt-16 sm:mt-20">
           <p className="field-label">Three ways to partner</p>
-          <div className="mt-4 grid md:grid-cols-3 gap-4">
+          <Reveal stagger className="mt-4 grid md:grid-cols-3 gap-4">
             {contentData.partnerModels.map((model) => (
               <Link
                 key={model.id}
@@ -46,7 +47,7 @@ export default function WhyPartner() {
                 </span>
               </Link>
             ))}
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

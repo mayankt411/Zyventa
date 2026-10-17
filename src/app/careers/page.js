@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import PageHeader from '@/components/PageHeader';
+import { Reveal } from '@/components/Motion';
 
 export const metadata = {
   title: 'Careers - Zyventa',
@@ -26,14 +27,14 @@ export default function CareersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-0">
           <div className="lg:col-span-7 lg:pr-16">
             <p className="eyebrow">Where you could fit</p>
-            <ol className="mt-8 border-t border-brand-navy">
+            <Reveal as="ol" stagger className="mt-8 border-t border-brand-navy">
               {AREAS.map((area, i) => (
                 <li key={area} className="grid grid-cols-[3rem_1fr] items-baseline py-6 border-b border-brand-border">
                   <span className="font-display text-brand-blue text-lg">0{i + 1}</span>
                   <span className="font-display text-2xl sm:text-3xl text-brand-navy">{area}</span>
                 </li>
               ))}
-            </ol>
+            </Reveal>
           </div>
 
           <aside className="lg:col-span-5 bg-brand-navy text-brand-paper rounded-md p-8 sm:p-12 flex flex-col justify-between gap-12">

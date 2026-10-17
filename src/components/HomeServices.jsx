@@ -1,21 +1,22 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
+import { Reveal } from '@/components/Motion';
 
 export default function HomeServices() {
   return (
     <section id="services" className="bg-white py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-16">
-        <div className="lg:col-span-4">
+        <Reveal className="lg:col-span-4">
           <p className="eyebrow">What we do</p>
           <h2 className="display mt-4 text-3xl sm:text-4xl">Five divisions, one partner.</h2>
           <p className="mt-5 text-ink-80 leading-relaxed">
             From registration to the pharmacy shelf, every step of market entry is handled in-house.
           </p>
           <Link href="/services" className="btn btn-line mt-8">All services</Link>
-        </div>
+        </Reveal>
 
-        <ol className="lg:col-span-8 rule-top">
+        <Reveal as="ol" stagger className="lg:col-span-8 rule-top">
           {contentData.distributionDivisions.map((div, i) => (
             <li key={div.id} className="border-b border-slate-200">
               <Link
@@ -31,7 +32,7 @@ export default function HomeServices() {
               </Link>
             </li>
           ))}
-        </ol>
+        </Reveal>
       </div>
     </section>
   );

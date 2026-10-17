@@ -5,11 +5,14 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 // useLayoutEffect warns during server rendering; fall back to useEffect there.
 const useIsoLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
-// Scroll-triggered motion. Hidden start states only apply when <html> has the
-// `motion-ok` class (set in layout.js before paint, and only when the visitor
-// has not asked for reduced motion), so content is never hidden without JS.
+// Scroll-triggered motion. Hidden start states only apply when <html> has
+// `motion-ok` or `motion-reduce` (set in layout.js before paint), so content is
+// never hidden without JS. Reduced-motion visitors get fades and counters but
+// no sliding, growing or parallax (see globals.css).
 
-function useInView(ref, { once = true, rootMargin = '0px 0px -10% 0px' } = {}) {
+// The huge top margin counts anything above the viewport as seen, so sections
+// skipped by a fast scroll, End key or anchor jump still reveal instead of staying hidden.
+function useInView(ref, { once = true, rootMargin = '100000px 0px -10% 0px' } = {}) {
   const [inView, setInView] = useState(false);
   useEffect(() => {
     const el = ref.current;
@@ -59,12 +62,11 @@ export function CountUp({ value, duration = 1400, className = '' }) {
 
   // Reset to zero before first paint so on-screen counters don't flash the final value.
   useIsoLayoutEffect(() => {
-    if (prefersReducedMotion()) return;
     setCurrent(0);
   }, []);
 
   useEffect(() => {
-    if (!inView || prefersReducedMotion()) return;
+    if (!inView) return;
     let frame;
     const start = performance.now();
     const tick = (now) => {

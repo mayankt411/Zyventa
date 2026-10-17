@@ -329,7 +329,8 @@ h1.font-heading, h2.font-heading, h3.font-heading {
 .font-display em, .display em { font-style: normal; }
 
 /* Scroll motion (see components/Motion.jsx). Start states apply only when
-   html.motion-ok is set, i.e. JS is running and reduced motion is off.
+   html has motion-ok (full motion) or motion-reduce (fades only, for visitors
+   who prefer reduced motion); without JS neither is set and nothing is hidden.
    Entrances use one-shot animations (fill-mode backwards) so they never
    interfere with hover transitions once they have finished. */
 @keyframes rise-in {
@@ -352,11 +353,29 @@ h1.font-heading, h2.font-heading, h3.font-heading {
   animation: bar-grow 1.1s cubic-bezier(.16,1,.3,1) backwards;
 }
 
-.motion-ok .reveal-stagger.is-visible > *:nth-child(2), .motion-ok .reveal-bars.is-visible > *:nth-child(2) .bar { animation-delay: .08s; }
-.motion-ok .reveal-stagger.is-visible > *:nth-child(3), .motion-ok .reveal-bars.is-visible > *:nth-child(3) .bar { animation-delay: .16s; }
-.motion-ok .reveal-stagger.is-visible > *:nth-child(4), .motion-ok .reveal-bars.is-visible > *:nth-child(4) .bar { animation-delay: .24s; }
-.motion-ok .reveal-stagger.is-visible > *:nth-child(5) { animation-delay: .32s; }
-.motion-ok .reveal-stagger.is-visible > *:nth-child(6) { animation-delay: .4s; }
-.motion-ok .reveal-stagger.is-visible > *:nth-child(7) { animation-delay: .48s; }
-.motion-ok .reveal-stagger.is-visible > *:nth-child(8) { animation-delay: .56s; }
-.motion-ok .reveal-stagger.is-visible > *:nth-child(n+9) { animation-delay: .62s; }
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.motion-reduce .reveal-up:not(.is-visible),
+.motion-reduce .reveal-stagger:not(.is-visible) > *,
+.motion-reduce .reveal-bars:not(.is-visible) .bar { opacity: 0; }
+/* Longhands, so stagger delays still apply; the !important duration beats the
+   global reduced-motion rule that zeroes animation durations. */
+.motion-reduce .reveal-up.is-visible,
+.motion-reduce .reveal-stagger.is-visible > *,
+.motion-reduce .reveal-bars.is-visible .bar {
+  animation-name: fade-in;
+  animation-duration: .9s !important;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+}
+
+:is(.motion-ok, .motion-reduce) .reveal-stagger.is-visible > *:nth-child(2), :is(.motion-ok, .motion-reduce) .reveal-bars.is-visible > *:nth-child(2) .bar { animation-delay: .08s; }
+:is(.motion-ok, .motion-reduce) .reveal-stagger.is-visible > *:nth-child(3), :is(.motion-ok, .motion-reduce) .reveal-bars.is-visible > *:nth-child(3) .bar { animation-delay: .16s; }
+:is(.motion-ok, .motion-reduce) .reveal-stagger.is-visible > *:nth-child(4), :is(.motion-ok, .motion-reduce) .reveal-bars.is-visible > *:nth-child(4) .bar { animation-delay: .24s; }
+:is(.motion-ok, .motion-reduce) .reveal-stagger.is-visible > *:nth-child(5) { animation-delay: .32s; }
+:is(.motion-ok, .motion-reduce) .reveal-stagger.is-visible > *:nth-child(6) { animation-delay: .4s; }
+:is(.motion-ok, .motion-reduce) .reveal-stagger.is-visible > *:nth-child(7) { animation-delay: .48s; }
+:is(.motion-ok, .motion-reduce) .reveal-stagger.is-visible > *:nth-child(8) { animation-delay: .56s; }
+:is(.motion-ok, .motion-reduce) .reveal-stagger.is-visible > *:nth-child(n+9) { animation-delay: .62s; }

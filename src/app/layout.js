@@ -14,10 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        {/* Enable scroll motion before first paint unless the visitor prefers reduced motion */}
+        {/* Enable scroll motion before first paint; reduced-motion visitors get fades only */}
         <script
           dangerouslySetInnerHTML={{
-            __html: "if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion-ok')",
+            __html: "document.documentElement.classList.add(window.matchMedia('(prefers-reduced-motion: reduce)').matches?'motion-reduce':'motion-ok')",
           }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

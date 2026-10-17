@@ -1,236 +1,162 @@
 'use client';
 
-import { useState } from 'react';
-import { MapPin, Mail, Phone, Clock, Send, CheckCircle2, ArrowRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { CheckCircle2, ArrowRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import PageHeader from '@/components/PageHeader';
+import { submitEnquiry, enquiryMailto } from '@/lib/submitEnquiry';
+
+const EMPTY_FORM = { name: '', email: '', phone: '', subject: 'General Inquiry', message: '' };
 
 export default function ContactUsPage() {
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: 'General Inquiry',
-    message: ''
-  });
+  const [formData, setFormData] = useState(EMPTY_FORM);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError(false);
+    const result = await submitEnquiry('contact', { ...formData, website: e.target.website.value });
+    setSending(false);
+    if (result.ok) setSubmitted(true);
+    else setError(true);
   };
+
+  const fallbackMailto = enquiryMailto(contentData.site.email, formData.subject, [
+    formData.message,
+    '',
+    formData.name,
+    formData.phone,
+  ]);
+
+  // Preselect the enquiry type when arriving from a partnership link (?type=distribution)
+  useEffect(() => {
+    const type = new URLSearchParams(window.location.search).get('type');
+    const match = contentData.partnerModels.find((m) => m.id === type);
+    if (match) setFormData((f) => ({ ...f, subject: match.title }));
+  }, []);
+
+  const update = (key) => (e) => setFormData({ ...formData, [key]: e.target.value });
+
+  const details = [
+    { label: 'Office', value: contentData.site.address },
+    { label: 'Email', value: contentData.site.email, href: `mailto:${contentData.site.email}` },
+    { label: 'Hours', value: 'Monday to Friday, 8:30 AM to 5:30 PM (GST)' },
+  ];
 
   return (
     <div>
-      
-      {/* Banner */}
-      <PageHeader eyebrow="Get in Touch" title={<>Let&apos;s Start Talk With Us</>}>Get in touch and let us know how we can help your healthcare brand thrive across the GCC and Middle East.</PageHeader>
+      <PageHeader eyebrow="Contact" title={<>Let&apos;s <em>talk</em>.</>}>
+        Tell us how we can help your healthcare brand grow across the GCC and Middle East.
+      </PageHeader>
 
-      {/* Main Form & Info Section */}
-      <section className="py-24 bg-brand-paper">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
-            
-            {/* Left Contact Details (5 Cols) */}
-            <div className="lg:col-span-5 space-y-8">
-              <div>
-                <p className="flex items-center gap-2 font-heading text-xs font-bold tracking-[0.14em] uppercase text-ink-60">
-                  <span className="w-2 h-2 rounded-sm bg-brand-green"></span>
-                  <span>Direct Communication</span>
-                </p>
-                <h2 className="mt-3 text-3xl font-bold text-ink font-heading">
-                  Get in touch
-                </h2>
-                <p className="mt-3 text-slate-600 text-sm leading-relaxed">
-                  We serve as a link between international healthcare companies and GCC and the growing markets of the Middle East.
-                </p>
-              </div>
-
-              {/* Info Cards */}
-              <div className="space-y-4">
-                <div className="p-6 rounded-sm bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                  <div className="p-3 rounded-sm bg-brand-navy text-brand-green flex-shrink-0">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-ink font-heading">
-                      Office Address
-                    </h3>
-                    <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                      {contentData.site.address}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="p-6 rounded-sm bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                  <div className="p-3 rounded-sm bg-brand-navy text-brand-green flex-shrink-0">
-                    <Mail className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-ink font-heading">
-                      Email Address
-                    </h3>
-                    <a
-                      href={`mailto:${contentData.site.email}`}
-                      className="mt-1 inline-block text-xs sm:text-sm text-brand-blue font-semibold hover:underline"
-                    >
-                      {contentData.site.email}
-                    </a>
-                  </div>
-                </div>
-
-                <div className="p-6 rounded-sm bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                  <div className="p-3 rounded-sm bg-brand-navy text-brand-green flex-shrink-0">
-                    <Clock className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-ink font-heading">
-                      Operating Hours
-                    </h3>
-                    <p className="mt-1 text-xs sm:text-sm text-slate-600">
-                      Monday – Friday: 8:30 AM – 5:30 PM (GST)
-                    </p>
-                  </div>
-                </div>
-              </div>
-
+      <section className="py-16 sm:py-24 bg-brand-paper">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16">
+          {/* Details panel */}
+          <aside className="lg:col-span-5 bg-brand-navy text-brand-paper rounded-md p-8 sm:p-12 flex flex-col justify-between gap-12">
+            <div>
+              <p className="eyebrow !text-brand-green">Dubai headquarters</p>
+              <p className="mt-6 font-display text-2xl sm:text-3xl leading-snug">
+                The link between international healthcare companies and the growing markets of the Middle East.
+              </p>
             </div>
+            <dl className="border-t border-white/15">
+              {details.map(({ label, value, href }) => (
+                <div key={label} className="py-5 border-b border-white/15">
+                  <dt className="field-label !text-brand-onDarkMuted">{label}</dt>
+                  <dd className="text-sm leading-relaxed">
+                    {href ? (
+                      <a href={href} className="font-semibold hover:text-brand-green transition-colors">{value}</a>
+                    ) : (
+                      value
+                    )}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </aside>
 
-            {/* Right Contact Form (7 Cols) */}
-            <div className="lg:col-span-7">
-              <div className="bg-white rounded-sm p-8 sm:p-12 border border-slate-200/80 shadow-xl shadow-slate-100">
-                <h3 className="text-2xl sm:text-3xl font-bold text-ink font-heading mb-2">
-                  Send us a message
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-500 mb-8">
-                  Fill out the form below and our regional distribution executive will reply promptly.
+          {/* Form */}
+          <div className="lg:col-span-7">
+            <h2 className="display text-3xl sm:text-4xl">Send us a message</h2>
+            <p className="mt-3 text-ink-60">Fill out the form and our regional team will reply promptly.</p>
+
+            {submitted ? (
+              <div className="mt-10 border-t border-brand-navy pt-10 animate-fade-up">
+                <CheckCircle2 className="w-10 h-10 text-brand-green" />
+                <p className="mt-4 font-display text-3xl text-brand-navy">Message sent.</p>
+                <p className="mt-2 text-ink-80 max-w-md">
+                  Thank you for contacting Zyventa. We have received your message and will be in touch shortly.
                 </p>
-
-                {submitted ? (
-                  <div className="p-10 rounded-sm bg-brand-green/15 text-brand-navy text-center space-y-4 animate-fade-up">
-                    <CheckCircle2 className="w-12 h-12 text-brand-green mx-auto" />
-                    <h4 className="text-xl font-bold font-heading">
-                      Message Sent Successfully!
-                    </h4>
-                    <p className="text-sm text-slate-700 max-w-md mx-auto">
-                      Thank you for contacting Zyventa. We have received your message and will get in touch shortly.
-                    </p>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setSubmitted(false);
-                        setFormData({ name: '', email: '', phone: '', subject: 'General Inquiry', message: '' });
-                      }}
-                      className="mt-4 px-6 py-2.5 rounded-sm bg-brand-navy text-white text-xs font-semibold hover:bg-brand-blue transition-colors"
-                    >
-                      Send Another Message
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-5">
-                    <div className="grid sm:grid-cols-2 gap-5">
-                      <div>
-                        <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-                          Your Name *
-                        </label>
-                        <input
-                          required
-                          type="text"
-                          placeholder="e.g. Dr. Ahmed Al Mansoori"
-                          value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="w-full px-4 py-3 rounded-sm border border-slate-200 text-sm focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-                          Your Email *
-                        </label>
-                        <input
-                          required
-                          type="email"
-                          placeholder="ahmed@example.com"
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full px-4 py-3 rounded-sm border border-slate-200 text-sm focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 gap-5">
-                      <div>
-                        <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-                          Phone Number
-                        </label>
-                        <input
-                          type="tel"
-                          placeholder="+971 50 123 4567"
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full px-4 py-3 rounded-sm border border-slate-200 text-sm focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-                          Subject / Inquiry Type
-                        </label>
-                        <select
-                          value={formData.subject}
-                          onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                          className="w-full px-4 py-3 rounded-sm border border-slate-200 text-sm focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green bg-white"
-                        >
-                          <option value="General Inquiry">General Inquiry</option>
-                          <option value="Brand Partnership">Brand Partnership & Representation</option>
-                          <option value="Wholesale Bulk Rates">Wholesale Bulk Medicine Purchase</option>
-                          <option value="Regulatory Support">Regulatory Support</option>
-                          <option value="Careers">Careers</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
-                        Your Message *
-                      </label>
-                      <textarea
-                        required
-                        rows="4"
-                        placeholder="How can Zyventa assist your healthcare organization?"
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full px-4 py-3 rounded-sm border border-slate-200 text-sm focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green"
-                      ></textarea>
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="w-full py-4 rounded-sm bg-brand-green text-brand-navy font-bold text-sm sm:text-base hover:bg-brand-accentGreen transition-all duration-300 shadow-lg shadow-brand-green/20 flex items-center justify-center gap-2 group"
-                    >
-                      <span>Send Message</span>
-                      <Send className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                    </button>
-                  </form>
-                )}
-
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSubmitted(false);
+                    setFormData(EMPTY_FORM);
+                  }}
+                  className="link-accent mt-8"
+                >
+                  Send another message
+                </button>
               </div>
-            </div>
-
+            ) : (
+              <form onSubmit={handleSubmit} className="mt-10 grid sm:grid-cols-2 gap-6">
+                <label>
+                  <span className="field-label">Your name *</span>
+                  <input required type="text" placeholder="Dr. Ahmed Al Mansoori" value={formData.name} onChange={update('name')} className="field" />
+                </label>
+                <label>
+                  <span className="field-label">Email *</span>
+                  <input required type="email" placeholder="ahmed@example.com" value={formData.email} onChange={update('email')} className="field" />
+                </label>
+                <label>
+                  <span className="field-label">Phone</span>
+                  <input type="tel" placeholder="+971 50 123 4567" value={formData.phone} onChange={update('phone')} className="field" />
+                </label>
+                <label>
+                  <span className="field-label">Enquiry type</span>
+                  <select value={formData.subject} onChange={update('subject')} className="field">
+                    <option value="General Inquiry">General enquiry</option>
+                    {contentData.partnerModels.map((m) => (
+                      <option key={m.id} value={m.title}>{m.title}</option>
+                    ))}
+                    <option value="Wholesale Bulk Rates">Wholesale bulk purchase</option>
+                    <option value="Regulatory Support">Regulatory support</option>
+                    <option value="Careers">Careers</option>
+                  </select>
+                </label>
+                <label className="sm:col-span-2">
+                  <span className="field-label">Message *</span>
+                  <textarea required rows="5" placeholder="How can Zyventa help your organisation?" value={formData.message} onChange={update('message')} className="field" />
+                </label>
+                <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+                <div className="sm:col-span-2">
+                  {error && (
+                    <p role="alert" className="mb-4 text-sm text-red-700">
+                      Your message couldn&apos;t be sent right now.{' '}
+                      <a href={fallbackMailto} className="font-bold underline">Email it to {contentData.site.email}</a> instead.
+                    </p>
+                  )}
+                  <button type="submit" disabled={sending} className="btn btn-solid disabled:opacity-60">
+                    {sending ? 'Sending…' : 'Send message'} <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
-
         </div>
       </section>
 
-      {/* Map Embed Section */}
-      <section className="h-96 w-full relative bg-slate-200">
+      <section className="h-96 w-full bg-brand-sand">
         <iframe
-          title="Zyventa Office Location - Mamzar Dubai"
+          title="Zyventa office location, Mamzar, Dubai"
           src="https://maps.google.com/maps?q=Omniyat+Building+Mamzar+Dubai&t=&z=14&ie=UTF8&iwloc=&output=embed"
-          className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-500"
+          className="w-full h-full border-0 grayscale-[60%] sepia-[15%]"
           loading="lazy"
         ></iframe>
       </section>
-
     </div>
   );
 }

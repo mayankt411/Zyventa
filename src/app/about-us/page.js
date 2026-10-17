@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Target, Compass, Users, Award, ShieldCheck, HeartPulse, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import PageHeader from '@/components/PageHeader';
 
@@ -8,107 +8,97 @@ export const metadata = {
   description: 'ZYVENTA is the connection between your brand and the region’s best medical professionals, primary health centres, hospitals and pharmacies.',
 };
 
+const PRINCIPLES = [
+  { label: 'Vision', text: contentData.site.vision },
+  { label: 'Mission', text: contentData.site.mission },
+];
+
 export default function AboutUsPage() {
   return (
     <div>
-      
-      {/* Page Header Banner */}
-      <PageHeader eyebrow="About Zyventa" title={<>One Stop Solution for Regional Healthcare</>}>ZYVENTA is the connection between your brand and the region&apos;s best medical professionals, primary health centres, hospitals and pharmacies.</PageHeader>
+      <PageHeader eyebrow="About Zyventa" title={<>One partner for <em>regional</em> healthcare.</>}>
+        ZYVENTA is the connection between your brand and the region&apos;s best medical professionals, primary health centres, hospitals and pharmacies.
+      </PageHeader>
 
-      {/* Overview & Split Intro */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
-            <div className="lg:col-span-6 space-y-6">
-              <p className="flex items-center gap-2 font-heading text-xs font-bold tracking-[0.14em] uppercase text-ink-60">
-                <span className="w-2 h-2 rounded-sm bg-brand-green"></span>
-                <span>Our Foundation</span>
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-ink font-heading leading-tight">
-                Empowering Healthcare Networks Worldwide
-              </h2>
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-                {contentData.site.aboutText}
-              </p>
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-                {contentData.site.aboutSubtext}
-              </p>
-            </div>
-
-            <div className="lg:col-span-6 relative">
-              <div className="rounded-sm overflow-hidden shadow-2xl border border-slate-100 bg-slate-100 aspect-[4/3]">
-                <img
-                  src="/assets/team/international-medical-team-in-face-masks-having-team-building-300x200.jpg"
-                  alt="Zyventa Healthcare Team"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
+      {/* Overview */}
+      <section className="py-20 sm:py-28 bg-brand-paper">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="lg:col-span-6">
+            <p className="eyebrow">Our foundation</p>
+            <h2 className="display mt-5 text-3xl sm:text-4xl">Building healthcare networks across the region.</h2>
+            <p className="mt-6 text-base sm:text-lg text-ink-80 leading-relaxed">{contentData.site.aboutText}</p>
+            <p className="mt-4 text-base sm:text-lg text-ink-80 leading-relaxed">{contentData.site.aboutSubtext}</p>
           </div>
+          <figure className="lg:col-span-6">
+            <div className="rounded-md overflow-hidden bg-brand-sand aspect-[4/3]">
+              <img
+                src="/assets/team/international-medical-team-in-face-masks-having-team-building-300x200.jpg"
+                alt="Zyventa healthcare team"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </figure>
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
-      <section className="py-24 bg-brand-paper border-y border-slate-200/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            
-            {/* Mission Card */}
-            <div className="bg-white rounded-sm p-8 sm:p-12 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300">
-              <div className="w-14 h-14 rounded-sm bg-brand-navy text-brand-green flex items-center justify-center mb-6">
-                <Target className="w-7 h-7" />
-              </div>
-              <h3 className="text-2xl font-bold text-ink font-heading mb-4">
-                MISSION:
-              </h3>
-              <p className="text-base text-slate-600 leading-relaxed">
-                To bridge healthcare access gaps across the Arabian Gulf and Middle East by partnering with global innovators to deliver high-quality medicines, biologics, and wellness solutions directly to regional healthcare providers and patients.
-              </p>
+      {/* Mission and vision */}
+      <section className="bg-brand-navy text-brand-paper">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2">
+          {PRINCIPLES.map((p, i) => (
+            <div key={p.label} className={`py-16 sm:py-20 ${i === 0 ? 'md:pr-14' : 'md:pl-14 border-t md:border-t-0 md:border-l border-white/15'}`}>
+              <p className="eyebrow !text-brand-green">{p.label}</p>
+              <p className="mt-6 font-display text-2xl sm:text-[1.75rem] leading-snug">{p.text}</p>
             </div>
-
-            {/* Vision Card */}
-            <div className="bg-white rounded-sm p-8 sm:p-12 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300">
-              <div className="w-14 h-14 rounded-sm bg-brand-navy text-brand-green flex items-center justify-center mb-6">
-                <Compass className="w-7 h-7" />
-              </div>
-              <h3 className="text-2xl font-bold text-ink font-heading mb-4">
-                VISION:
-              </h3>
-              <p className="text-base text-slate-600 leading-relaxed">
-                To be the most trusted and comprehensive healthcare commercialization and distribution platform in the Middle East and Africa, recognized for scientific rigor, ethical excellence, and seamless execution.
-              </p>
-            </div>
-
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* Team Philosophy Quote */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <div className="w-12 h-12 mx-auto rounded-sm bg-brand-green/20 text-brand-green flex items-center justify-center">
-            <Users className="w-6 h-6" />
+      {/* Footprint and drug store */}
+      <section className="py-20 sm:py-28 bg-brand-paper">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16">
+          <div className="lg:col-span-6">
+            <p className="eyebrow">Where we operate</p>
+            <h2 className="display mt-5 text-3xl sm:text-4xl">Headquartered in Dubai, serving four GCC markets.</h2>
+            <dl className="mt-8 border-t border-brand-navy">
+              <div className="grid grid-cols-3 gap-4 py-4 border-b border-brand-border">
+                <dt className="field-label !mb-0 pt-1">Headquarters</dt>
+                <dd className="col-span-2 font-display text-xl text-brand-navy">{contentData.site.markets.headquarters}</dd>
+              </div>
+              <div className="grid grid-cols-3 gap-4 py-4 border-b border-brand-border">
+                <dt className="field-label !mb-0 pt-1">Commercial markets</dt>
+                <dd className="col-span-2 font-display text-xl text-brand-navy">{contentData.site.markets.commercial.join(', ')}</dd>
+              </div>
+              <div className="grid grid-cols-3 gap-4 py-4 border-b border-brand-border">
+                <dt className="field-label !mb-0 pt-1">Portfolio</dt>
+                <dd className="col-span-2 text-ink-80">Branded pharmaceuticals, generics, nutraceuticals and OTC products</dd>
+              </div>
+            </dl>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-ink font-heading">
-            Our People Make Us Who We Are
-          </h2>
-          <blockquote className="text-lg sm:text-xl text-slate-700 italic leading-relaxed">
-            &ldquo;We provide world-class support to those who want to enter the most promising markets of Middle East & Africa, with the help of the most dynamic management team. We recognize that our team is what makes us who we are. We pride ourselves on our professional, highly skilled and dedicated staff, each bringing their own unique skills to the business.&rdquo;
+          <aside className="lg:col-span-6 bg-brand-navy text-brand-paper rounded-md p-8 sm:p-12 flex flex-col justify-between gap-10">
+            <p className="eyebrow !text-brand-green">{contentData.drugStore.approval}</p>
+            <div>
+              <p className="font-display text-3xl sm:text-4xl leading-tight">{contentData.drugStore.name}</p>
+              <p className="mt-2 text-brand-onDarkMuted">{contentData.drugStore.location}</p>
+              <p className="mt-6 text-lg leading-relaxed">{contentData.drugStore.role}</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      {/* Team philosophy */}
+      <section className="py-20 sm:py-28 bg-brand-sand">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="eyebrow">Our people</p>
+          <p className="display mt-6 text-5xl sm:text-6xl">20<em>+</em></p>
+          <p className="mt-2 text-sm font-semibold text-ink-60">years of combined leadership experience across MENA</p>
+          <blockquote className="mt-8 font-display text-2xl sm:text-3xl text-brand-navy leading-snug">
+            &ldquo;We recognize that our team is what makes us who we are. We pride ourselves on our professional, highly skilled and dedicated staff, each bringing their own unique skills to the business.&rdquo;
           </blockquote>
-          <div className="pt-4">
-            <Link
-              href="/contact-us"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-sm text-sm font-semibold bg-brand-navy text-white hover:bg-brand-blue transition-colors shadow"
-            >
-              <span>Get in Touch With Our Team</span>
-              <ArrowRight className="w-4 h-4 text-brand-green" />
-            </Link>
-          </div>
+          <Link href="/contact-us" className="btn btn-solid mt-10">
+            Get in touch with our team <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
         </div>
       </section>
-
     </div>
   );
 }

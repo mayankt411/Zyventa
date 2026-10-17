@@ -4,21 +4,28 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Mail, MapPin, Phone, ArrowRight, CheckCircle2, Linkedin, Facebook, Instagram } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
+import { submitEnquiry } from '@/lib/submitEnquiry';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+    setError(false);
+    const result = await submitEnquiry('newsletter', { email });
+    if (result.ok) {
       setSubscribed(true);
       setEmail('');
+    } else {
+      setError(true);
     }
   };
 
   return (
-    <footer className="bg-brand-navy text-white overflow-hidden">
+    <footer className="bg-brand-darkBlue text-white overflow-hidden">
       
       {/* Upper Footer Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
@@ -92,7 +99,7 @@ export default function Footer() {
             
             {/* Column: Company */}
             <div>
-              <h4 className="text-sm font-bold uppercase tracking-wider text-brand-green mb-5 font-heading">
+              <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-brand-green mb-5">
                 Company
               </h4>
               <ul className="space-y-3 text-sm text-slate-300">
@@ -126,7 +133,7 @@ export default function Footer() {
 
             {/* Column: Distribution & Products */}
             <div>
-              <h4 className="text-sm font-bold uppercase tracking-wider text-brand-green mb-5 font-heading">
+              <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-brand-green mb-5">
                 Distribution & Range
               </h4>
               <ul className="space-y-3 text-sm text-slate-300">
@@ -160,7 +167,7 @@ export default function Footer() {
 
             {/* Column: Newsletter & Support */}
             <div>
-              <h4 className="text-sm font-bold uppercase tracking-wider text-brand-green mb-5 font-heading">
+              <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-brand-green mb-5">
                 Support & Updates
               </h4>
               <ul className="space-y-3 text-sm text-slate-300 mb-6">
@@ -194,7 +201,7 @@ export default function Footer() {
                         placeholder="Your email address"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full pl-3 pr-10 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-slate-400 text-xs focus:outline-none focus:border-brand-green"
+                        className="w-full pl-3 pr-10 py-2.5 rounded-md bg-white/5 border border-white/20 text-white placeholder:text-slate-400 text-xs focus:outline-none focus:border-brand-green"
                       />
                       <button
                         type="submit"
@@ -204,6 +211,11 @@ export default function Footer() {
                         <ArrowRight className="w-3.5 h-3.5" />
                       </button>
                     </div>
+                    {error && (
+                      <p role="alert" className="text-xs text-brand-green">
+                        Sign-up isn&apos;t available right now. Email {contentData.site.email} to join.
+                      </p>
+                    )}
                   </form>
                 )}
               </div>

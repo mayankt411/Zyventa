@@ -1,28 +1,12 @@
 'use client';
 
-import { useState } from 'react';
-import { 
-  X, 
-  ShieldCheck, 
-  Pill, 
-  Package, 
-  CheckCircle2, 
-  Info, 
-  ArrowRight, 
-  Activity, 
-  Send
-} from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { X, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ProductVisual, therapyStyle } from '@/components/Catalog';
+import { submitEnquiry, enquiryMailto } from '@/lib/submitEnquiry';
+import contentData from '@/data/zyventaContent.json';
 
-const categoryBadgeStyles = {
-  'Cardiovascular': 'bg-cyan-500/15 text-cyan-600 border-cyan-300',
-  'CNS & Neurology': 'bg-emerald-500/15 text-emerald-600 border-emerald-300',
-  'Orthopedic & Pain Care': 'bg-rose-500/15 text-rose-600 border-rose-300',
-  'Metabolic & Diabetes': 'bg-amber-500/15 text-amber-600 border-amber-300',
-  'Dermatology': 'bg-purple-500/15 text-purple-600 border-purple-300',
-  'Gastroenterology': 'bg-teal-500/15 text-teal-600 border-teal-300',
-};
-
-export default function ProductDetailModal({ product, onClose, onInquire }) {
+export default function ProductDetailModal({ product, onClose }) {
   const [showInquiryForm, setShowInquiryForm] = useState(false);
   const [inquirySubmitted, setInquirySubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -30,207 +14,156 @@ export default function ProductDetailModal({ product, onClose, onInquire }) {
     email: '',
     phone: '',
     quantity: '100',
-    notes: ''
   });
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
+
+  // Close on Escape
+  useEffect(() => {
+    const onKey = (e) => e.key === 'Escape' && onClose();
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [onClose]);
 
   if (!product) return null;
 
-  const badgeClass = categoryBadgeStyles[product.category] || 'bg-blue-500/15 text-blue-600 border-blue-300';
-
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    setInquirySubmitted(true);
-    setTimeout(() => {
-      setInquirySubmitted(false);
-      setShowInquiryForm(false);
-      onClose();
-    }, 2000);
+    setSending(true);
+    setError(false);
+    const result = await submitEnquiry('product', {
+      ...formData,
+      product: product.name,
+      website: e.target.website.value,
+    });
+    setSending(false);
+    if (result.ok) setInquirySubmitted(true);
+    else setError(true);
   };
 
+  const update = (key) => (e) => setFormData({ ...formData, [key]: e.target.value });
+
+  const specs = [
+    ['Active composition', product.composition],
+    ['Available strengths', product.availableStrengths],
+    ['Pack size', product.packSize],
+    ['Indication', product.indication],
+  ].filter(([, value]) => value);
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-md overflow-y-auto animate-fade-up">
-      <div className="bg-white rounded-sm max-w-3xl w-full my-8 shadow-2xl border border-slate-100 overflow-hidden relative flex flex-col max-h-[90vh]">
-        
-        {/* Header Bar */}
-        <div className="flex items-center justify-between px-6 sm:px-8 py-5 border-b border-slate-100 bg-slate-50/80 sticky top-0 z-20">
-          <div className="flex items-center gap-3">
-            <span className={`px-3 py-1 rounded-full text-xs font-bold border ${badgeClass}`}>
-              {product.category}
-            </span>
-            <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-bold ${
-              product.isRx ? 'bg-indigo-50 text-indigo-700 border border-indigo-200' : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-            }`}>
-              {product.prescription}
-            </span>
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-brand-darkBlue/70 backdrop-blur-sm animate-fade-up"
+      onClick={(e) => e.target === e.currentTarget && onClose()}
+      role="dialog"
+      aria-modal="true"
+      aria-label={product.name}
+    >
+      <div className="bg-brand-paper rounded-md max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col">
+        <div className="overflow-y-auto grid md:grid-cols-12">
+          {/* Product visual */}
+          <div className="md:col-span-5 p-10 flex items-center justify-center relative min-h-[260px] max-h-[22rem]" style={{ background: therapyStyle(product.category).tint }}>
+            <ProductVisual product={product} />
           </div>
 
-          <button
-            type="button"
-            onClick={onClose}
-            className="w-8 h-8 rounded-full bg-slate-200/80 hover:bg-slate-300 flex items-center justify-center text-slate-700 transition-colors focus:outline-none"
-            aria-label="Close modal"
-          >
-            <X className="w-4 h-4" />
-          </button>
-        </div>
-
-        {/* Scrollable Content Body */}
-        <div className="overflow-y-auto p-6 sm:p-8 space-y-6">
-          
-          {/* Top Hero Grid */}
-          <div className="grid sm:grid-cols-12 gap-6 sm:gap-8 items-center">
-            
-            {/* Product Pack Image */}
-            <div className="sm:col-span-5 bg-gradient-to-br from-slate-50 via-slate-100 to-emerald-50/30 rounded-sm p-6 border border-slate-100 flex items-center justify-center aspect-square relative group">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="max-h-52 w-auto object-contain filter drop-shadow-lg transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-
-            {/* Product Main Title & Tagline */}
-            <div className="sm:col-span-7 space-y-3">
-              <h2 className="text-2xl sm:text-3xl font-bold text-ink font-heading leading-tight">
-                {product.name}
-              </h2>
-
-              {product.tagline && (
-                <p className="text-sm sm:text-base font-semibold text-brand-blue leading-snug">
-                  {product.tagline}
-                </p>
-              )}
-
-              <p className="text-sm text-slate-600 leading-relaxed">
-                {product.description}
-              </p>
-
-              {/* Strengths & Pack Pills */}
-              <div className="pt-2 flex flex-wrap gap-2">
-                {product.availableStrengths && (
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-blue-50 border border-blue-200 text-blue-800 text-xs font-semibold">
-                    <Activity className="w-3.5 h-3.5 text-blue-600" />
-                    <span>{product.availableStrengths}</span>
-                  </div>
-                )}
-                {product.packSize && (
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold">
-                    <Package className="w-3.5 h-3.5 text-slate-600" />
-                    <span>{product.packSize}</span>
-                  </div>
-                )}
-              </div>
-            </div>
-
-          </div>
-
-          {/* Detailed Info Tabs / Cards */}
-          <div className="space-y-4 pt-2">
-            
-            {/* Active Composition Card */}
-            {product.composition && (
-              <div className="p-4 sm:p-5 rounded-sm bg-slate-50 border border-slate-200/80">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">
-                  <Pill className="w-4 h-4 text-brand-green" />
-                  <span>Active Composition & Ingredients</span>
-                </div>
-                <p className="text-sm sm:text-base font-semibold text-ink">
-                  {product.composition}
-                </p>
-              </div>
-            )}
-
-            {/* Closing Line Note */}
-            {product.closingLine && (
-              <div className="p-3.5 rounded-sm bg-gradient-to-r from-brand-navy to-brand-blue text-white text-xs sm:text-sm font-medium flex items-center justify-between">
-                <span>✨ {product.closingLine}</span>
-              </div>
-            )}
-
-          </div>
-
-          {/* Inquiry Form Accordion */}
-          {showInquiryForm ? (
-            <div className="mt-6 p-6 rounded-sm bg-brand-paper border border-slate-200 animate-fade-up">
-              <h4 className="text-base font-bold text-ink mb-4 flex items-center gap-2">
-                <Send className="w-4 h-4 text-brand-green" />
-                <span>Request Wholesale / Order Inquiry for {product.name}</span>
-              </h4>
-
-              {inquirySubmitted ? (
-                <div className="p-6 rounded-sm bg-brand-green/20 text-brand-navy text-center space-y-1">
-                  <CheckCircle2 className="w-6 h-6 text-brand-green mx-auto" />
-                  <p className="font-bold text-sm">Inquiry received successfully!</p>
-                  <p className="text-xs text-slate-600">Our medical distribution manager will connect with you.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleFormSubmit} className="space-y-3">
-                  <div className="grid sm:grid-cols-2 gap-3">
-                    <input
-                      required
-                      type="text"
-                      placeholder="Your Name / Organization"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="px-3.5 py-2 rounded-sm border border-slate-200 text-xs focus:outline-none focus:border-brand-green bg-white"
-                    />
-                    <input
-                      required
-                      type="email"
-                      placeholder="Email Address"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="px-3.5 py-2 rounded-sm border border-slate-200 text-xs focus:outline-none focus:border-brand-green bg-white"
-                    />
-                  </div>
-                  <div className="grid sm:grid-cols-2 gap-3">
-                    <input
-                      type="tel"
-                      placeholder="Phone / WhatsApp (+971 ...)"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="px-3.5 py-2 rounded-sm border border-slate-200 text-xs focus:outline-none focus:border-brand-green bg-white"
-                    />
-                    <input
-                      type="number"
-                      min="1"
-                      placeholder="Estimated Units Required"
-                      value={formData.quantity}
-                      onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
-                      className="px-3.5 py-2 rounded-sm border border-slate-200 text-xs focus:outline-none focus:border-brand-green bg-white"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full py-2.5 rounded-full bg-brand-green text-brand-navy font-bold text-xs hover:bg-brand-accentGreen transition-colors shadow"
-                  >
-                    Submit Product Inquiry
-                  </button>
-                </form>
-              )}
-            </div>
-          ) : null}
-
-        </div>
-
-        {/* Modal Footer CTA */}
-        <div className="px-6 sm:px-8 py-4 border-t border-slate-100 bg-slate-50/80 flex flex-wrap items-center justify-between gap-3 sticky bottom-0 z-20">
-          <div className="text-xs text-slate-500 font-medium">
-            Available across UAE & GCC distribution channels
-          </div>
-
-          <div className="flex items-center gap-3">
+          {/* Details */}
+          <div className="md:col-span-7 p-6 sm:p-10 relative">
             <button
               type="button"
-              onClick={() => setShowInquiryForm(!showInquiryForm)}
-              className="px-5 py-2.5 rounded-full text-xs font-bold bg-brand-navy text-white hover:bg-brand-blue transition-colors shadow flex items-center gap-1.5"
+              onClick={onClose}
+              className="absolute top-4 right-4 w-9 h-9 rounded-full border border-brand-border hover:border-brand-navy flex items-center justify-center text-brand-navy transition-colors"
+              aria-label="Close"
             >
-              <span>{showInquiryForm ? 'Hide Inquiry Form' : 'Request Pricing & Stock'}</span>
-              <ArrowRight className="w-3.5 h-3.5 text-brand-green" />
+              <X className="w-4 h-4" />
             </button>
+
+            <div className="flex flex-wrap gap-1.5 pr-12">
+              <span className="tag tag-neutral">{product.category}</span>
+              {product.prescription && (
+                <span className={`tag ${product.isRx ? 'tag-rx' : 'tag-otc'}`}>{product.prescription}</span>
+              )}
+            </div>
+            <h2 className="display mt-5 text-3xl sm:text-4xl">{product.name}</h2>
+            {product.tagline && <p className="mt-2 text-brand-blue font-semibold">{product.tagline}</p>}
+            {product.description && <p className="mt-4 text-sm text-ink-80 leading-relaxed">{product.description}</p>}
+
+            {specs.length > 0 && (
+              <dl className="mt-8 border-t border-brand-navy">
+                {specs.map(([label, value]) => (
+                  <div key={label} className="grid grid-cols-3 gap-4 py-3 border-b border-brand-border text-sm">
+                    <dt className="field-label !mb-0 pt-0.5">{label}</dt>
+                    <dd className="col-span-2 text-ink">{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            )}
+
+            {product.closingLine && (
+              <p className="mt-6 font-display text-lg italic text-brand-navy">{product.closingLine}</p>
+            )}
+
+            {showInquiryForm && (
+              <div className="mt-8 pt-6 border-t border-brand-border animate-fade-up">
+                {inquirySubmitted ? (
+                  <div className="flex items-center gap-3 text-brand-navy">
+                    <CheckCircle2 className="w-6 h-6 text-brand-green" />
+                    <div>
+                      <p className="font-bold text-sm">Enquiry received</p>
+                      <p className="text-xs text-ink-60">Our distribution team will be in touch.</p>
+                    </div>
+                  </div>
+                ) : (
+                  <form onSubmit={handleFormSubmit} className="grid sm:grid-cols-2 gap-4">
+                    <label>
+                      <span className="field-label">Name or organisation</span>
+                      <input required type="text" value={formData.name} onChange={update('name')} className="field" />
+                    </label>
+                    <label>
+                      <span className="field-label">Email</span>
+                      <input required type="email" value={formData.email} onChange={update('email')} className="field" />
+                    </label>
+                    <label>
+                      <span className="field-label">Phone or WhatsApp</span>
+                      <input type="tel" placeholder="+971" value={formData.phone} onChange={update('phone')} className="field" />
+                    </label>
+                    <label>
+                      <span className="field-label">Units required</span>
+                      <input type="number" min="1" value={formData.quantity} onChange={update('quantity')} className="field" />
+                    </label>
+                    <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+                    {error && (
+                      <p role="alert" className="sm:col-span-2 text-sm text-red-700">
+                        Your enquiry couldn&apos;t be sent right now.{' '}
+                        <a
+                          href={enquiryMailto(contentData.site.email, `Product enquiry · ${product.name}`, [
+                            `Product: ${product.name}`,
+                            `Units required: ${formData.quantity}`,
+                            '',
+                            formData.name,
+                            formData.phone,
+                          ])}
+                          className="font-bold underline"
+                        >
+                          Email it to us
+                        </a>{' '}
+                        instead.
+                      </p>
+                    )}
+                    <button type="submit" disabled={sending} className="btn btn-solid sm:col-span-2 justify-center disabled:opacity-60">
+                      {sending ? 'Sending…' : 'Send enquiry'} <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                    </button>
+                  </form>
+                )}
+              </div>
+            )}
           </div>
         </div>
 
+        <div className="px-6 sm:px-10 py-4 border-t border-brand-border bg-white flex flex-wrap items-center justify-between gap-3">
+          <p className="text-xs text-ink-60">Available across UAE and GCC distribution channels</p>
+          <button type="button" onClick={() => setShowInquiryForm(!showInquiryForm)} className="btn btn-solid !py-2.5">
+            {showInquiryForm ? 'Hide form' : 'Request pricing and stock'} <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </button>
+        </div>
       </div>
     </div>
   );

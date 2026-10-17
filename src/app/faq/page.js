@@ -2,97 +2,78 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Search, HelpCircle, ArrowRight } from 'lucide-react';
+import { Plus, Minus, ArrowRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import PageHeader from '@/components/PageHeader';
+import { SearchField } from '@/components/Catalog';
 
 export default function FAQPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [openIndex, setOpenIndex] = useState(0);
 
-  const filteredFaqs = contentData.faqs.filter(faq =>
+  const filteredFaqs = contentData.faqs.filter((faq) =>
     faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div>
-      
-      {/* Banner */}
-      <PageHeader eyebrow="Need Help?" title={<>Frequently Asked Questions</>}>Discover Zyventa: Your Top FAQs Answered – Your Gateway to Success in Healthcare Markets!</PageHeader>
+      <PageHeader eyebrow="FAQ" title={<>Questions, <em>answered</em>.</>}>
+        What partners, pharmacies and healthcare brands most often ask us about entering the GCC and MEA markets.
+      </PageHeader>
 
-      {/* Accordion List */}
-      <section className="py-24 bg-brand-paper">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Search Bar */}
-          <div className="relative mb-12">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-            <input
-              type="text"
-              placeholder="Search frequently asked questions..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 rounded-sm bg-white border border-slate-200 text-sm sm:text-base focus:outline-none focus:border-brand-green shadow-sm"
-            />
-          </div>
-
-          {/* Accordions */}
-          <div className="space-y-4">
-            {filteredFaqs.map((faq, idx) => {
-              const isOpen = openIndex === idx;
-              return (
-                <div
-                  key={idx}
-                  className="bg-white rounded-sm border border-slate-200/80 overflow-hidden shadow-sm transition-all"
-                >
-                  <button
-                    type="button"
-                    onClick={() => setOpenIndex(isOpen ? -1 : idx)}
-                    className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none"
-                    aria-expanded={isOpen}
-                  >
-                    <span className="text-base sm:text-lg font-bold text-ink font-heading">
-                      {faq.question}
-                    </span>
-                    <div className={`p-2 rounded-sm bg-slate-100 text-slate-500 transition-transform duration-200 ${isOpen ? 'rotate-180 bg-brand-green/20 text-brand-navy' : ''}`}>
-                      <ChevronDown className="w-4 h-4" />
-                    </div>
-                  </button>
-
-                  {isOpen && (
-                    <div className="px-6 pb-6 pt-2 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 animate-fade-up">
-                      {faq.answer}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Contact Support CTA Box */}
-          <div className="mt-16 p-8 rounded-sm bg-white border border-slate-200 text-center space-y-4 shadow-sm">
-            <HelpCircle className="w-10 h-10 text-brand-green mx-auto" />
-            <h3 className="text-xl font-bold text-ink font-heading">
-              Have More Questions?
-            </h3>
-            <p className="text-sm text-slate-600 max-w-md mx-auto">
-              Our regional distribution and healthcare consultation specialists are available to answer any inquiry.
-            </p>
-            <div className="pt-2">
-              <Link
-                href="/contact-us"
-                className="inline-flex items-center gap-2 px-7 py-3 rounded-sm text-sm font-semibold bg-brand-navy text-white hover:bg-brand-blue transition-colors shadow"
-              >
-                <span>Contact Our Support Team</span>
-                <ArrowRight className="w-4 h-4 text-brand-green" />
-              </Link>
+      <section className="py-16 sm:py-24 bg-brand-paper">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16">
+          {/* Sidebar: search and help panel */}
+          <aside className="lg:col-span-4">
+            <div className="lg:sticky lg:top-28 space-y-10">
+              <SearchField value={searchTerm} onChange={setSearchTerm} placeholder="Search questions" />
+              <div className="bg-brand-navy text-brand-paper rounded-md p-8">
+                <p className="font-display text-2xl leading-snug">Can&apos;t find what you need?</p>
+                <p className="mt-3 text-sm text-brand-onDarkMuted leading-relaxed">
+                  Our distribution and regulatory specialists can answer any enquiry.
+                </p>
+                <Link href="/contact-us" className="btn btn-accent mt-6">
+                  Contact us <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
+              </div>
             </div>
-          </div>
+          </aside>
 
+          {/* Questions */}
+          <div className="lg:col-span-8">
+            <ol className="border-t border-brand-navy">
+              {filteredFaqs.map((faq, idx) => {
+                const isOpen = openIndex === idx;
+                return (
+                  <li key={faq.question} className="border-b border-brand-border">
+                    <button
+                      type="button"
+                      onClick={() => setOpenIndex(isOpen ? -1 : idx)}
+                      className="w-full grid grid-cols-[2.5rem_1fr_auto] sm:grid-cols-[3.5rem_1fr_auto] items-baseline gap-3 py-6 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
+                      aria-expanded={isOpen}
+                    >
+                      <span className="font-display text-brand-blue text-lg">{String(idx + 1).padStart(2, '0')}</span>
+                      <span className="font-display text-xl sm:text-2xl text-brand-navy">{faq.question}</span>
+                      <span className="w-8 h-8 rounded-full border border-brand-border flex items-center justify-center text-brand-navy">
+                        {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                      </span>
+                    </button>
+                    {isOpen && (
+                      <p className="pb-7 pl-[2.5rem] sm:pl-[3.5rem] pr-12 text-ink-80 leading-relaxed animate-fade-up">
+                        {faq.answer}
+                      </p>
+                    )}
+                  </li>
+                );
+              })}
+            </ol>
+            {filteredFaqs.length === 0 && (
+              <p className="py-12 font-display text-2xl text-brand-navy">No questions match your search.</p>
+            )}
+          </div>
         </div>
       </section>
-
     </div>
   );
 }

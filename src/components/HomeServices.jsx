@@ -9,9 +9,9 @@ export default function HomeServices() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-16">
         <Reveal className="lg:col-span-4">
           <p className="eyebrow">What we do</p>
-          <h2 className="display mt-4 text-3xl sm:text-4xl">Four divisions, one partner.</h2>
+          <h2 className="display mt-4 text-3xl sm:text-4xl">Five divisions, one partner.</h2>
           <p className="mt-5 text-ink-80 leading-relaxed">
-            From registration to the pharmacy shelf, every step of market entry is handled in-house.
+            From finding the right partner to the pharmacy shelf, every step of market entry is handled in-house.
           </p>
           <Link href="/services" className="btn btn-line mt-8">All services</Link>
         </Reveal>

@@ -9,38 +9,60 @@
     "email": "contact@zyventa.com",
     "address": "Office Number 2211, Al Rehan Block, Omniyat Building, Mamzar, Dubai, UAE",
     "aboutText": "ZYVENTA was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East. ZYVENTA bridges access gaps by partnering with global pharmaceutical and biotechnology companies to deploy and commercialize new pharmaceutical, biologics, and other healthcare solutions in the Middle East and Africa (MEA) Markets.",
-    "aboutSubtext": "At ZYVENTA, we pride ourselves on our comprehensive approach to establishing and enhancing brand presence within the region's dynamic healthcare landscape. Our dedicated team oversees every phase and process necessary to cultivate a strong brand identity and market presence. With meticulous attention to detail, we integrate five essential divisions: Regulation, Marketing, Sales, Distribution, and Supply Chain Management.",
-    "mission": "To bridge healthcare access gaps across the Middle East and Africa by delivering high-quality, innovative pharmaceutical and wellness solutions from global partners directly to regional markets.",
-    "vision": "To become the leading and most trusted healthcare distribution and commercialization partner across the Arabian Gulf, Middle East, and Africa.",
-    "footerDescription": "We serve as a link between international healthcare companies and GCC and the growing markets of the Middle East."
+    "aboutSubtext": "At ZYVENTA, we pride ourselves on our comprehensive approach to establishing and enhancing brand presence within the region's dynamic healthcare landscape. Our dedicated team oversees every phase and process necessary to cultivate a strong brand identity and market presence. With meticulous attention to detail, we integrate five essential divisions: Business Development, Regulation, Marketing, Sales and Distribution.",
+    "mission": "To be the preferred regional partner for pharma companies entering MENA, and to develop our own branded products that improve patients’ health and quality of life.",
+    "vision": "A specialty firm introducing innovative products that meet unmet medical needs across MENA.",
+    "footerDescription": "We serve as a link between international healthcare companies and GCC and the growing markets of the Middle East.",
+    "markets": {
+      "headquarters": "UAE (Dubai)",
+      "commercial": [
+        "Saudi Arabia",
+        "Oman",
+        "Bahrain"
+      ]
+    },
+    "ecommerceUrl": "https://shopify.zyventa.com"
   },
   "stats": [
     {
-      "value": "5",
+      "value": "29",
       "suffix": "",
-      "label": "Integrated Divisions",
-      "description": "Regulation, Marketing, Sales, Distribution, Supply Chain"
+      "label": "Products, 46 SKUs",
+      "description": "Up from 6 products in FY 2022"
     },
     {
-      "value": "100",
-      "suffix": "%",
-      "label": "Compliance & Quality",
-      "description": "Adherence to regional regulatory standards"
+      "value": "4",
+      "suffix": "",
+      "label": "GCC markets",
+      "description": "UAE, Saudi Arabia, Oman and Bahrain"
     },
     {
-      "value": "6",
-      "suffix": "+",
-      "label": "GCC & MEA Markets",
-      "description": "Comprehensive regional presence"
+      "value": "8",
+      "suffix": "",
+      "label": "Principal countries",
+      "description": "Partners from the USA, UK, Europe, India and the GCC"
     },
     {
       "value": "20",
       "suffix": "+",
-      "label": "Global Partner Brands",
-      "description": "Trusted international pharmaceutical collaborations"
+      "label": "Years of leadership",
+      "description": "Combined experience across MENA"
     }
   ],
   "distributionDivisions": [
+    {
+      "id": "business-development",
+      "name": "Business Development",
+      "title": "Business Development & Partnerships",
+      "description": "New partner opportunities, bringing international manufacturers and their products into the GCC and MENA.",
+      "points": [
+        "Identifying principals and products suited to GCC and MENA markets",
+        "Distribution agreements and distribution rights for partner brands",
+        "Joint product development for regional needs",
+        "New market entry support with local market intelligence"
+      ],
+      "image": "/assets/images/healthcare-researcher-working-to-discover-a-vaccine.jpg"
+    },
     {
       "id": "regulation",
       "name": "Regulation",
@@ -92,19 +114,6 @@
         "Robust stock availability and reliable order delivery"
       ],
       "image": "/assets/images/warehouse-female-worker-checking-up-stuff-in-a-warehouse-.jpg"
-    },
-    {
-      "id": "supply-chain",
-      "name": "Supply Chain",
-      "title": "Supply Chain Management & Cold Chain Logistics",
-      "description": "Temperature-controlled warehousing, GDP-compliant handling and timely delivery.",
-      "points": [
-        "GDP (Good Distribution Practice) certified operations",
-        "Temperature-monitored cold chain storage and transport",
-        "Real-time inventory visibility and demand forecasting",
-        "Optimized multi-modal freight handling and customs clearance"
-      ],
-      "image": "/assets/images/connected-logistics-and-supply-chain-concept-table-tennis-ball-with-plane-trucks-train-and-ship-s-300x200.jpg"
     }
   ],
   "keyServices": [
@@ -127,11 +136,6 @@
       "title": "Pharmaceutical Distribution",
       "description": "Seamless wholesale and retail distribution of prescription medications and healthcare items.",
       "icon": "Truck"
-    },
-    {
-      "title": "Supply Chain & Logistics",
-      "description": "Temperature-controlled warehousing, GDP-compliant logistics, and rapid fulfillment across UAE.",
-      "icon": "Layers"
     },
     {
       "title": "Online Store & E-Commerce",
@@ -157,10 +161,6 @@
     {
       "name": "Amdis",
       "logo": "/assets/logos/Amdis-Logo-1-2.png"
-    },
-    {
-      "name": "Dr. WellMe",
-      "logo": "/assets/logos/Dr._WellMe_Logo_PNG-01-2-1024x1024.png"
     },
     {
       "name": "Jubilant",
@@ -200,7 +200,7 @@
     {
       "year": "Division Expansion",
       "title": "Five Integrated Divisions",
-      "description": "Established end-to-end capabilities spanning Regulation, Marketing, Sales, Distribution, and Supply Chain Management."
+      "description": "Established end-to-end capabilities spanning Business Development, Regulation, Marketing, Sales and Distribution."
     },
     {
       "year": "Portfolio Growth",
@@ -431,7 +431,7 @@
     },
     {
       "id": "troxlmetacin-gel",
-      "name": "Troxlmetacin Gel",
+      "name": "Troximetacin Gel",
       "tagline": "Targeted relief that goes straight to the area of discomfort.",
       "composition": "Indometacin\nTroxerutin",
       "indication": "Troximetacin Gel may be used for the local management of symptoms associated with:\n\nJoint pain\nMuscle pain\nLocal inflammation\nSwelling\nSprains and strains\nSoft-tissue injuries\nTendon and periarticular discomfort\nOther musculoskeletal conditions where topical anti-inflammatory treatment is appropriate",
@@ -522,15 +522,15 @@
       "description": "Zybitel combines Telmisartan and Amlodipine in a single tablet for the management of high blood pressure (hypertension).\n\nThe formulation brings together two antihypertensive medicines with complementary mechanisms of action. Telmisartan helps block the effects of angiotensin II, while Amlodipine helps relax blood vessels by reducing calcium entry into vascular smooth muscle.\n\nThis dual-action approach provides an option for patients who require combination therapy to achieve appropriate blood-pressure control. Telmisartan/Amlodipine combinations are used in patients whose blood pressure is not adequately controlled with either component alone and may also be used as replacement therapy in patients already receiving both medicines separately.",
       "packSize": "28 Tablets\nPacked as 4 × 7-tablet blister packs",
       "availableStrengths": "Zybitel 80/5 mg – Telmisartan 80 mg + Amlodipine 5 mg\n\nZybitel 80/10 mg – Telmisartan 80 mg + Amlodipine 10 mg",
-      "category": "CNS & Neurology",
-      "rawCategory": "CNS",
+      "category": "Cardiovascular",
+      "rawCategory": "Cardiovascular",
       "features": "1. Fixed-dose combination of Telmisartan + Amlodipine\n2. Dual-mechanism antihypertensive therapy\n3. Available in 80/5 mg and 80/10 mg strengths\n4. Metabolically neutral safe inn diabetes paitents\n5. Convenient single-tablet combination\n6. Suitable for individualized hypertension management",
       "usage": "Zybitel should be taken exactly as prescribed by a healthcare professional.\n\nTelmisartan/Amlodipine combination tablets are generally administered once daily, with or without food. The dose should be individualized according to the patient's blood-pressure response, previous therapy and clinical condition.",
       "isRx": true,
       "prescription": "Prescription (Rx)",
       "closingLine": "Dual-action cardiovascular support in one convenient dose.",
       "image": "/assets/images/ABM-1112112111.jpg",
-      "therapy": "Therapy - CNS & Neurology",
+      "therapy": "Therapy - Cardiovascular",
       "isStore": false,
       "isWholesale": true
     },
@@ -543,15 +543,15 @@
       "description": "Vildagard combines Vildagliptin and Metformin in a single film-coated tablet to support blood-glucose control in adults with type 2 diabetes mellitus.\n\nThe two active ingredients work through complementary mechanisms. Vildagliptin helps improve glucose-dependent insulin release and reduce inappropriate glucagon secretion, while Metformin helps reduce glucose production by the liver and improves the body's response to insulin.\n\nThe fixed-dose combination provides a convenient treatment option for appropriate patients who require both medicines as part of their diabetes-management regimen.",
       "packSize": "60 Film-Coated Tablets",
       "availableStrengths": "Vildagard 50/500 mg – Vildagliptin 50 mg + Metformin Hydrochloride 500 mg\n\nVildagard 50/850 mg – Vildagliptin 50 mg + Metformin Hydrochloride 850 mg\n\nVildagard 50/1000 mg – Vildagliptin 50 mg + Metformin Hydrochloride 1000 mg",
-      "category": "CNS & Neurology",
-      "rawCategory": "CNS",
+      "category": "Metabolic & Diabetes",
+      "rawCategory": "Metabolics",
       "features": "1. Enhances glycemic control with 1.1% HbA1c reduction\n2. addresses key underlying defects of type 2 diabites\n3. associated with low rissk of hypoglycemia and weight neutality\n4. Fixed-dose combination of Vildagliptin + Metformin\n5. Dual-mechanism approach to blood-glucose management\n6.cAvailable in three strengths\n7. Film-coated tablet formulation\n8. Convenient combination therapy\n9. 60-tablet pack",
       "usage": "Vildagard should be taken exactly as prescribed by a healthcare professional.\n\nThe dose should be individualized according to the patient's current treatment, blood-glucose control, kidney function and tolerability. Vildagliptin/Metformin combinations are commonly administered with food to help reduce gastrointestinal effects associated with Metformin. The recommended maximum daily dose of Vildagliptin is generally 100 mg.",
       "isRx": true,
       "prescription": "Prescription (Rx)",
       "closingLine": "Two complementary mechanisms for confident glucose management.",
       "image": "/assets/images/ABM-1112112112.jpg",
-      "therapy": "Therapy - CNS & Neurology",
+      "therapy": "Therapy - Metabolic & Diabetes",
       "isStore": false,
       "isWholesale": true
     },
@@ -564,37 +564,16 @@
       "description": "Telmijub contains Telmisartan, an antihypertensive medicine used for the treatment of essential hypertension in adults.\n\nTelmisartan belongs to the angiotensin II receptor blocker (ARB) class. By blocking the effects of angiotensin II, it helps blood vessels relax and widen, thereby lowering blood pressure and supporting cardiovascular health.\n\nIt has a smooth and sustained BP control over 24 hours",
       "packSize": "30 Tablets",
       "availableStrengths": "Telmijub 40 mg\nTelmijub 80 mg",
-      "category": "CNS & Neurology",
-      "rawCategory": "CNS",
+      "category": "Cardiovascular",
+      "rawCategory": "Cardiovascular",
       "features": "1. Contains Telmisartan\n2. Angiotensin II receptor blocker (ARB)\n3. Helps manage high blood pressure\n4. Available in 40 mg and 80 mg strengths\n5. Convenient oral tablet formulation\n6. 30-tablet pack",
       "usage": "Telmijub should be taken exactly as prescribed by a healthcare professional.\n\nFor hypertension, the commonly effective Telmisartan dose is 40 mg once daily. In patients whose blood pressure is not adequately controlled, the dose may be increased to 80 mg once daily, depending on clinical response and medical advice.",
       "isRx": true,
       "prescription": "Prescription (Rx)",
       "closingLine": "Simple once-daily support for long-term blood-pressure control.",
       "image": "/assets/images/ABM-212121212.jpg",
-      "therapy": "Therapy - CNS & Neurology",
+      "therapy": "Therapy - Cardiovascular",
       "isStore": false,
-      "isWholesale": true
-    },
-    {
-      "id": "dr-wellme-brainwell",
-      "name": "Dr.WellMe BrainWell Capsules",
-      "tagline": "Cognitive Vitality & Mental Focus",
-      "composition": "Phosphatidylserine, Ginkgo Biloba Extract, Bacopa Monnieri, B-Complex Vitamins",
-      "indication": "Supports cognitive function, mental clarity, focus, and brain health.",
-      "description": "Premium dietary supplement formulated with high-potency neuro-nutrients to enhance memory, concentration, and long-term brain health.",
-      "packSize": "60 Capsules",
-      "availableStrengths": "Standardized botanical & nutrient complex",
-      "category": "CNS & Neurology",
-      "rawCategory": "CNS / Dietary Supplement",
-      "features": "Standardized neuro-botanicals, Non-GMO, Supports mental alertness and cognitive stamina",
-      "usage": "Take 1-2 capsules daily with meals or as directed by healthcare professional.",
-      "isRx": false,
-      "prescription": "Over-The-Counter (OTC)",
-      "closingLine": "Targeted cognitive nourishment for everyday mental stamina.",
-      "image": "/assets/images/Brainweel.png",
-      "therapy": "Therapy - CNS & Neurology",
-      "isStore": true,
       "isWholesale": true
     }
   ],
@@ -605,7 +584,7 @@
     },
     {
       "question": "What services does Zyventa offer?",
-      "answer": "Zyventa integrates five core divisions: Regulatory Affairs & Compliance, Strategic Marketing, Medical Sales Detailing, Seamless Wholesale & Retail Distribution, and Supply Chain Management / Cold Chain Logistics."
+      "answer": "Zyventa integrates five core divisions: Business Development & Partnerships, Regulatory Affairs & Compliance, Strategic Marketing, Medical Sales Detailing, and Seamless Wholesale & Retail Distribution."
     },
     {
       "question": "How does Zyventa ensure compliance with regulatory requirements?",
@@ -617,7 +596,7 @@
     },
     {
       "question": "How does Zyventa manage its distribution network?",
-      "answer": "We maintain an integrated distribution network supplying hospitals, government bodies, retail pharmacy chains, and online channels with GDP-certified temperature-controlled storage and logistics."
+      "answer": "We supply hospitals, government bodies, retail pharmacy chains and online channels through Zyventa Trading, our MOH-approved Bait Al Mas drug store, and a network of licensed local distributors."
     }
   ],
   "blogs": [
@@ -642,5 +621,196 @@
     "Metabolic & Diabetes",
     "Dermatology",
     "Gastroenterology"
+  ],
+  "portfolioGrowth": [
+    {
+      "year": "FY 2022",
+      "products": 6
+    },
+    {
+      "year": "FY 2023",
+      "products": 11
+    },
+    {
+      "year": "FY 2024",
+      "products": 14
+    },
+    {
+      "year": "Today",
+      "products": 29
+    }
+  ],
+  "portfolioMix": [
+    {
+      "label": "Conventional pharma",
+      "detail": "19 products · 36 SKUs"
+    },
+    {
+      "label": "GSL, medical device and para-pharma",
+      "detail": "10 products · 11 SKUs"
+    }
+  ],
+  "firstToMarket": {
+    "regionFirsts": [
+      {
+        "name": "Troximetacin",
+        "use": "Pain and inflammation"
+      },
+      {
+        "name": "Calmivenal Gel",
+        "use": "Haemorrhoids"
+      },
+      {
+        "name": "Breezex",
+        "use": "Cold therapy for pain"
+      },
+      {
+        "name": "Zynatis",
+        "use": "Lidocaine 4% patch"
+      },
+      {
+        "name": "Zyflex",
+        "use": "Muscle stiffness patch"
+      },
+      {
+        "name": "Nervease",
+        "use": "Neuropathic pain"
+      },
+      {
+        "name": "Cardiovive",
+        "use": "Heart health"
+      },
+      {
+        "name": "Nourisil MD",
+        "use": "Silicone scar gel"
+      }
+    ],
+    "firstGenerics": [
+      "Lacolep",
+      "Desvenzyl"
+    ],
+    "uaeFirsts": [
+      "CalmiRelax",
+      "CalmiDormin",
+      "Breezex (up to 8 hours)",
+      "Zyflex"
+    ]
+  },
+  "productBadges": {
+    "firstToMarket": [
+      "troxlmetacin-gel",
+      "calmivenal-gel",
+      "breezex",
+      "zynatis",
+      "zyflex",
+      "nourisil-md"
+    ],
+    "firstGeneric": [
+      "lacolep",
+      "desvenzyl"
+    ],
+    "owned": [
+      "zyvenkar",
+      "febuvent",
+      "zybitel",
+      "vildagard",
+      "desvenzyl",
+      "lacolep",
+      "zynatis",
+      "breezex",
+      "zyflex"
+    ]
+  },
+  "whyPartner": [
+    {
+      "title": "Speed to market",
+      "description": "Streamlined regulatory processes and efficient logistics."
+    },
+    {
+      "title": "Regulatory expertise",
+      "description": "An in-house regulatory team and an MOH-approved retail operation."
+    },
+    {
+      "title": "Relationships",
+      "description": "Key opinion leaders, prescribers and health authorities."
+    },
+    {
+      "title": "Local presence",
+      "description": "On-the-ground teams with cultural insight."
+    },
+    {
+      "title": "Full-chain control",
+      "description": "Proven first-to-market launches, from registration to the shelf."
+    }
+  ],
+  "partnerModels": [
+    {
+      "id": "joint-development",
+      "title": "Joint product development",
+      "description": "R&D and clinical trials for regional needs."
+    },
+    {
+      "id": "distribution",
+      "title": "Distribution agreements",
+      "description": "Network and sales force across the GCC and MEA."
+    },
+    {
+      "id": "market-entry",
+      "title": "New market entry support",
+      "description": "Regulatory expertise and local market intelligence."
+    }
+  ],
+  "verticals": [
+    {
+      "title": "Pharma marketing",
+      "description": "Brand strategy and commercialisation for own and partner products."
+    },
+    {
+      "title": "Bait Al Mas Drug Store",
+      "description": "Company-owned, licensed drug store approved by the UAE Ministry of Health."
+    },
+    {
+      "title": "E-commerce",
+      "description": "Direct-to-consumer online portal."
+    },
+    {
+      "title": "Hospital supplies",
+      "description": "Institutional channel into MENA hospitals."
+    },
+    {
+      "title": "Zyventa Trading",
+      "description": "Trading of DM-registered products."
+    }
+  ],
+  "drugStore": {
+    "name": "Bait Al Mas Drug Store LLC",
+    "location": "Abu Shagara, Sharjah",
+    "approval": "Approved by the UAE Ministry of Health",
+    "role": "An anchor for own and partner brands, with direct visibility into patient demand."
+  },
+  "principalCountries": [
+    "USA",
+    "United Kingdom",
+    "Ireland",
+    "Italy",
+    "Bulgaria",
+    "India",
+    "Saudi Arabia",
+    "UAE"
+  ],
+  "businessFlow": [
+    "Manufacturer or marketing authorisation holder",
+    "Batch release and secondary packaging",
+    "Zyventa Trading",
+    "Local distributors",
+    "Hospitals and retail pharmacies"
+  ],
+  "packShotVerified": [
+    "nourisil-md",
+    "nevral",
+    "calmi-relax",
+    "calmi-dormin",
+    "calmivenal-gel",
+    "troxlmetacin-gel"
   ]
 }

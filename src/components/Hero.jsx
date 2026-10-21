@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import Link from 'next/link';
 import { Play, Pause, ArrowRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
+import { CountUp } from '@/components/Motion';
 
 export default function Hero() {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -22,31 +23,74 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="bg-brand-paper pt-28 sm:pt-32">
+    <section id="hero" className="bg-brand-paper pt-20">
+      {/* Headline split: statement left, navy quote panel right */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end reveal">
-          <div className="lg:col-span-8">
-            <p className="eyebrow">{contentData.site.tagline}</p>
-            <h1 className="display mt-5 text-4xl sm:text-5xl lg:text-[4.25rem]">
-              Your healthcare bridge to the Middle East&nbsp;&amp;&nbsp;Africa.
+        <div className="grid lg:grid-cols-12 border-b border-brand-border">
+          <div className="lg:col-span-8 py-14 sm:py-20 lg:pr-14 reveal">
+            <p className="eyebrow">Healthcare market entry · GCC, Middle East &amp; Africa</p>
+            <h1 className="display mt-6 text-[2.6rem] sm:text-6xl lg:text-[4.6rem]">
+              Creating a <em>healthy</em> tomorrow, across the Middle East &amp;&nbsp;Africa.
             </h1>
-          </div>
-          <div className="lg:col-span-4 lg:pb-2">
-            <p className="text-base sm:text-lg text-ink-80 leading-relaxed">
-              Zyventa connects global pharmaceutical and biotechnology companies with the Arabian Gulf, Middle East and Africa.
+            <p className="mt-7 max-w-xl text-lg text-ink-80 leading-relaxed">
+              We connect global pharmaceutical and biotechnology companies with the patients who need them, from registration to the pharmacy shelf.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/services" className="btn btn-solid">
-                Our services <ArrowRight className="w-4 h-4" aria-hidden="true" />
+            <div className="mt-9 flex flex-wrap items-center gap-6">
+              <Link href="/contact-us" className="btn btn-accent">
+                Partner with us <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
-              <Link href="/contact-us" className="btn btn-line">Contact us</Link>
+              <Link href="/services" className="link-accent">
+                See what we do <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
             </div>
           </div>
+
+          <aside
+            className="lg:col-span-4 bg-brand-navy text-brand-paper p-8 sm:p-10 flex flex-col justify-between gap-10 reveal"
+            style={{ animationDelay: '.1s' }}
+          >
+            <span className="font-display text-7xl leading-none text-brand-green" aria-hidden="true">&ldquo;</span>
+            <div>
+              <p className="font-display text-2xl sm:text-[1.7rem] leading-snug">
+                From registration to the pharmacy shelf, handled in-house.
+              </p>
+              <p className="mt-6 text-sm text-brand-onDarkMuted">Five divisions · one partner</p>
+              <ul className="mt-5 flex flex-wrap gap-2">
+                {contentData.distributionDivisions.map((div) => (
+                  <li key={div.id}>
+                    <Link
+                      href={`/services#${div.id}`}
+                      className="inline-block text-xs font-semibold px-3 py-1.5 rounded-full border border-white/20 hover:border-brand-green hover:text-brand-green transition-colors"
+                    >
+                      {div.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </aside>
         </div>
 
-        {/* Featured video — the page's primary visual */}
-        <figure className="mt-10 sm:mt-14 reveal" style={{ animationDelay: '.15s' }}>
-          <div className="relative aspect-video w-full bg-brand-navy overflow-hidden shadow-[0_30px_60px_-30px_rgba(15,42,77,0.55)]">
+        {/* Key figures */}
+        <dl className="mt-8 grid grid-cols-2 lg:grid-cols-4 bg-brand-navy text-white rounded-md overflow-hidden">
+          {contentData.stats.map((stat, i) => (
+            <div
+              key={stat.label}
+              className={`py-8 sm:py-10 px-6 border-white/15 ${i % 2 === 1 ? 'border-l' : ''} ${i === 2 ? 'lg:border-l' : ''} ${i >= 2 ? 'border-t lg:border-t-0' : ''}`}
+            >
+              <dt className="sr-only">{stat.label}</dt>
+              <dd className="font-display text-4xl sm:text-5xl text-white">
+                <CountUp value={stat.value} /><span className="text-brand-green">{stat.suffix}</span>
+              </dd>
+              <dd className="mt-2 text-sm font-semibold text-white">{stat.label}</dd>
+              <dd className="mt-1 text-xs sm:text-sm text-brand-onDarkMuted leading-relaxed">{stat.description}</dd>
+            </div>
+          ))}
+        </dl>
+
+        {/* Company film */}
+        <figure className="mt-14 sm:mt-20 reveal" style={{ animationDelay: '.15s' }}>
+          <div className="relative aspect-[21/9] w-full bg-brand-navy overflow-hidden rounded-md">
             <video
               ref={videoRef}
               autoPlay
@@ -63,13 +107,14 @@ export default function Hero() {
             <button
               type="button"
               onClick={togglePlay}
-              className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 inline-flex items-center gap-2 px-3.5 py-2 bg-brand-navy/80 text-white text-xs font-semibold hover:bg-brand-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
+              className="absolute bottom-4 right-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-paper/90 text-brand-navy text-xs font-bold hover:bg-brand-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
               aria-label={isPlaying ? 'Pause video' : 'Play video'}
             >
               {isPlaying ? <Pause className="w-3.5 h-3.5 fill-current" /> : <Play className="w-3.5 h-3.5 fill-current" />}
               <span>{isPlaying ? 'Pause' : 'Play'}</span>
             </button>
           </div>
+          <figcaption className="mt-3 text-xs text-ink-60">Zyventa company film</figcaption>
         </figure>
       </div>
       <div className="h-16 sm:h-24" />

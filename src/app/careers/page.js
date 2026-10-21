@@ -1,10 +1,14 @@
-import { Mail, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
+import PageHeader from '@/components/PageHeader';
+import { Reveal } from '@/components/Motion';
 
 export const metadata = {
   title: 'Careers - Zyventa',
   description: 'Send your CV to Zyventa and join a team connecting global healthcare brands with the Middle East and Africa.',
 };
+
+const AREAS = ['Pharmaceutical sales', 'Marketing', 'Regulatory affairs', 'Distribution', 'Business development'];
 
 export default function CareersPage() {
   // NOTE: no dedicated recruitment address exists in the project; the company
@@ -14,35 +18,40 @@ export default function CareersPage() {
   const mailto = `mailto:${email}?subject=${subject}`;
 
   return (
-    <div className="pt-20 bg-brand-paper">
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-        <div className="max-w-3xl reveal">
-          <p className="eyebrow">Careers</p>
-          <h1 className="display mt-5 text-4xl sm:text-5xl lg:text-6xl">
-            Join the team behind Zyventa.
-          </h1>
-          <p className="mt-6 text-lg text-ink-80 leading-relaxed">
-            We are always glad to hear from capable people in pharmaceutical sales, marketing, regulatory affairs and operations.
-            Share your CV and we will be in touch when there is a fit.
-          </p>
-        </div>
+    <div>
+      <PageHeader eyebrow="Careers" title={<>Join the team <em>behind</em> Zyventa.</>}>
+        We are always glad to hear from capable people. Share your CV and we will be in touch when there is a fit.
+      </PageHeader>
 
-        <div className="mt-14 rule-top pt-8 grid md:grid-cols-12 gap-8 items-center">
-          <div className="md:col-span-7">
-            <p className="text-sm font-semibold text-ink-60 uppercase tracking-wider">Send your CV to</p>
-            <a
-              href={mailto}
-              className="mt-2 inline-flex items-center gap-3 font-display text-2xl sm:text-4xl text-brand-navy break-all hover:text-brand-blue transition-colors"
-            >
-              <Mail className="w-7 h-7 shrink-0" aria-hidden="true" />
-              {email}
-            </a>
+      <section className="bg-brand-paper py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-0">
+          <div className="lg:col-span-7 lg:pr-16">
+            <p className="eyebrow">Where you could fit</p>
+            <Reveal as="ol" stagger className="mt-8 border-t border-brand-navy">
+              {AREAS.map((area, i) => (
+                <li key={area} className="grid grid-cols-[3rem_1fr] items-baseline py-6 border-b border-brand-border">
+                  <span className="font-display text-brand-blue text-lg">0{i + 1}</span>
+                  <span className="font-display text-2xl sm:text-3xl text-brand-navy">{area}</span>
+                </li>
+              ))}
+            </Reveal>
           </div>
-          <div className="md:col-span-5 md:text-right">
-            <a href={mailto} className="btn btn-solid">
-              Send your CV <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </a>
-          </div>
+
+          <aside className="lg:col-span-5 bg-brand-navy text-brand-paper rounded-md p-8 sm:p-12 flex flex-col justify-between gap-12">
+            <span className="font-display text-7xl leading-none text-brand-green" aria-hidden="true">&ldquo;</span>
+            <div>
+              <p className="font-display text-2xl sm:text-3xl leading-snug">Our team is what makes us who we are.</p>
+              <p className="mt-8 field-label !text-brand-onDarkMuted">Send your CV to</p>
+              <a href={mailto} className="font-display text-xl sm:text-2xl break-all hover:text-brand-green transition-colors">
+                {email}
+              </a>
+              <div className="mt-8">
+                <a href={mailto} className="btn btn-accent">
+                  Send your CV <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
     </div>

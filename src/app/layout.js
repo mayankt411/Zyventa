@@ -12,17 +12,23 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
+        {/* Enable scroll motion before first paint; reduced-motion visitors get fades only */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add(window.matchMedia('(prefers-reduced-motion: reduce)').matches?'motion-reduce':'motion-ok')",
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen flex flex-col antialiased bg-white text-ink">
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-white focus:px-4 focus:py-2 focus:text-brand-navy">Skip to content</a>
+      <body className="min-h-screen flex flex-col antialiased bg-brand-paper text-ink">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-white focus:px-4 focus:py-2 focus:text-brand-navy focus:rounded">Skip to content</a>
         <Header />
         <main id="main-content" className="flex-grow">
           {children}

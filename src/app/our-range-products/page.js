@@ -1,262 +1,197 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
-import { Search, Package, ArrowRight, CheckCircle2, ShoppingBag, Pill, Activity, ShieldCheck, Filter } from 'lucide-react';
+import { ArrowRight, ArrowDown, X } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
-import PageHeader from '@/components/PageHeader';
 import ProductDetailModal from '@/components/ProductDetailModal';
+import HomeCta from '@/components/HomeCta';
+import { CountUp, Parallax } from '@/components/Motion';
+import {
+  SearchField, ChipGroup, ProductCard, ProductGrid, EmptyState,
+  PackCollage, TherapyTiles, Spotlight, therapyStyle,
+} from '@/components/Catalog';
 
-const categoryPillColors = {
-  'Cardiovascular': 'bg-cyan-100 text-cyan-800 border-cyan-200',
-  'CNS & Neurology': 'bg-emerald-100 text-emerald-800 border-emerald-200',
-  'Orthopedic & Pain Care': 'bg-rose-100 text-rose-800 border-rose-200',
-  'Metabolic & Diabetes': 'bg-amber-100 text-amber-800 border-amber-200',
-  'Dermatology': 'bg-purple-100 text-purple-800 border-purple-200',
-  'Gastroenterology': 'bg-teal-100 text-teal-800 border-teal-200',
-};
+const RX_OPTIONS = [
+  { value: 'All', label: 'All' },
+  { value: 'Rx', label: 'Prescription' },
+  { value: 'OTC', label: 'OTC' },
+];
+
+// Pack shots whose images match the product, used in the hero collage.
+const COLLAGE_IDS = ['nourisil-md', 'calmi-relax', 'troxlmetacin-gel', 'calmivenal-gel'];
+const SPOTLIGHT_IDS = ['troxlmetacin-gel', 'calmivenal-gel', 'nourisil-md'];
 
 export default function OurRangeProductsPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [rxFilter, setRxFilter] = useState('All'); // 'All', 'Rx', 'OTC'
+  const [rxFilter, setRxFilter] = useState('All');
   const [activeProductModal, setActiveProductModal] = useState(null);
+  const catalogueRef = useRef(null);
 
-  const categories = contentData.categories || [
-    "All",
-    "Cardiovascular",
-    "CNS & Neurology",
-    "Orthopedic & Pain Care",
-    "Metabolic & Diabetes",
-    "Dermatology",
-    "Gastroenterology"
-  ];
+  const { products } = contentData;
+  const therapyAreas = (contentData.categories || []).filter((c) => c !== 'All');
+  const byId = (ids) => ids.map((id) => products.find((p) => p.id === id)).filter(Boolean);
 
-  const filteredProducts = contentData.products.filter(p => {
+  const filteredProducts = products.filter((p) => {
     const searchLower = searchTerm.toLowerCase();
-    const matchesSearch = 
-      p.name.toLowerCase().includes(searchLower) ||
-      (p.composition && p.composition.toLowerCase().includes(searchLower)) ||
-      (p.tagline && p.tagline.toLowerCase().includes(searchLower)) ||
-      (p.indication && p.indication.toLowerCase().includes(searchLower)) ||
-      (p.availableStrengths && p.availableStrengths.toLowerCase().includes(searchLower)) ||
-      p.category.toLowerCase().includes(searchLower);
-
+    const matchesSearch = [p.name, p.composition, p.tagline, p.indication, p.availableStrengths, p.category]
+      .some((field) => field && field.toLowerCase().includes(searchLower));
     const matchesCategory = selectedCategory === 'All' || p.category === selectedCategory;
-    
-    const matchesRx = 
-      rxFilter === 'All' ? true :
-      rxFilter === 'Rx' ? p.isRx :
-      !p.isRx;
-
+    const matchesRx = rxFilter === 'All' ? true : rxFilter === 'Rx' ? p.isRx : !p.isRx;
     return matchesSearch && matchesCategory && matchesRx;
   });
 
+  const resetFilters = () => {
+    setSearchTerm('');
+    setSelectedCategory('All');
+    setRxFilter('All');
+  };
+  const hasFilters = searchTerm || selectedCategory !== 'All' || rxFilter !== 'All';
+
+  const pickArea = (cat) => {
+    setSelectedCategory(cat);
+    catalogueRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  const stats = [
+    { value: contentData.stats[0]?.value || products.length, label: 'Products in portfolio' },
+    { value: therapyAreas.length, label: 'Therapy areas' },
+    { value: contentData.firstToMarket.regionFirsts.length, label: 'First-to-market launches' },
+  ];
+
   return (
     <div>
-      
-      {/* Banner */}
-      <PageHeader eyebrow="Pharmaceutical Wholesale Catalog" title={<>Our Range Products</>}>At Zyventa, we provide competitive wholesale rates for bulk medicine purchases across cardiovascular, central nervous system, metabolic, dermatology, orthopedic, and gastroenterology therapeutic lines.</PageHeader>
-
-      {/* Main Catalog Section */}
-      <section className="py-16 sm:py-20 bg-brand-paper">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Filter Bar */}
-          <div className="p-6 bg-white rounded-sm border border-slate-200/80 shadow-sm mb-10 space-y-5">
-            
-            {/* Search & Rx Toggle */}
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              
-              {/* Search Bar */}
-              <div className="relative w-full md:w-96">
-                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                <input
-                  type="text"
-                  placeholder="Search by name, ingredient, strength or indication..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2.5 rounded-sm bg-slate-50 border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-brand-green focus:bg-white"
-                />
-              </div>
-
-              {/* Rx / OTC Filter Toggle */}
-              <div className="flex items-center gap-2 p-1 bg-slate-100 rounded-sm">
-                <button
-                  type="button"
-                  onClick={() => setRxFilter('All')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                    rxFilter === 'All' ? 'bg-white text-ink shadow-sm' : 'text-slate-600 hover:text-ink'
-                  }`}
-                >
-                  All ({contentData.products.length})
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setRxFilter('Rx')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                    rxFilter === 'Rx' ? 'bg-indigo-600 text-white shadow-sm' : 'text-slate-600 hover:text-ink'
-                  }`}
-                >
-                  Rx Only
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setRxFilter('OTC')}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                    rxFilter === 'OTC' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 hover:text-ink'
-                  }`}
-                >
-                  OTC / Nutraceuticals
-                </button>
-              </div>
-
-            </div>
-
-            {/* Category Filter Pills */}
-            <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100">
-              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mr-1">
-                Therapeutic Area:
-              </span>
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  type="button"
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-3.5 py-1.5 rounded-sm text-xs font-bold transition-all ${
-                    selectedCategory === cat
-                      ? 'bg-brand-navy text-white shadow-sm'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-
-          </div>
-
-          {/* Results Summary Counter */}
-          <div className="mb-6 flex items-center justify-between text-xs font-semibold text-slate-500">
-            <span>Showing {filteredProducts.length} pharmaceutical formulations</span>
-            {(searchTerm || selectedCategory !== 'All' || rxFilter !== 'All') && (
-              <button
-                type="button"
-                onClick={() => { setSearchTerm(''); setSelectedCategory('All'); setRxFilter('All'); }}
-                className="text-brand-blue hover:underline"
-              >
-                Clear all filters
-              </button>
-            )}
-          </div>
-
-          {/* Product Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {filteredProducts.map((product) => {
-              const pillStyle = categoryPillColors[product.category] || 'bg-blue-100 text-blue-800 border-blue-200';
-              return (
-                <div
-                  key={product.id}
-                  className="bg-white rounded-sm p-6 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
-                >
-                  <div>
-                    {/* Image Box */}
-                    <div className="relative rounded-sm bg-gradient-to-br from-slate-50 via-slate-100/60 to-emerald-50/30 p-6 flex items-center justify-center border border-slate-100 aspect-[4/3] overflow-hidden mb-5">
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        className="max-h-48 w-auto object-contain transition-transform duration-500 group-hover:scale-105 filter drop-shadow-md"
-                        loading="lazy"
-                      />
-                      <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
-                        <span className={`px-2.5 py-0.5 rounded-sm text-[10px] font-bold border ${pillStyle}`}>
-                          {product.category}
-                        </span>
-                        <span className={`px-2 py-0.5 rounded-sm text-[10px] font-bold ${
-                          product.isRx ? 'bg-indigo-50 text-indigo-700 border border-indigo-200' : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                        }`}>
-                          {product.prescription}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Title & Tagline */}
-                    <h3 className="text-lg font-bold text-ink font-heading group-hover:text-brand-blue transition-colors">
-                      {product.name}
-                    </h3>
-                    {product.tagline && (
-                      <p className="mt-1 text-xs font-semibold text-brand-blue line-clamp-1">
-                        {product.tagline}
-                      </p>
-                    )}
-
-                    {/* Active Composition Chip */}
-                    {product.composition && (
-                      <div className="mt-3 p-2.5 rounded-sm bg-slate-50 border border-slate-100 flex items-start gap-2 text-xs text-slate-700">
-                        <Pill className="w-3.5 h-3.5 text-brand-green flex-shrink-0 mt-0.5" />
-                        <div className="line-clamp-2 font-medium">
-                          <span className="text-slate-400 font-normal">Active: </span>
-                          {product.composition}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Strengths & Pack */}
-                    <div className="mt-3 flex flex-wrap gap-1.5">
-                      {product.availableStrengths && (
-                        <span className="px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 text-[11px] font-semibold">
-                          {product.availableStrengths}
-                        </span>
-                      )}
-                      {product.packSize && (
-                        <span className="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-600 text-[11px] font-semibold">
-                          Pack: {product.packSize}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Card Action Buttons */}
-                  <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-end gap-2">
-                    <button
-                      type="button"
-                      onClick={() => setActiveProductModal(product)}
-                      className="inline-flex items-center gap-1 text-xs font-bold text-brand-blue hover:text-brand-navy transition-colors"
-                    >
-                      <span>Wholesale Quote →</span>
-                    </button>
-                  </div>
-
+      {/* Hero */}
+      <section className="bg-brand-navy text-brand-paper pt-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-6 reveal">
+            <p className="eyebrow !text-brand-green">Wholesale catalogue</p>
+            <h1 className="display !text-brand-paper mt-6 text-5xl sm:text-6xl lg:text-7xl">
+              Our <em>range</em> of products.
+            </h1>
+            <p className="mt-6 max-w-lg text-lg text-brand-onDarkMuted leading-relaxed">
+              Branded pharmaceuticals, generics, nutraceuticals and OTC products at competitive wholesale rates for pharmacies, clinics and hospitals.
+            </p>
+            <dl className="mt-10 grid grid-cols-3 gap-6 border-t border-white/15 pt-6 max-w-lg">
+              {stats.map((s) => (
+                <div key={s.label}>
+                  <dd className="font-display text-4xl sm:text-5xl"><CountUp value={s.value} /></dd>
+                  <dt className="mt-1 text-xs text-brand-onDarkMuted">{s.label}</dt>
                 </div>
-              );
-            })}
-          </div>
-
-          {filteredProducts.length === 0 && (
-            <div className="text-center py-16 bg-white rounded-sm border border-slate-200 p-8">
-              <Package className="w-12 h-12 text-slate-300 mx-auto mb-3" />
-              <p className="text-slate-600 font-bold">No products found matching your search</p>
-              <button
-                type="button"
-                onClick={() => { setSearchTerm(''); setSelectedCategory('All'); setRxFilter('All'); }}
-                className="mt-3 text-xs font-bold text-brand-blue underline"
-              >
-                Reset Search Filters
+              ))}
+            </dl>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <button type="button" onClick={() => pickArea('All')} className="btn btn-accent">
+                Browse catalogue <ArrowDown className="w-4 h-4" aria-hidden="true" />
               </button>
+              <Link href="/contact-us?type=distribution" className="btn btn-on-dark">
+                Request wholesale pricing
+              </Link>
             </div>
-          )}
-
+          </div>
+          <div className="lg:col-span-6 reveal" style={{ animationDelay: '.15s' }}>
+            <Parallax speed={-0.06}>
+              <PackCollage products={byId(COLLAGE_IDS)} />
+            </Parallax>
+          </div>
         </div>
       </section>
 
-      {/* Interactive Detail Modal */}
-      {activeProductModal && (
-        <ProductDetailModal
-          product={activeProductModal}
-          onClose={() => setActiveProductModal(null)}
-        />
-      )}
+      {/* Therapy areas */}
+      <section className="bg-brand-paper py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="eyebrow">Therapy areas</p>
+              <h2 className="display mt-4 text-3xl sm:text-4xl">Browse by <em>therapy area</em>.</h2>
+            </div>
+            <p className="text-sm text-ink-60">Select an area to filter the catalogue.</p>
+          </div>
+          <div className="mt-10">
+            <TherapyTiles categories={therapyAreas} products={products} value={selectedCategory} onChange={pickArea} />
+          </div>
+        </div>
+      </section>
 
+      {/* First-to-market spotlight */}
+      <section className="bg-brand-darkBlue py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="eyebrow !text-brand-green">Spotlight</p>
+              <h2 className="display !text-brand-paper mt-4 text-3xl sm:text-4xl">First to market in the UAE, Oman and <em>KSA</em>.</h2>
+            </div>
+            <Link href="/#track-record" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-paper hover:text-brand-green transition-colors">
+              Our track record <ArrowRight className="w-4 h-4" aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="mt-10">
+            <Spotlight products={byId(SPOTLIGHT_IDS)} onOpen={setActiveProductModal} />
+          </div>
+        </div>
+      </section>
+
+      {/* Catalogue */}
+      <section ref={catalogueRef} id="catalogue" className="bg-brand-paper scroll-mt-20">
+        {/* Sticky toolbar */}
+        <div className="sticky top-16 z-30 bg-brand-paper/95 backdrop-blur border-b border-brand-border">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center gap-4">
+            <div className="md:w-80">
+              <SearchField compact value={searchTerm} onChange={setSearchTerm} placeholder="Search name, ingredient or indication" />
+            </div>
+            <ChipGroup options={RX_OPTIONS} value={rxFilter} onChange={setRxFilter} />
+            <div className="md:ml-auto flex items-center gap-3 text-sm text-ink-60">
+              {selectedCategory !== 'All' && (
+                <button
+                  type="button"
+                  onClick={() => setSelectedCategory('All')}
+                  className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold text-white"
+                  style={{ background: therapyStyle(selectedCategory).accent }}
+                >
+                  {selectedCategory} <X className="w-3.5 h-3.5" aria-label="Clear therapy area" />
+                </button>
+              )}
+              <span>
+                <span className="font-display text-xl text-brand-navy mr-1">{filteredProducts.length}</span>
+                products
+              </span>
+              {hasFilters && (
+                <button type="button" onClick={resetFilters} className="link-accent text-xs">Clear all</button>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          {filteredProducts.length > 0 ? (
+            <ProductGrid>
+              {filteredProducts.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  onOpen={setActiveProductModal}
+                  actionLabel="Request wholesale quote"
+                />
+              ))}
+            </ProductGrid>
+          ) : (
+            <EmptyState onReset={resetFilters} />
+          )}
+        </div>
+      </section>
+
+      <HomeCta
+        eyebrow="Wholesale"
+        title="Need bulk supply for your pharmacy or clinic?"
+        accent="Ask for a quote."
+        primary={{ href: '/contact-us?type=distribution', label: 'Request pricing' }}
+        secondary={{ href: '/online-store', label: 'Online store' }}
+      />
+
+      {activeProductModal && (
+        <ProductDetailModal product={activeProductModal} onClose={() => setActiveProductModal(null)} />
+      )}
     </div>
   );
 }

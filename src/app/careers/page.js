@@ -8,7 +8,7 @@ export const metadata = {
   description: 'Send your CV to Zyventa and join a team connecting global healthcare brands with the Middle East and Africa.',
 };
 
-const AREAS = ['Pharmaceutical sales', 'Marketing', 'Regulatory affairs', 'Operations and supply chain'];
+const AREAS = ['Pharmaceutical sales', 'Marketing', 'Regulatory affairs', 'Distribution', 'Business development'];
 
 export default function CareersPage() {
   // NOTE: no dedicated recruitment address exists in the project; the company

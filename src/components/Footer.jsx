@@ -158,8 +158,8 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services#supply-chain" className="hover:text-brand-green transition-colors">
-                    Supply Chain & Logistics
+                  <Link href="/services#sales" className="hover:text-brand-green transition-colors">
+                    Medical Sales
                   </Link>
                 </li>
               </ul>

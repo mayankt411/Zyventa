@@ -7,7 +7,7 @@ import { Reveal } from '@/components/Motion';
 
 export const metadata = {
   title: 'Services - Zyventa',
-  description: 'Regulatory, marketing, sales, distribution and supply chain services for healthcare brands across the GCC, Middle East and Africa.',
+  description: 'Regulatory, marketing, sales and distribution services for healthcare brands across the GCC, Middle East and Africa.',
 };
 
 export default function ServicesPage() {
@@ -15,13 +15,13 @@ export default function ServicesPage() {
 
   return (
     <div>
-      <PageHeader eyebrow="Services" title={<>Five divisions that take your product to <em>market</em>.</>}>
-        Regulation, marketing, sales, distribution and supply chain, delivered by one team across the GCC and wider MEA region.
+      <PageHeader eyebrow="Services" title={<>Four divisions that take your product to <em>market</em>.</>}>
+        Regulation, marketing, sales and distribution, delivered by one team across the GCC and wider MEA region.
       </PageHeader>
 
       {/* Division index */}
       <nav aria-label="Divisions" className="bg-brand-paper">
-        <ol className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-5 border-b border-brand-border">
+        <ol className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-4 border-b border-brand-border">
           {divisions.map((div, i) => (
             <li key={div.id} className={i > 0 ? 'sm:border-l border-brand-border' : ''}>
               <a href={`#${div.id}`} className={`group block py-6 sm:px-5 ${i === 0 ? 'sm:pl-0' : ''}`}>

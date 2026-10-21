@@ -104,7 +104,7 @@ export default function Header() {
                           </Link>
                         ))}
                         <div className="mt-1 pt-3 pb-1 px-3 border-t border-brand-border">
-                          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-ink-60">Our five divisions</p>
+                          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-ink-60">Our divisions</p>
                           <div className="mt-2 flex flex-wrap gap-1.5">
                             {contentData.distributionDivisions.map((div) => (
                               <Link

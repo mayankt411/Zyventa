@@ -54,7 +54,7 @@ export default function Hero() {
               <p className="font-display text-2xl sm:text-[1.7rem] leading-snug">
                 From registration to the pharmacy shelf, handled in-house.
               </p>
-              <p className="mt-6 text-sm text-brand-onDarkMuted">Five divisions · one partner</p>
+              <p className="mt-6 text-sm text-brand-onDarkMuted">Four divisions · one partner</p>
               <ul className="mt-5 flex flex-wrap gap-2">
                 {contentData.distributionDivisions.map((div) => (
                   <li key={div.id}>

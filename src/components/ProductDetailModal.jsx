@@ -17,6 +17,9 @@ export default function ProductDetailModal({ product, onClose }) {
   });
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
+  const variants = product.images || [];
+  const [variantIndex, setVariantIndex] = useState(0);
+  const shown = variants[variantIndex] ? { ...product, image: variants[variantIndex].src } : product;
 
   // Close on Escape
   useEffect(() => {
@@ -61,8 +64,26 @@ export default function ProductDetailModal({ product, onClose }) {
       <div className="bg-brand-paper rounded-md max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col">
         <div className="overflow-y-auto grid md:grid-cols-12">
           {/* Product visual */}
-          <div className="md:col-span-5 p-10 flex items-center justify-center relative min-h-[260px] max-h-[22rem]" style={{ background: therapyStyle(product.category).tint }}>
-            <ProductVisual product={product} />
+          <div className="md:col-span-5 p-10 flex flex-col items-center justify-center gap-4 relative min-h-[260px]" style={{ background: therapyStyle(product.category).tint }}>
+            <div className="flex items-center justify-center w-full max-h-[18rem]">
+              <ProductVisual product={shown} />
+            </div>
+            {variants.length > 1 && (
+              <div className="flex flex-wrap justify-center gap-2" role="tablist" aria-label="Select strength">
+                {variants.map((v, i) => (
+                  <button
+                    key={v.src}
+                    type="button"
+                    role="tab"
+                    aria-selected={i === variantIndex}
+                    onClick={() => setVariantIndex(i)}
+                    className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors ${i === variantIndex ? 'bg-brand-navy text-white border-brand-navy' : 'bg-white text-brand-navy border-brand-border hover:border-brand-navy'}`}
+                  >
+                    {v.label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Details */}

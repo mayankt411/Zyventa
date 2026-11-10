@@ -23,7 +23,7 @@ export default function SingleBlogPage({ params }) {
         <header className="bg-brand-navy text-white border-b-4 border-brand-green">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20">
             <Link href="/blogs" className="inline-flex items-center gap-2 text-sm font-semibold text-brand-green hover:text-white transition-colors">
-              <ArrowLeft className="w-4 h-4" aria-hidden="true" /> All insights
+              <ArrowLeft className="w-4 h-4" aria-hidden="true" /> All posts
             </Link>
             <div className="mt-10 grid lg:grid-cols-12 gap-8 pb-12">
               <h1 className="display !text-white lg:col-span-9 text-4xl sm:text-5xl lg:text-6xl">{blog.title}</h1>

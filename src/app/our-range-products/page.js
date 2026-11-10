@@ -19,8 +19,8 @@ const RX_OPTIONS = [
 ];
 
 // Pack shots whose images match the product, used in the hero collage.
-const COLLAGE_IDS = ['nourisil-md', 'calmi-relax', 'troxlmetacin-gel', 'calmivenal-gel'];
-const SPOTLIGHT_IDS = ['troxlmetacin-gel', 'calmivenal-gel', 'nourisil-md'];
+const COLLAGE_IDS = ['nourisil-md', 'calmi-relax', 'troximetacin-gel', 'calmivenal-gel'];
+const SPOTLIGHT_IDS = ['troximetacin-gel', 'calmivenal-gel', 'nourisil-md'];
 
 export default function OurRangeProductsPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -35,7 +35,7 @@ export default function OurRangeProductsPage() {
 
   const filteredProducts = products.filter((p) => {
     const searchLower = searchTerm.toLowerCase();
-    const matchesSearch = [p.name, p.composition, p.tagline, p.indication, p.availableStrengths, p.category]
+    const matchesSearch = [p.name, p.composition, p.tagline, p.description, p.availableStrengths, p.category]
       .some((field) => field && field.toLowerCase().includes(searchLower));
     const matchesCategory = selectedCategory === 'All' || p.category === selectedCategory;
     const matchesRx = rxFilter === 'All' ? true : rxFilter === 'Rx' ? p.isRx : !p.isRx;
@@ -138,7 +138,7 @@ export default function OurRangeProductsPage() {
         <div className="sticky top-16 z-30 bg-brand-paper/95 backdrop-blur border-b border-brand-border">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center gap-4">
             <div className="md:w-80">
-              <SearchField compact value={searchTerm} onChange={setSearchTerm} placeholder="Search name, ingredient or indication" />
+              <SearchField compact value={searchTerm} onChange={setSearchTerm} placeholder="Search name, ingredient or use" />
             </div>
             <ChipGroup options={RX_OPTIONS} value={rxFilter} onChange={setRxFilter} />
             <div className="md:ml-auto flex items-center gap-3 text-sm text-ink-60">

@@ -50,7 +50,6 @@ export default function ProductDetailModal({ product, onClose }) {
     ['Active composition', product.composition],
     ['Available strengths', product.availableStrengths],
     ['Pack size', product.packSize],
-    ['Indication', product.indication],
   ].filter(([, value]) => value);
 
   return (

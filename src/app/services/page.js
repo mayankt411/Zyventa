@@ -7,7 +7,7 @@ import { Reveal } from '@/components/Motion';
 
 export const metadata = {
   title: 'Services - Zyventa',
-  description: 'Business development, regulatory, marketing, sales and distribution services for healthcare brands across the GCC, Middle East and Africa.',
+  description: 'Business development, regulatory, marketing, sales and distribution services for healthcare brands across the GCC, Middle East and North Africa.',
 };
 
 export default function ServicesPage() {
@@ -16,7 +16,7 @@ export default function ServicesPage() {
   return (
     <div>
       <PageHeader eyebrow="Services" title={<>Five divisions that take your product to <em>market</em>.</>}>
-        Business development, regulation, marketing, sales and distribution, delivered by one team across the GCC and wider MEA region.
+        Business development, regulation, marketing, sales and distribution, delivered by one team across the GCC and wider MENA region.
       </PageHeader>
 
       {/* Division index */}
@@ -82,27 +82,15 @@ export default function ServicesPage() {
           </Reveal>
 
           {/* Route to market */}
-          <div className="mt-20">
-            <p className="field-label">From manufacturer to patient</p>
-            <Reveal as="ol" stagger className="mt-4 grid md:grid-cols-5 gap-3">
-              {contentData.businessFlow.map((step, i) => (
-                <li
-                  key={step}
-                  className={`relative rounded-md p-5 min-h-[7rem] flex flex-col justify-between ${
-                    step === 'Zyventa Trading' ? 'bg-brand-navy text-brand-paper' : 'bg-brand-sand text-brand-navy'
-                  }`}
-                >
-                  <span className={`text-xs font-bold ${step === 'Zyventa Trading' ? 'text-brand-green' : 'text-brand-blue'}`}>
-                    Step {i + 1}
-                  </span>
-                  <span className="mt-3 font-display text-lg leading-snug">{step}</span>
-                </li>
-              ))}
-            </Reveal>
-            <p className="mt-4 text-sm text-ink-60 max-w-3xl">
+          <Reveal className="mt-20 grid lg:grid-cols-12 gap-8 lg:gap-16 items-center rounded-md bg-brand-sand border-l-4 border-brand-green px-6 py-10 sm:px-10 sm:py-12">
+            <div className="lg:col-span-5">
+              <p className="field-label">Route to market</p>
+              <h3 className="display mt-3 text-2xl sm:text-3xl">From manufacturer to <em>patient</em>.</h3>
+            </div>
+            <p className="lg:col-span-7 text-base sm:text-lg text-ink-80 leading-relaxed">
               Trademarks are owned by Zyventa, or by another marketing authorisation holder with Zyventa holding distribution rights. Our field teams work with doctors to build prescriptions across hospitals and pharmacies.
             </p>
-          </div>
+          </Reveal>
         </div>
       </section>
 

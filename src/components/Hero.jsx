@@ -28,9 +28,9 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 border-b border-brand-border">
           <div className="lg:col-span-8 py-14 sm:py-20 lg:pr-14 reveal">
-            <p className="eyebrow">Healthcare market entry · GCC, Middle East &amp; Africa</p>
+            <p className="eyebrow">Healthcare market entry · GCC, Middle East &amp; North Africa</p>
             <h1 className="display mt-6 text-[2.6rem] sm:text-6xl lg:text-[4.6rem]">
-              Creating a <em>healthy</em> tomorrow, across the Middle East &amp;&nbsp;Africa.
+              Creating a <em>healthy</em> tomorrow, across the Middle East &amp; North&nbsp;Africa.
             </h1>
             <p className="mt-7 max-w-xl text-lg text-ink-80 leading-relaxed">
               We connect global pharmaceutical and biotechnology companies with the patients who need them, from registration to the pharmacy shelf.
@@ -46,10 +46,19 @@ export default function Hero() {
           </div>
 
           <aside
-            className="lg:col-span-4 bg-brand-navy text-brand-paper p-8 sm:p-10 flex flex-col justify-between gap-10 reveal"
+            className="lg:col-span-4 bg-brand-navy text-brand-paper p-6 sm:p-8 flex flex-col justify-between gap-8 reveal"
             style={{ animationDelay: '.1s' }}
           >
-            <span className="font-display text-7xl leading-none text-brand-green" aria-hidden="true">&ldquo;</span>
+            <figure className="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:flex-1 lg:min-h-[15rem] w-full overflow-hidden rounded-md bg-brand-darkBlue">
+              <img
+                src="/assets/images/recreated/services-regulation.jpg"
+                alt="Healthcare professional handing medication to a patient across a pharmacy counter"
+                width={1448}
+                height={1086}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <span className="absolute left-0 bottom-0 h-1 w-16 bg-brand-green" aria-hidden="true" />
+            </figure>
             <div>
               <p className="font-display text-2xl sm:text-[1.7rem] leading-snug">
                 From registration to the pharmacy shelf, handled in-house.

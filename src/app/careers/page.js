@@ -5,7 +5,7 @@ import { Reveal } from '@/components/Motion';
 
 export const metadata = {
   title: 'Careers - Zyventa',
-  description: 'Send your CV to Zyventa and join a team connecting global healthcare brands with the Middle East and Africa.',
+  description: 'Send your CV to Zyventa and join a team connecting global healthcare brands with the Middle East and North Africa.',
 };
 
 const AREAS = ['Pharmaceutical sales', 'Marketing', 'Regulatory affairs', 'Distribution', 'Business development'];

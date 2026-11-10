@@ -33,7 +33,9 @@ export default function AboutUsPage() {
           <figure className="lg:col-span-6">
             <div className="rounded-md overflow-hidden bg-brand-sand aspect-[4/3]">
               <img
-                src="/assets/team/international-medical-team-in-face-masks-having-team-building-300x200.jpg"
+                src="/assets/images/recreated/about-healthcare-team.jpg"
+                width={1448}
+                height={1086}
                 alt="Zyventa healthcare team"
                 className="w-full h-full object-cover"
               />
@@ -59,7 +61,7 @@ export default function AboutUsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-6">
             <p className="eyebrow">Where we operate</p>
-            <h2 className="display mt-5 text-3xl sm:text-4xl">Headquartered in Dubai, serving four GCC markets.</h2>
+            <h2 className="display mt-5 text-3xl sm:text-4xl">Headquartered in Dubai, serving five GCC markets.</h2>
             <dl className="mt-8 border-t border-brand-navy">
               <div className="grid grid-cols-3 gap-4 py-4 border-b border-brand-border">
                 <dt className="field-label !mb-0 pt-1">Headquarters</dt>
@@ -68,6 +70,19 @@ export default function AboutUsPage() {
               <div className="grid grid-cols-3 gap-4 py-4 border-b border-brand-border">
                 <dt className="field-label !mb-0 pt-1">Commercial markets</dt>
                 <dd className="col-span-2 font-display text-xl text-brand-navy">{contentData.site.markets.commercial.join(', ')}</dd>
+              </div>
+              <div className="grid grid-cols-3 gap-4 py-4 border-b border-brand-border">
+                <dt className="field-label !mb-0 pt-1">Warehouse locations</dt>
+                <dd className="col-span-2">
+                  <ul className="space-y-3">
+                    {contentData.warehouses.map((w) => (
+                      <li key={w.name}>
+                        <span className="block font-display text-xl text-brand-navy">{w.name}</span>
+                        <span className="block text-sm text-ink-60 mt-0.5">{w.location}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </dd>
               </div>
               <div className="grid grid-cols-3 gap-4 py-4 border-b border-brand-border">
                 <dt className="field-label !mb-0 pt-1">Portfolio</dt>

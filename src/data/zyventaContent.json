@@ -2,13 +2,13 @@
   "site": {
     "name": "Zyventa",
     "tagline": "CREATING A HEALTHY TOMORROW",
-    "heroHeadline": "ZYVENTA: Your MEA healthcare bridge!",
-    "heroSubheadline": "We provide world-class support to those who want to enter the most promising markets of Middle East & Africa, with the help of the most dynamic management team. We recognize that our team is what makes us who we are.",
+    "heroHeadline": "ZYVENTA: Your MENA healthcare bridge!",
+    "heroSubheadline": "We provide world-class support to those who want to enter the most promising markets of Middle East & North Africa, with the help of the most dynamic management team. We recognize that our team is what makes us who we are.",
     "videoSrc": "/assets/videos/Zyventa-Promo-Landscape-V3.mp4",
     "logo": "/assets/logos/cropped-zyventa-logo-png1.png",
     "email": "contact@zyventa.com",
-    "address": "Office Number 2211, Al Rehan Block, Omniyat Building, Mamzar, Dubai, UAE",
-    "aboutText": "ZYVENTA was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East. ZYVENTA bridges access gaps by partnering with global pharmaceutical and biotechnology companies to deploy and commercialize new pharmaceutical, biologics, and other healthcare solutions in the Middle East and Africa (MEA) Markets.",
+    "address": "Office No. 323, 3rd Floor, Al Rehan Block, Omniyat Building, Al Mamzar, Dubai, UAE",
+    "aboutText": "ZYVENTA was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East. ZYVENTA bridges access gaps by partnering with global pharmaceutical and biotechnology companies to deploy and commercialize new pharmaceutical, biologics, and other healthcare solutions in the Middle East and North Africa (MENA) markets.",
     "aboutSubtext": "At ZYVENTA, we pride ourselves on our comprehensive approach to establishing and enhancing brand presence within the region's dynamic healthcare landscape. Our dedicated team oversees every phase and process necessary to cultivate a strong brand identity and market presence. With meticulous attention to detail, we integrate five essential divisions: Business Development, Regulation, Marketing, Sales and Distribution.",
     "mission": "To be the preferred regional partner for pharma companies entering MENA, and to develop our own branded products that improve patients’ health and quality of life.",
     "vision": "A specialty firm introducing innovative products that meet unmet medical needs across MENA.",
@@ -18,7 +18,8 @@
       "commercial": [
         "Saudi Arabia",
         "Oman",
-        "Bahrain"
+        "Bahrain",
+        "Qatar"
       ]
     },
     "ecommerceUrl": "https://shopify.zyventa.com"
@@ -31,10 +32,10 @@
       "description": "Up from 6 products in FY 2022"
     },
     {
-      "value": "4",
+      "value": "5",
       "suffix": "",
       "label": "GCC markets",
-      "description": "UAE, Saudi Arabia, Oman and Bahrain"
+      "description": "UAE, Saudi Arabia, Oman, Bahrain and Qatar"
     },
     {
       "value": "8",
@@ -61,7 +62,7 @@
         "Joint product development for regional needs",
         "New market entry support with local market intelligence"
       ],
-      "image": "/assets/images/healthcare-researcher-working-to-discover-a-vaccine.jpg"
+      "image": "/assets/images/recreated/services-business-development.jpg"
     },
     {
       "id": "regulation",
@@ -74,7 +75,7 @@
         "Pharmacovigilance and lifecycle management",
         "Strategic regulatory roadmap for fast-track market access"
       ],
-      "image": "/assets/images/prescription-for-medication-and-examination-by-doctor.jpg"
+      "image": "/assets/images/recreated/services-regulation.jpg"
     },
     {
       "id": "marketing",
@@ -87,7 +88,7 @@
         "Market research, competitor analysis, and positioning",
         "Collaborative alignment with frontline medical sales representatives"
       ],
-      "image": "/assets/images/business-meeting-on-marketing-300x200.jpg"
+      "image": "/assets/images/recreated/services-marketing.jpg"
     },
     {
       "id": "sales",
@@ -100,7 +101,7 @@
         "Continuous doctor engagement and clinical evidence presentation",
         "Performance-driven sales targets and territory management"
       ],
-      "image": "/assets/images/group-of-doctors-talking-to-pharmaceutical-sales-representative-300x200.jpg"
+      "image": "/assets/images/recreated/services-sales.jpg"
     },
     {
       "id": "distribution",
@@ -113,13 +114,13 @@
         "Direct-to-hospital and government tenders fulfillment",
         "Robust stock availability and reliable order delivery"
       ],
-      "image": "/assets/images/warehouse-female-worker-checking-up-stuff-in-a-warehouse-.jpg"
+      "image": "/assets/images/recreated/services-distribution.jpg"
     }
   ],
   "keyServices": [
     {
       "title": "Regulation & Compliance",
-      "description": "Navigating registration, compliance, and regulatory affairs with health authorities across GCC and MEA.",
+      "description": "Navigating registration, compliance, and regulatory affairs with health authorities across GCC and MENA.",
       "icon": "ShieldCheck"
     },
     {
@@ -155,46 +156,134 @@
   ],
   "partners": [
     {
+      "name": "Sevana Pharmaceuticals",
+      "logo": "/assets/logos/partners/sevana-pharmaceuticals.png",
+      "country": "UAE"
+    },
+    {
+      "name": "Pure Pharmaceuticals",
+      "logo": "/assets/logos/partners/pure-pharmaceuticals.png"
+    },
+    {
+      "name": "Pharma Bavaria International",
+      "logo": "/assets/logos/partners/pharma-bavaria-international.png",
+      "country": "Germany"
+    },
+    {
+      "name": "Pharmaline International",
+      "logo": "/assets/logos/partners/pharmaline-international.png",
+      "country": "Saudi Arabia"
+    },
+    {
+      "name": "Vista Pharma",
+      "logo": "/assets/logos/partners/vista-pharma.png",
+      "country": "Oman"
+    },
+    {
+      "name": "Al Hashar Pharmacy",
+      "logo": "/assets/logos/partners/al-hashar-pharmacy.png",
+      "country": "Oman"
+    },
+    {
+      "name": "Al Ittihad Drug Store (IDS)",
+      "logo": "/assets/logos/partners/al-ittihad-drug-store.png",
+      "country": "UAE"
+    },
+    {
+      "name": "Cigalah Group",
+      "logo": "/assets/logos/partners/cigalah-group.png",
+      "country": "UAE"
+    },
+    {
       "name": "Akses Swiss",
-      "logo": "/assets/logos/Akses_SWISS_logo_WEB-2.png"
+      "logo": "/assets/logos/partners/akses-swiss.png"
     },
     {
-      "name": "Amdis",
-      "logo": "/assets/logos/Amdis-Logo-1-2.png"
-    },
-    {
-      "name": "Jubilant",
-      "logo": "/assets/logos/JUBILANT-LOGO-2.png"
-    },
-    {
-      "name": "Macleods",
-      "logo": "/assets/logos/MACLEODS-LOGO-2.png"
-    },
-    {
-      "name": "Metromed",
-      "logo": "/assets/logos/METROMED-LOGO-png-2.png"
+      "name": "Liquidsun",
+      "logo": "/assets/logos/partners/liquidsun.png",
+      "country": "UK"
     },
     {
       "name": "Rusan",
-      "logo": "/assets/logos/RUSAN-LOGO-1.png"
+      "logo": "/assets/logos/partners/rusan.png",
+      "country": "India"
     },
     {
-      "name": "Yari",
-      "logo": "/assets/logos/yari-logo-1.png"
+      "name": "Sharjah Drug Store",
+      "logo": "/assets/logos/partners/sharjah-drug-store.png",
+      "country": "UAE"
     },
     {
-      "name": "Pharma Bavaria",
-      "logo": "/assets/icons/pharma-bavaria-svg-2.png"
+      "name": "Unexo Life Sciences",
+      "logo": "/assets/logos/partners/unexo-life-sciences.png"
     },
     {
-      "name": "ABM Healthcare",
-      "logo": "/assets/logos/ABM-Logo111.png"
+      "name": "Incepta",
+      "logo": "/assets/logos/partners/incepta.png"
+    },
+    {
+      "name": "Amdis",
+      "logo": "/assets/logos/partners/amdis.png",
+      "country": "India"
+    },
+    {
+      "name": "Al Yari Pharmacy",
+      "logo": "/assets/logos/partners/al-yari-pharmacy.png",
+      "country": "Bahrain"
+    },
+    {
+      "name": "Abcon",
+      "logo": "/assets/logos/partners/abcon.png",
+      "country": "UAE"
+    },
+    {
+      "name": "Pharmasol",
+      "logo": "/assets/logos/partners/pharmasol.png"
+    },
+    {
+      "name": "Lab Botanic Bavaria",
+      "logo": "/assets/logos/partners/lab-botanic-bavaria.png"
+    },
+    {
+      "name": "Akriti",
+      "logo": "/assets/logos/partners/akriti.png",
+      "country": "India"
+    },
+    {
+      "name": "Macleods",
+      "logo": "/assets/logos/partners/macleods.png",
+      "country": "India"
+    },
+    {
+      "name": "Vetprom",
+      "logo": "/assets/logos/partners/vetprom.png",
+      "country": "Bulgaria"
+    },
+    {
+      "name": "Metromed",
+      "logo": "/assets/logos/partners/metromed.png",
+      "country": "UAE"
+    },
+    {
+      "name": "Menapharm Consulting",
+      "logo": "/assets/logos/partners/menapharm-consulting.png",
+      "country": "Europe"
+    },
+    {
+      "name": "Jubilant Generics",
+      "logo": "/assets/logos/partners/jubilant-generics.png",
+      "country": "India"
+    },
+    {
+      "name": "Bahwan Healthcare Centre",
+      "logo": "/assets/logos/partners/bahwan-healthcare-centre.png",
+      "country": "Oman"
     }
   ],
   "journey": [
     {
       "year": "Founding Vision",
-      "title": "The MEA Healthcare Link",
+      "title": "The MENA Healthcare Link",
       "description": "ZYVENTA was established to serve as a vital link between international healthcare companies and the burgeoning markets of the Arabian Gulf and Middle East."
     },
     {
@@ -215,19 +304,18 @@
     {
       "year": "Today",
       "title": "Regional Market Leader",
-      "description": "Proudly connecting global healthcare innovation with healthcare providers, pharmacies, and patients across GCC & MEA."
+      "description": "Proudly connecting global healthcare innovation with healthcare providers, pharmacies, and patients across GCC & MENA."
     }
   ],
   "products": [
     {
       "id": "zyvenkar",
       "name": "Zyvenkar",
-      "tagline": "Controls BP and Future Complications Too",
-      "composition": "Amlodipine\nA calcium channel blocker that helps relax and widen blood vessels, supporting improved blood flow and reduction of blood pressure.\n\nOlmesartan\nAn angiotensin II receptor blocker (ARB) that helps prevent the narrowing of blood vessels, thereby supporting effective blood-pressure control.",
-      "indication": "Used for the management of hypertension (high blood pressure) in patients for whom combination therapy with Amlodipine and Olmesartan is considered appropriate.",
-      "description": "Zyvenkar combines Amlodipine and Olmesartan in a convenient, once-daily film-coated tablet designed for the management of hypertension for 24 hours.\n\nThe combination brings together two complementary antihypertensive agents that work through different mechanisms to help achieve effective blood-pressure control. By combining both active ingredients in a single tablet, Zyvenkar offers a convenient treatment option for patients who require combination therapy.",
-      "packSize": "28's Tablet",
-      "availableStrengths": "Zyvenkar 5/20mg\nZyvenkar 5/40mg\nZyvenkar 10/20mg\nZyvenkar 10/40mg",
+      "tagline": "Controls BP and future complications too",
+      "composition": "Amlodipine + Olmesartan",
+      "description": "Experience the combined benefits of Amlodipine and Olmesartan with Zyvenkar, a convenient dual-action tablet designed to support effective blood-pressure control. Two complementary ingredients work together in one simple treatment option for hypertension management.",
+      "packSize": "28 tablets",
+      "availableStrengths": "5/20 mg, 5/40 mg, 10/20 mg, 10/40 mg",
       "category": "Cardiovascular",
       "rawCategory": "Cardiovascular",
       "features": "1. Dual-action antihypertensive combination\n2. Combines Amlodipine and Olmesartan in one tablet\n3. Available in four strength combinations\n4. Film-coated tablets\n5. Convenient combination therapy for hypertension management",
@@ -245,11 +333,10 @@
       "id": "desvenzyl",
       "name": "Desvenzyl",
       "tagline": "A modern SNRI for effective depression management",
-      "composition": "Desvenlafaxine belongs to a class of medicines known as serotonin-norepinephrine reuptake inhibitors (SNRIs). It works by helping increase the availability of serotonin and norepinephrine in the brain, neurotransmitters involved in mood regulation.",
-      "indication": "Used for the treatment of major depressive disorder (MDD) in adults.",
-      "description": "Desvenzyl contains Desvenlafaxine, an extended-release antidepressant formulated to provide sustained delivery of the active ingredient over time.\nIt is designed for the treatment of major depressive disorder (MDD) in adults, helping to support the regulation of neurotransmitters involved in mood and emotional well-being.\nThe extended-release formulation allows for convenient once-daily administration, as prescribed by a healthcare professional.",
-      "packSize": "30 Extended-Release Tablets",
-      "availableStrengths": "Desvenzyl 50 mg\nDesvenzyl 100 mg",
+      "composition": "Desvenlafaxine",
+      "description": "Discover dependable support for depression management with Desvenzyl Extended-Release Tablets. Designed for sustained release, Desvenzyl offers convenient once-daily therapy to support mood and emotional well-being in adults with major depressive disorder.",
+      "packSize": "30 extended-release tablets",
+      "availableStrengths": "50 mg, 100 mg",
       "category": "CNS & Neurology",
       "rawCategory": "CNS",
       "features": "1. Desvenlafaxine extended-release formulation\n2. Available in 50 mg and 100 mg strengths\n3. Convenient once-daily dosing, as prescribed\n4. Designed for sustained release of the active ingredient",
@@ -266,12 +353,11 @@
     {
       "id": "lacolep",
       "name": "Lacolep",
-      "tagline": "comprehensive sesure control",
-      "composition": "Lacosamide is an anticonvulsant medicine that helps reduce abnormal electrical activity in the brain associated with seizures.",
-      "indication": "Lacosamide is used for the treatment of partial-onset seizures and may be used either alone or in combination with other antiepileptic medicines, depending on the patient's treatment requirements.\n\nIt may also be used as adjunctive therapy for primary generalized tonic-clonic seizures in appropriate patients, according to approved prescribing information.",
-      "description": "Lacolep contains Lacosamide, an antiepileptic medicine used in the management of certain types of epileptic seizures.\n\nEach film-coated tablet provides a precise dose of Lacosamide and is formulated to support effective seizure management as part of an individualized treatment plan prescribed by a healthcare professional.",
-      "packSize": "28 Film-Coated Tablets",
-      "availableStrengths": "Lacolep 50 mg\nLacolep 100 mg",
+      "tagline": "Comprehensive seizure control",
+      "composition": "Lacosamide",
+      "description": "Experience focused seizure-management support with Lacolep Film-Coated Tablets. Formulated with Lacosamide for precise dosing, Lacolep provides a convenient and reliable option for individualized antiepileptic therapy.",
+      "packSize": "28 film-coated tablets",
+      "availableStrengths": "50 mg, 100 mg",
       "category": "CNS & Neurology",
       "rawCategory": "CNS",
       "features": "1. Lacosamide anticonvulsant therapy\n2. Available in 50 mg and 100 mg strengths\n3. Film-coated tablets\n4. Precise and convenient oral dosing\n5. Suitable for use as part of an individualized epilepsy-management regimen",
@@ -289,11 +375,10 @@
       "id": "febuvent",
       "name": "Febuvent",
       "tagline": "Restores comfort",
-      "composition": "Febuxostat belongs to a class of medicines known as xanthine oxidase inhibitors. It works by inhibiting the enzyme responsible for uric acid production, thereby helping reduce uric acid levels in the blood.",
-      "indication": "Used for the chronic management of hyperuricemia in adult patients with gout, according to the approved prescribing information applicable in the relevant market.",
-      "description": "Febuvent contains Febuxostat, a medicine used for the long-term management of elevated uric acid levels in patients with gout.\n\nFebuxostat helps lower serum uric acid by reducing its production in the body, supporting ongoing management of hyperuricemia associated with gout.",
-      "packSize": "30 Tablets",
-      "availableStrengths": "Febuvent 40 mg\nFebuvent 80 mg",
+      "composition": "Febuxostat",
+      "description": "Discover effective uric-acid management with Febuvent Tablets. Formulated with Febuxostat, Febuvent helps lower elevated uric acid levels and supports the long-term management of hyperuricemia associated with gout.",
+      "packSize": "30 tablets",
+      "availableStrengths": "40 mg, 80 mg",
       "category": "Orthopedic & Pain Care",
       "rawCategory": "Ortho",
       "features": "1. prevent accumulation/recrytallization of uric acid in joints.\n2.Xanthine oxidase inhibitor\n3. Helps reduce elevated serum uric acid levels\n4. Available in 40 mg and 80 mg strengths\n5. Convenient oral tablet formulation",
@@ -310,12 +395,11 @@
     {
       "id": "akthyod",
       "name": "Akthyod",
-      "tagline": "Provides Convenience and compliance",
-      "composition": "Carbimazole belongs to a group of medicines known as antithyroid agents. It reduces the formation of thyroid hormones in the thyroid gland.",
-      "indication": "Carbimazole may be used for: \n1. Treatment of hyperthyroidism\n2. Preparation for thyroid surgery (thyroidectomy) in patients with hyperthyroidism\n3. Treatment before and after radioiodine therapy, where clinically appropriate",
-      "description": "Akthyod contains Carbimazole, an antithyroid medicine used in the management of an overactive thyroid gland (hyperthyroidism).\n\nCarbimazole works by reducing the production of thyroid hormones, helping restore thyroid hormone levels toward the normal range under appropriate medical supervision.\n\nAkthyod is available in two strengths to support individualized treatment according to the patient's thyroid function and clinical requirements.",
-      "packSize": "100 Tablets\nPacked as 10 × 10 tablets",
-      "availableStrengths": "Akthyod 5 mg\nAkthyod 20 mg",
+      "tagline": "Provides convenience and compliance",
+      "composition": "Carbimazole",
+      "description": "Introducing Akthyod Tablets, formulated with Carbimazole to support effective management of an overactive thyroid. Available in two strengths, Akthyod offers flexible treatment options tailored to individual thyroid-care needs.",
+      "packSize": "100 tablets (10 × 10)",
+      "availableStrengths": "5 mg, 20 mg",
       "category": "Metabolic & Diabetes",
       "rawCategory": "Metabolics",
       "features": "1. Longer intrathyroidal levels\n2. Carbimazole antithyroid therapy\n3. Available in 5 mg and 20 mg strengths\n4. Helps reduce excessive thyroid hormone production\n5. Supports individualized treatment according to thyroid function\n6. Convenient 100-tablet pack",
@@ -333,11 +417,10 @@
       "id": "nourisil-md",
       "name": "Nourisil MD",
       "tagline": "The gold standard for scar management",
-      "composition": "Nourisil™ MD contains a combination of silicone-based ingredients and Vitamin E, including:\n\n-Cyclopentasiloxane\n-Caprylyl Methicone\n-Tocopheryl Acetate (Vitamin E)\n-Dimethicone Crosspolymer\n-PEG-12 Dimethicone/PPG-20 Crosspolymer\n-Polyglyceryl-3 Diisostearate\n-Dimethicone",
-      "indication": "Nourisil™ MD is designed for the prevention and management of new and old keloid and hypertrophic scars resulting from:\n\n-Surgical procedures\n-Wounds\n-Trauma\n-Burns",
-      "description": "Nourisil™ MD is an ultra-light, transparent and self-drying silicone scar gel designed for the prevention and management of new and old keloid and hypertrophic scars.\n\nIts advanced formulation combines five silicones with Vitamin E to help maintain the skin’s moisture balance while improving the appearance and feel of scars.\n\nWhen applied as directed, Nourisil™ MD dries to form a lightweight protective layer over the scar, helping to hydrate the area while supporting smoother, softer and flatter-looking scars.",
-      "packSize": "Tube and Pump",
-      "availableStrengths": "Nourisil™ MD 10 g\nNourisil™ MD 30 g",
+      "composition": "Medical-grade blend of five silicones + Vitamin E",
+      "description": "Discover advanced scar care with Nourisil MD, an ultra-light and transparent silicone gel designed to improve the appearance of new and old scars. Its smooth, self-drying formula helps soften and flatten scars while fitting effortlessly into everyday skincare routines.",
+      "packSize": "10 g tube, 30 g pump",
+      "availableStrengths": "",
       "category": "Dermatology",
       "rawCategory": "Derma",
       "features": "1. Helps flatten, soften and smooth scars\n2. Helps reduce scar-associated redness\n3. Helps relieve itching and discomfort associated with scars\n4. Transparent and self-drying formulation\n5. Lightweight, silky and non-greasy feel\n6. Forms a protective, hydrating silicone layer\n7. Suitable for application on areas including the face and joints\n8. Suitable for all skin types, including sensitive skin\n9. Preservative-free and mineral-oil-free",
@@ -353,11 +436,10 @@
     {
       "id": "nevral",
       "name": "Nevral",
-      "tagline": "Winning Synergy against neuropathic pain",
-      "composition": "Nevral contains:\n\n-Quercetin\n-Alpha Lipoic Acid\n-L-Carnitine\n-Folic Acid\n-Vitamin B12 (Cyanocobalamin)\n-Vitamin B1 (Thiamine)",
-      "indication": "Nevral is formulated to support nerve health and may be used as nutritional support in conditions involving the central or peripheral nervous system, including situations associated with peripheral neuropathy.",
-      "description": "Nevral is a nutraceutical formulation developed to support nerve health and normal nervous-system function.\n\nIts formulation combines antioxidants, amino-acid derivatives and essential B vitamins that help support nerve function, cellular energy metabolism and protection against oxidative stress.\n\nNevral may be used as part of a nutritional approach for individuals requiring additional support for peripheral nerve health.",
-      "packSize": "30 Tablets\nPacked as 3 × 10-tablet blister packs",
+      "tagline": "Winning synergy against neuropathic pain",
+      "composition": "Quercetin, Alpha Lipoic Acid, Carnitine, Folic Acid, Vitamin B12, Vitamin B1",
+      "description": "Support healthier nerve function with Nevral, a carefully selected blend of antioxidants, amino-acid derivatives and essential B vitamins. Its comprehensive formula is designed to support peripheral nerve health, cellular energy and everyday nervous-system function.",
+      "packSize": "30 tablets (3 × 10 blister packs)",
       "availableStrengths": "",
       "category": "CNS & Neurology",
       "rawCategory": "CNS",
@@ -366,7 +448,7 @@
       "isRx": true,
       "prescription": "Prescription (Rx)",
       "closingLine": "Everyday nutritional support for healthier nerve function.",
-      "image": "/assets/images/nevral.png",
+      "image": "/assets/images/nevral-pack.png",
       "therapy": "Therapy - CNS & Neurology",
       "isStore": true,
       "isWholesale": true
@@ -374,11 +456,10 @@
     {
       "id": "calmi-relax",
       "name": "Calmi Relax",
-      "tagline": "Your power is propotional to your ability to relax",
-      "composition": "Each formulation contains:\n\nValerian Extract\nStandardized to 0.25% Valerenic Acid\n\nGolden Root Extract (Rhodiola rosea)\nStandardized to 3% Rosavin and 1% Salidroside\n\nHawthorn Extract (Crataegus monogyna)\nStandardized to 15% Procyanidins and 2.3% Flavonoids\n\nPassiflora incarnata Extract\nStandardized to 3.5% Flavonoids\n\nMagnesium Citrate Tribasic Hydrate\nContaining a minimum of 14.5% Magnesium",
-      "indication": "Calmi Relax is designed to support:\n\n-Relaxation during periods of everyday stress\n-Normal nervous-system function\n-Mental and emotional balance\n-Reduced feelings of nervous tension\n-Healthy adaptation to demanding or stressful situations\n-Rest and relaxation",
-      "description": "Calmi Relax is a combination formulation developed to support relaxation, emotional balance and normal nervous-system function, particularly during periods of everyday stress and tension.\n\nIts formula combines standardized herbal extracts with magnesium to provide complementary support for mental and physical relaxation.",
-      "packSize": "30 Tablets\nPacked as 2 × 15-tablet blister packs",
+      "tagline": "Your power is proportional to your ability to relax",
+      "composition": "Valerian Extract, Golden Root, Hawthorn, Passiflora incarnata, Magnesium Citrate",
+      "description": "Experience a calmer, more balanced day with Calmi Relax. This unique combination of standardized botanical extracts and magnesium is designed to support relaxation, emotional balance and normal nervous-system function during times of everyday stress.",
+      "packSize": "30 tablets (2 × 15 blister packs)",
       "availableStrengths": "",
       "category": "CNS & Neurology",
       "rawCategory": "CNS",
@@ -396,11 +477,10 @@
     {
       "id": "calmi-dormin",
       "name": "Calmi Dormin",
-      "tagline": "Good nights sleep is the pillar of health",
-      "composition": "Each tablet contains:\n\nValerian Extract (Valeriana officinalis L.) – 250 mg\nStandardized to 0.25% Valerenic Acid\n\nLemon Balm Extract (Melissa officinalis L.) – 200 mg\nStandardized to 5% Rosmarinic Acid\n\nLinden Flower Extract (Tilia cordata Mill.) – 150 mg\nStandardized to 3.5% Flavonoids",
-      "indication": "Calmi Dormin is formulated to support:\n\n-Relaxation during periods of restlessness\n-A calm state before bedtime\n-Restful and comfortable sleep\n-Normal nervous-system relaxation\n-Nighttime well-being",
-      "description": "Calmi Dormin is a herbal food supplement formulated to support relaxation, restful sleep and overall nighttime well-being.\n\nIts carefully selected combination of Valerian, Lemon Balm and Linden Flower extracts provides complementary botanical support for relaxation and helps promote a calm state before bedtime.\n\nThe standardized herbal extracts provide consistent levels of key naturally occurring constituents in a convenient once- or twice-daily tablet format.",
-      "packSize": "30 Tablets\nPacked as 2 × 15-tablet blister packs",
+      "tagline": "A good night's sleep is the pillar of health",
+      "composition": "Valerian Extract 250 mg, Lemon Balm Extract 200 mg, Linden Flower Extract 150 mg",
+      "description": "Welcome more restful nights with Calmi Dormin. Combining Valerian, Lemon Balm and Linden Flower extracts, this carefully crafted formula supports relaxation and helps create a calmer, more comfortable bedtime routine.",
+      "packSize": "30 tablets (2 × 15 blister packs)",
       "availableStrengths": "",
       "category": "CNS & Neurology",
       "rawCategory": "CNS",
@@ -419,10 +499,9 @@
       "id": "calmivenal-gel",
       "name": "Calmivenal Gel",
       "tagline": "Simple solution for a delicate problem",
-      "composition": "Key ingredients include:\n\n-Diosmin\n-Hesperidin\n-Oak Bark Extract (Quercus robur)\n-Carbomer 940",
-      "indication": "Calmivenal Gel is intended to help relieve symptoms associated with haemorrhoids, including:\n\n-Itching\n-Burning sensation\n-Irritation\n-Pain and discomfort\n-Swelling\n-Oozing in the anal area",
-      "description": "Calmivenal Gel is an anorectal gel developed to help relieve symptoms associated with haemorrhoids and irritation in the anal area.\n\nIts formulation combines flavonoid-based ingredients, including Diosmin and Hesperidin, together with other supportive components to help soothe irritation, reduce discomfort and support the recovery of irritated skin and mucous membranes.\n\nThe gel is intended for local application in the anal area and is formulated for convenient use as part of haemorrhoid care.",
-      "packSize": "40 g Gel",
+      "composition": "Diosmin, Hesperidin, Oak Bark Extract, Carbomer 940",
+      "description": "Discover targeted comfort with Calmivenal Gel, specially formulated for local haemorrhoid care. Its soothing combination of ingredients helps relieve irritation, itching, burning, swelling and discomfort while supporting recovery of sensitive skin in the affected area.",
+      "packSize": "40 g gel",
       "availableStrengths": "",
       "category": "Gastroenterology",
       "rawCategory": "Gastro",
@@ -431,19 +510,18 @@
       "isRx": true,
       "prescription": "Prescription (Rx)",
       "closingLine": "Soothing local care where comfort matters most.",
-      "image": "/assets/images/calmivenal.png",
+      "image": "/assets/images/calmivenal-gel.png",
       "therapy": "Therapy - Gastroenterology",
       "isStore": true,
       "isWholesale": true
     },
     {
-      "id": "troxlmetacin-gel",
+      "id": "troximetacin-gel",
       "name": "Troximetacin Gel",
-      "tagline": "Targeted relief that goes straight to the area of discomfort.",
-      "composition": "Indometacin\nTroxerutin",
-      "indication": "Troximetacin Gel may be used for the local management of symptoms associated with:\n\nJoint pain\nMuscle pain\nLocal inflammation\nSwelling\nSprains and strains\nSoft-tissue injuries\nTendon and periarticular discomfort\nOther musculoskeletal conditions where topical anti-inflammatory treatment is appropriate",
-      "description": "Troximetacin Gel is a topical formulation designed to support the management of pain, inflammation and swelling associated with musculoskeletal conditions.\n\nIt combines Indomethacin, a non-steroidal anti-inflammatory drug (NSAID), with Troxerutin, a flavonoid derivative commonly used to support microcirculation and reduce swelling.\n\nThe gel is intended for local application to affected areas, providing targeted treatment directly where discomfort occurs.",
-      "packSize": "40 g Gel",
+      "tagline": "Feel light and liberated",
+      "composition": "Indomethacin + Troxerutin",
+      "description": "Experience targeted relief with Troximetacin Gel, a dual-action topical formula combining Indomethacin and Troxerutin. Designed for joint and muscle discomfort, it helps relieve pain, inflammation and localized swelling where you need it most.",
+      "packSize": "40 g gel",
       "availableStrengths": "",
       "category": "Orthopedic & Pain Care",
       "rawCategory": "Ortho",
@@ -452,7 +530,7 @@
       "isRx": true,
       "prescription": "Prescription (Rx)",
       "closingLine": "Targeted relief that goes straight to the area of discomfort.",
-      "image": "/assets/images/troximetacin.png",
+      "image": "/assets/images/troximetacin-gel.png",
       "therapy": "Therapy - Orthopedic & Pain Care",
       "isStore": false,
       "isWholesale": true
@@ -460,11 +538,10 @@
     {
       "id": "breezex",
       "name": "Breezex",
-      "tagline": "Cooling hydrogel pain relief that lasts up to 8 hours.",
+      "tagline": "Cooling hydrogel pain relief that lasts up to 8 hours",
       "composition": "Menthol 6.5%",
-      "indication": "Breezex is intended for the temporary relief of minor pain associated with:\n\n-Back pain\n-Neck pain\n-Shoulder pain\n-Sprains\n-Strains\n-Minor muscular and musculoskeletal discomfort",
-      "description": "Breezex is a pain relief hydrogel patch containing 6.5% Menthol, designed to provide convenient, targeted cooling relief for temporary musculoskeletal aches and discomfort.\n\nThe flexible hydrogel patch adheres comfortably to the affected area and delivers a cooling sensation directly where relief is needed. Its breathable, mess-free design makes it convenient for use during everyday activities and can be worn discreetly underneath clothing.\n\nEach patch is designed to provide relief for up to 8 hours.",
-      "packSize": "5 Patches per Box",
+      "description": "Enjoy cooling, mess-free pain relief with Breezex Hydrogel Patches. Formulated with 6.5% Menthol, Breezex delivers a refreshing cooling sensation directly to areas of minor muscle and musculoskeletal discomfort, with comfortable wear for up to 8 hours.",
+      "packSize": "5 patches per box",
       "availableStrengths": "",
       "category": "Orthopedic & Pain Care",
       "rawCategory": "Ortho",
@@ -481,11 +558,10 @@
     {
       "id": "zyflex",
       "name": "Zyflex",
-      "tagline": "Long-lasting  patch relief for muscle pain and stiffness.",
-      "composition": "Each 50 cm² patch contains the following percentages by weight of medicated paste:\n\nWintergreen Oil – 7%\nMenthol – 7%\nCamphor – 7%\nEucalyptus Oil – 1%\nClove Oil – 1%",
-      "indication": "Zyflex is intended for topical use in adults to help relieve:\n\n-Backache\n-Waist and lower-back discomfort\n-Joint pain\n-Muscular pain\n-Muscle stiffness\n-General localized musculoskeletal discomfort",
-      "description": "Zyflex is a medicated topical patch designed to provide targeted relief from muscle pain, joint discomfort, backache and muscular stiffness.\n\nEach patch contains a combination of cooling and warming ingredients, including Wintergreen Oil, Menthol, Camphor, Eucalyptus Oil and Clove Oil, to provide localized relief directly at the affected area.\n\nThe patch is designed to remain securely in place while offering convenient, long-lasting pain relief during everyday activities.",
-      "packSize": "9 Patches per Box\nPacked as 3 patches per pouch × 3 pouches",
+      "tagline": "Long-lasting patch relief for muscle pain and stiffness",
+      "composition": "Wintergreen Oil 7%, Menthol 7%, Camphor 7%, Eucalyptus Oil 1%, Clove Oil 1%",
+      "description": "Experience long-lasting relief with Zyflex Patches. Its powerful combination of natural ingredients provides targeted support for backache, joint pain, muscle pain and stiffness for up to 12 hours.",
+      "packSize": "9 patches (3 patches × 3 pouches)",
       "availableStrengths": "",
       "category": "Orthopedic & Pain Care",
       "rawCategory": "Ortho",
@@ -502,11 +578,10 @@
     {
       "id": "zynatis",
       "name": "Zynatis",
-      "tagline": "Precision painrelief",
+      "tagline": "Precision pain relief",
       "composition": "Lidocaine 4%",
-      "indication": "Zynatis is intended for the temporary relief of localized pain and discomfort where topical Lidocaine therapy is appropriate.\n\n1. Musculoskeletal pain\n2. localised joint pain\n3. low back pain\n4. localised neuropathic pain\n5. post-herpetic neuralgia\n6. Post operative pain management",
-      "description": "Zynatis is a topical pain-relief patch containing 4% Lidocaine, designed to provide localized relief by temporarily numbing the affected area.\n\nThe patch is applied directly to clean, dry skin over the area of discomfort, allowing Lidocaine to act locally and help reduce pain sensations.\n\nIts convenient patch format provides targeted application without the need for creams or gels and can be worn for up to 12 hours per application, according to the product instructions.",
-      "packSize": "5 Patches\n10 Patches",
+      "description": "Discover focused local pain relief with Zynatis Lidocaine 4% Patch. Designed to deliver Lidocaine directly to the affected area, Zynatis helps temporarily numb localized discomfort in a clean, convenient patch format that can be worn for up to 12 hours.",
+      "packSize": "5-patch and 10-patch packs · Patch size: 10 × 14 cm",
       "availableStrengths": "",
       "category": "Orthopedic & Pain Care",
       "rawCategory": "Ortho",
@@ -523,12 +598,11 @@
     {
       "id": "zybitel",
       "name": "Zybitel",
-      "tagline": "Dual-action Bp control. Once daily",
-      "composition": "Telmisartan\nAn angiotensin II receptor blocker (ARB) that helps prevent angiotensin II from narrowing blood vessels, thereby supporting lower blood pressure.\n\nAmlodipine\nA calcium channel blocker that helps relax and widen blood vessels, supporting improved blood flow and blood-pressure reduction.",
-      "indication": "Zybitel is used for the treatment of hypertension in adults, particularly where combination therapy with Telmisartan and Amlodipine is considered appropriate.",
-      "description": "Zybitel combines Telmisartan and Amlodipine in a single tablet for the management of high blood pressure (hypertension).\n\nThe formulation brings together two antihypertensive medicines with complementary mechanisms of action. Telmisartan helps block the effects of angiotensin II, while Amlodipine helps relax blood vessels by reducing calcium entry into vascular smooth muscle.\n\nThis dual-action approach provides an option for patients who require combination therapy to achieve appropriate blood-pressure control. Telmisartan/Amlodipine combinations are used in patients whose blood pressure is not adequately controlled with either component alone and may also be used as replacement therapy in patients already receiving both medicines separately.",
-      "packSize": "28 Tablets\nPacked as 4 × 7-tablet blister packs",
-      "availableStrengths": "Zybitel 80/5 mg – Telmisartan 80 mg + Amlodipine 5 mg\n\nZybitel 80/10 mg – Telmisartan 80 mg + Amlodipine 10 mg",
+      "tagline": "Dual-action BP control, once daily",
+      "composition": "Telmisartan + Amlodipine",
+      "description": "Experience the convenience of two antihypertensive agents in one tablet with Zybitel. Combining Telmisartan and Amlodipine, Zybitel provides complementary action to support effective blood-pressure control in patients who require combination therapy.",
+      "packSize": "28 tablets (4 × 7)",
+      "availableStrengths": "80/5 mg, 80/10 mg",
       "category": "Cardiovascular",
       "rawCategory": "Cardiovascular",
       "features": "1. Fixed-dose combination of Telmisartan + Amlodipine\n2. Dual-mechanism antihypertensive therapy\n3. Available in 80/5 mg and 80/10 mg strengths\n4. Metabolically neutral safe inn diabetes paitents\n5. Convenient single-tablet combination\n6. Suitable for individualized hypertension management",
@@ -545,12 +619,11 @@
     {
       "id": "vildagard",
       "name": "Vildagard",
-      "tagline": "Better control Daily",
-      "composition": "Vildagliptin\nA DPP-4 inhibitor that helps improve blood-glucose regulation by increasing the activity of incretin hormones, thereby supporting glucose-dependent insulin secretion.\n\nMetformin Hydrochloride\nA biguanide antidiabetic medicine that primarily helps reduce hepatic glucose production and improves insulin sensitivity.",
-      "indication": "Vildagliptin/Metformin combinations are used as an adjunct to diet and exercise to improve glycaemic control in adults with type 2 diabetes mellitus, including patients inadequately controlled with Metformin alone or patients already receiving Vildagliptin and Metformin separately. They may also be used with other antidiabetic medicines, including insulin, when appropriate.",
-      "description": "Vildagard combines Vildagliptin and Metformin in a single film-coated tablet to support blood-glucose control in adults with type 2 diabetes mellitus.\n\nThe two active ingredients work through complementary mechanisms. Vildagliptin helps improve glucose-dependent insulin release and reduce inappropriate glucagon secretion, while Metformin helps reduce glucose production by the liver and improves the body's response to insulin.\n\nThe fixed-dose combination provides a convenient treatment option for appropriate patients who require both medicines as part of their diabetes-management regimen.",
-      "packSize": "60 Film-Coated Tablets",
-      "availableStrengths": "Vildagard 50/500 mg – Vildagliptin 50 mg + Metformin Hydrochloride 500 mg\n\nVildagard 50/850 mg – Vildagliptin 50 mg + Metformin Hydrochloride 850 mg\n\nVildagard 50/1000 mg – Vildagliptin 50 mg + Metformin Hydrochloride 1000 mg",
+      "tagline": "Better control daily",
+      "composition": "Vildagliptin + Metformin Hydrochloride",
+      "description": "Discover convenient dual-action support for type 2 diabetes management with Vildagard. Combining Vildagliptin and Metformin, Vildagard works through complementary mechanisms to help improve blood-glucose control, with multiple strengths to suit individual treatment needs.",
+      "packSize": "60 film-coated tablets",
+      "availableStrengths": "50/500 mg, 50/850 mg, 50/1000 mg",
       "category": "Metabolic & Diabetes",
       "rawCategory": "Metabolics",
       "features": "1. Enhances glycemic control with 1.1% HbA1c reduction\n2. addresses key underlying defects of type 2 diabites\n3. associated with low rissk of hypoglycemia and weight neutality\n4. Fixed-dose combination of Vildagliptin + Metformin\n5. Dual-mechanism approach to blood-glucose management\n6.cAvailable in three strengths\n7. Film-coated tablet formulation\n8. Convenient combination therapy\n9. 60-tablet pack",
@@ -565,14 +638,13 @@
       "isWholesale": true
     },
     {
-      "id": "temlijub",
-      "name": "Temlijub",
-      "tagline": "Simple once-daily support for long-term blood-pressure control.",
+      "id": "telmijub",
+      "name": "Telmijub",
+      "tagline": "Daily heart shield",
       "composition": "Telmisartan",
-      "indication": "Telmisartan is used for:\n- Treatment of essential hypertension in adults\n- Cardiovascular risk reduction in selected high-risk adults, including certain patients with established atherothrombotic cardiovascular disease or type 2 diabetes with documented target-organ damage, where indicated by the approved prescribing information.",
-      "description": "Telmijub contains Telmisartan, an antihypertensive medicine used for the treatment of essential hypertension in adults.\n\nTelmisartan belongs to the angiotensin II receptor blocker (ARB) class. By blocking the effects of angiotensin II, it helps blood vessels relax and widen, thereby lowering blood pressure and supporting cardiovascular health.\n\nIt has a smooth and sustained BP control over 24 hours",
-      "packSize": "30 Tablets",
-      "availableStrengths": "Telmijub 40 mg\nTelmijub 80 mg",
+      "description": "Experience dependable blood-pressure management with Telmijub. Formulated with Telmisartan, this once-daily tablet helps relax blood vessels and support effective, long-term control of hypertension in a simple and convenient format.",
+      "packSize": "30 tablets",
+      "availableStrengths": "40 mg, 80 mg",
       "category": "Cardiovascular",
       "rawCategory": "Cardiovascular",
       "features": "1. Contains Telmisartan\n2. Angiotensin II receptor blocker (ARB)\n3. Helps manage high blood pressure\n4. Available in 40 mg and 80 mg strengths\n5. Convenient oral tablet formulation\n6. 30-tablet pack",
@@ -590,7 +662,7 @@
   "faqs": [
     {
       "question": "What regions does Zyventa serve?",
-      "answer": "ZYVENTA serves the Arabian Gulf (GCC) countries and the broader Middle East and Africa (MEA) markets, connecting international healthcare brands with regional distributors, pharmacies, and healthcare systems."
+      "answer": "ZYVENTA serves the Arabian Gulf (GCC) countries and the broader Middle East and North Africa (MENA) markets, connecting international healthcare brands with regional distributors, pharmacies, and healthcare systems."
     },
     {
       "question": "What services does Zyventa offer?",
@@ -606,7 +678,7 @@
     },
     {
       "question": "How does Zyventa manage its distribution network?",
-      "answer": "We supply hospitals, government bodies, retail pharmacy chains and online channels through Zyventa Trading, our MOH-approved Bait Al Mas drug store, and a network of licensed local distributors."
+      "answer": "We supply hospitals, government bodies, retail pharmacy chains and online channels through Zyventa Trading, our MOH-approved Bait Al Mas drug store, and a network of licensed local distributors. Stock is held at two warehouse locations: Bait Al Mas Drug Store LLC, Abu Shagara, Sharjah, UAE, and Zyventa Biocare, Al Qusais 4, Dubai, UAE."
     }
   ],
   "blogs": [
@@ -618,7 +690,7 @@
       "excerpt": "In today's ever-evolving healthcare landscape, the importance of effective medicine distribution and online selling cannot be overstated. As a leading player in this field, Zyventa has positioned itself as a vital link between international healthcare companies and the burgeoning markets of the Arabian Gulf and the Middle East.",
       "content": [
         "In today's ever-evolving healthcare landscape, the importance of effective medicine distribution and online selling cannot be overstated. As a leading player in this field, Zyventa has positioned itself as a vital link between international healthcare companies and the burgeoning markets of the Arabian Gulf and the Middle East. With a firm commitment to bridging access gaps and promoting innovative healthcare solutions, Zyventa's role goes far beyond simply distributing medications. Therefore, it's about facilitating change and improving lives.",
-        "ZYVENTA was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East. ZYVENTA bridges access gaps by partnering with global pharmaceutical and biotechnology companies to deploy and commercialize new pharmaceutical, biologics, and other healthcare solutions in the Middle East and Africa (MEA) Markets.",
+        "ZYVENTA was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East. ZYVENTA bridges access gaps by partnering with global pharmaceutical and biotechnology companies to deploy and commercialize new pharmaceutical, biologics, and other healthcare solutions in the Middle East and North Africa (MENA) markets.",
         "We recognize that our team is what makes us who we are. We pride ourselves on our professional, highly skilled and dedicated staff, each bringing their own unique skills to the business."
       ]
     }
@@ -664,7 +736,7 @@
     "regionFirsts": [
       {
         "name": "Troximetacin",
-        "use": "Pain and inflammation"
+        "use": "Pain, inflammation and swelling"
       },
       {
         "name": "Calmivenal Gel",
@@ -708,7 +780,7 @@
   },
   "productBadges": {
     "firstToMarket": [
-      "troxlmetacin-gel",
+      "troximetacin-gel",
       "calmivenal-gel",
       "breezex",
       "zynatis",
@@ -762,7 +834,7 @@
     {
       "id": "distribution",
       "title": "Distribution agreements",
-      "description": "Network and sales force across the GCC and MEA."
+      "description": "Network and sales force across the GCC and MENA."
     },
     {
       "id": "market-entry",
@@ -792,6 +864,16 @@
       "description": "Trading of DM-registered products."
     }
   ],
+  "warehouses": [
+    {
+      "name": "Bait Al Mas Drug Store LLC",
+      "location": "Abu Shagara, Sharjah, UAE"
+    },
+    {
+      "name": "Zyventa Biocare",
+      "location": "Al Qusais 4, Dubai, UAE"
+    }
+  ],
   "drugStore": {
     "name": "Bait Al Mas Drug Store LLC",
     "location": "Abu Shagara, Sharjah",
@@ -808,13 +890,6 @@
     "Saudi Arabia",
     "UAE"
   ],
-  "businessFlow": [
-    "Manufacturer or marketing authorisation holder",
-    "Batch release and secondary packaging",
-    "Zyventa Trading",
-    "Local distributors",
-    "Hospitals and retail pharmacies"
-  ],
   "packShotVerified": [
     "vildagard",
     "zybitel",
@@ -826,12 +901,12 @@
     "febuvent",
     "akthyod",
     "breezex",
-    "temlijub",
+    "telmijub",
     "nourisil-md",
     "nevral",
     "calmi-relax",
     "calmi-dormin",
     "calmivenal-gel",
-    "troxlmetacin-gel"
+    "troximetacin-gel"
   ]
 }

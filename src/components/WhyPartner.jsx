@@ -14,7 +14,7 @@ export default function WhyPartner() {
             <h2 className="display !text-white mt-4 text-3xl sm:text-5xl">Why global brands <em>partner</em> with us.</h2>
           </div>
           <p className="lg:col-span-5 text-lg text-brand-onDarkMuted leading-relaxed">
-            Headquartered in Dubai, with commercial reach into Saudi Arabia, Oman and Bahrain through our own teams and channel partners.
+            Headquartered in Dubai, with commercial reach into Saudi Arabia, Oman, Bahrain and Qatar through our own teams and channel partners.
           </p>
         </Reveal>
 

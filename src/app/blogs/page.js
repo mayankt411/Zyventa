@@ -5,7 +5,7 @@ import PageHeader from '@/components/PageHeader';
 import { Reveal } from '@/components/Motion';
 
 export const metadata = {
-  title: 'Blogs & Insights - Zyventa',
+  title: 'Blog - Zyventa',
   description: 'Stay updated with pharmaceutical distribution insights, healthcare regulations, and regional market trends from Zyventa.',
 };
 
@@ -16,8 +16,8 @@ export default function BlogsPage() {
 
   return (
     <div>
-      <PageHeader eyebrow="Insights" title={<>Notes on healthcare in the <em>region</em>.</>}>
-        Distribution, regulation and market trends across the GCC, Middle East and Africa.
+      <PageHeader eyebrow="Blog" title={<>Notes on healthcare in the <em>region</em>.</>}>
+        Distribution, regulation and market trends across the GCC, Middle East and North Africa.
       </PageHeader>
 
       <section className="py-16 sm:py-24 bg-brand-paper">

@@ -151,8 +151,8 @@ export default function ContactUsPage() {
 
       <section className="h-96 w-full bg-brand-sand">
         <iframe
-          title="Zyventa office location, Mamzar, Dubai"
-          src="https://maps.google.com/maps?q=Omniyat+Building+Mamzar+Dubai&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          title="Zyventa office location, Al Mamzar, Dubai"
+          src="https://maps.google.com/maps?q=Omniyat+Building+Al+Mamzar+Dubai&t=&z=14&ie=UTF8&iwloc=&output=embed"
           className="w-full h-full border-0 grayscale-[60%] sepia-[15%]"
           loading="lazy"
         ></iframe>

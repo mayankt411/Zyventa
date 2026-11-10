@@ -19,7 +19,7 @@ export default function FAQPage() {
   return (
     <div>
       <PageHeader eyebrow="FAQ" title={<>Questions, <em>answered</em>.</>}>
-        What partners, pharmacies and healthcare brands most often ask us about entering the GCC and MEA markets.
+        What partners, pharmacies and healthcare brands most often ask us about entering the GCC and MENA markets.
       </PageHeader>
 
       <section className="py-16 sm:py-24 bg-brand-paper">

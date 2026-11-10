@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { dropdown: true },
   { href: '/careers', label: 'Careers' },
   { href: '/faq', label: 'FAQ' },
-  { href: '/blogs', label: 'Insights' },
+  { href: '/blogs', label: 'Blog' },
 ];
 
 const PRODUCT_LINKS = [
@@ -43,11 +43,10 @@ export default function Header() {
   const isActive = (href, exact) => (exact ? pathname === href : pathname.startsWith(href));
   const productsActive = PRODUCT_LINKS.some((l) => pathname.startsWith(l.href));
 
+  // Bold labels; hover/active draw a green underline and darken the text.
   const desktopLinkClass = (active) =>
-    `relative text-sm font-semibold py-2 transition-colors hover:text-brand-navy ${
-      active
-        ? 'text-brand-navy after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-0.5 after:bg-brand-green'
-        : 'text-ink-60'
+    `relative text-[0.95rem] font-bold py-2 transition-colors duration-200 hover:text-brand-navy focus-visible:outline-none focus-visible:text-brand-navy after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-[3px] after:rounded-full after:bg-brand-green after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 focus-visible:after:scale-x-100 ${
+      active ? 'text-brand-navy after:scale-x-100' : 'text-ink-80 after:scale-x-0'
     }`;
 
   return (
@@ -62,11 +61,17 @@ export default function Header() {
             className="flex items-center rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green"
             aria-label="Zyventa home"
           >
-            <img src={contentData.site.logo} alt="Zyventa" className={`w-auto object-contain transition-[height] duration-300 ${isScrolled ? 'h-8' : 'h-10'}`} />
+            <img
+              src={contentData.site.logo}
+              alt="Zyventa"
+              width={271}
+              height={97}
+              className={`w-auto object-contain transition-[height] duration-300 ${isScrolled ? 'h-11' : 'h-12 sm:h-14'}`}
+            />
           </Link>
 
           {/* Desktop navigation */}
-          <nav className="hidden lg:flex items-center gap-8" aria-label="Main">
+          <nav className="hidden lg:flex items-center gap-7 xl:gap-8" aria-label="Main">
             {NAV_LINKS.map((link) =>
               link.dropdown ? (
                 <div
@@ -103,20 +108,6 @@ export default function Header() {
                             </span>
                           </Link>
                         ))}
-                        <div className="mt-1 pt-3 pb-1 px-3 border-t border-brand-border">
-                          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-ink-60">Our divisions</p>
-                          <div className="mt-2 flex flex-wrap gap-1.5">
-                            {contentData.distributionDivisions.map((div) => (
-                              <Link
-                                key={div.id}
-                                href={`/services#${div.id}`}
-                                className="text-xs font-semibold text-brand-navy px-2.5 py-1 rounded-full border border-brand-border hover:border-brand-green hover:text-brand-blue transition-colors"
-                              >
-                                {div.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
                       </div>
                     </div>
                   )}
@@ -158,7 +149,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-display text-2xl py-3 border-b border-brand-border ${active ? 'text-brand-blue' : 'text-brand-navy'}`}
+                  className={`font-display font-bold text-2xl py-3 border-b border-brand-border transition-colors hover:text-brand-blue hover:pl-1 ${active ? 'text-brand-blue' : 'text-brand-navy'}`}
                 >
                   {link.label}
                 </Link>
@@ -168,7 +159,7 @@ export default function Header() {
           <Link href="/contact-us" className="btn btn-accent w-full justify-center mt-6">
             Contact us <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
-          <p className="text-xs text-ink-60 text-center mt-4">Mamzar, Dubai, UAE · {contentData.site.email}</p>
+          <p className="text-xs text-ink-60 text-center mt-4">Al Mamzar, Dubai, UAE · {contentData.site.email}</p>
         </div>
       )}
     </header>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { X, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { ProductVisual, therapyStyle } from '@/components/Catalog';
+import { ProductVisual, imageRatio } from '@/components/Catalog';
 import { submitEnquiry, enquiryMailto } from '@/lib/submitEnquiry';
 import contentData from '@/data/zyventaContent.json';
 
@@ -60,15 +60,26 @@ export default function ProductDetailModal({ product, onClose }) {
       aria-modal="true"
       aria-label={product.name}
     >
-      <div className="bg-brand-paper rounded-md max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col">
-        <div className="overflow-y-auto grid md:grid-cols-12">
+      <div
+        className="relative bg-brand-paper rounded-md w-full max-h-[90vh] overflow-hidden flex flex-col"
+        // Width follows the photo's shape (narrow for square photos, wide for wide ones)
+        // so the photo shows whole with nothing around it.
+        style={{ maxWidth: `min(48rem, max(24rem, calc(62vh * ${imageRatio(product.image).toFixed(3)})))` }}
+      >
+        <button
+          type="button"
+          onClick={onClose}
+          className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/90 border border-brand-border hover:border-brand-navy flex items-center justify-center text-brand-navy transition-colors"
+          aria-label="Close"
+        >
+          <X className="w-4 h-4" />
+        </button>
+        <div className="overflow-y-auto">
           {/* Product visual */}
-          <div className="md:col-span-5 p-10 flex flex-col items-center justify-center gap-4 relative min-h-[260px]" style={{ background: therapyStyle(product.category).tint }}>
-            <div className="flex items-center justify-center w-full max-h-[18rem]">
-              <ProductVisual product={shown} />
-            </div>
+          <div className="relative overflow-hidden">
+            <ProductVisual fill product={shown} />
             {variants.length > 1 && (
-              <div className="flex flex-wrap justify-center gap-2" role="tablist" aria-label="Select strength">
+              <div className="absolute inset-x-0 bottom-0 flex flex-wrap justify-center gap-2 p-3 bg-gradient-to-t from-black/40 to-transparent" role="tablist" aria-label="Select strength">
                 {variants.map((v, i) => (
                   <button
                     key={v.src}
@@ -86,17 +97,8 @@ export default function ProductDetailModal({ product, onClose }) {
           </div>
 
           {/* Details */}
-          <div className="md:col-span-7 p-6 sm:p-10 relative">
-            <button
-              type="button"
-              onClick={onClose}
-              className="absolute top-4 right-4 w-9 h-9 rounded-full border border-brand-border hover:border-brand-navy flex items-center justify-center text-brand-navy transition-colors"
-              aria-label="Close"
-            >
-              <X className="w-4 h-4" />
-            </button>
-
-            <div className="flex flex-wrap gap-1.5 pr-12">
+          <div className="p-6 sm:p-10">
+            <div className="flex flex-wrap gap-1.5">
               <span className="tag tag-neutral">{product.category}</span>
               {product.prescription && (
                 <span className={`tag ${product.isRx ? 'tag-rx' : 'tag-otc'}`}>{product.prescription}</span>

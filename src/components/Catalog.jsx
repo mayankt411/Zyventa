@@ -1,5 +1,6 @@
 import { Search, ArrowRight, ArrowUpRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
+import imageSizes from '@/data/imageSizes.json';
 import { Reveal } from '@/components/Motion';
 
 const { productBadges } = contentData;
@@ -20,16 +21,41 @@ export const therapyStyle = (category) => THERAPY_STYLES[category] || DEFAULT_ST
 const verifiedPacks = new Set(contentData.packShotVerified || []);
 export const hasPackShot = (product) => verifiedPacks.has(product.id);
 
+// Real pixel size of every product photo (generated from the files in
+// public/assets/images). Lets each image box take its photo's exact shape, so
+// photos show whole with no bars, borders or cropping, and the page doesn't
+// jump while they load.
+const FALLBACK_SIZE = [3, 2];
+export const imageSize = (src) => imageSizes[src] || FALLBACK_SIZE;
+export const imageRatio = (src) => {
+  const [w, h] = imageSize(src);
+  return w / h;
+};
+
 // Real pack shot when we have one; otherwise a designed pack graphic so a
 // product never shows another company's logo or another product's box.
-export function ProductVisual({ product, size = 'card', imgClassName = '' }) {
+// `fill` renders the photo edge to edge at its own proportions: no frame, tint or padding.
+export function ProductVisual({ product, size = 'card', imgClassName = '', fill = false }) {
   const style = therapyStyle(product.category);
+  if (hasPackShot(product) && fill) {
+    const [w, h] = imageSize(product.image);
+    return (
+      <img
+        src={product.image}
+        alt={product.name}
+        width={w}
+        height={h}
+        className={`block w-full h-auto ${imgClassName}`}
+        loading="lazy"
+      />
+    );
+  }
   if (hasPackShot(product)) {
     return (
       <img
         src={product.image}
         alt=""
-        className={`max-h-full max-w-full object-contain mix-blend-multiply ${imgClassName}`}
+        className={`max-h-full max-w-full object-contain ${imgClassName}`}
         loading="lazy"
       />
     );
@@ -124,35 +150,6 @@ export function ChipGroup({ label, options, value, onChange }) {
   );
 }
 
-// Collage of real pack shots for the top of a catalogue page.
-export function PackCollage({ products }) {
-  const layout = [
-    'col-span-2 row-span-2 -rotate-2',
-    'rotate-3 translate-y-4',
-    '-rotate-3',
-    'col-span-3 rotate-1 -translate-y-2',
-  ];
-  return (
-    <div className="grid grid-cols-3 grid-rows-3 gap-4 h-[22rem] sm:h-[26rem]" aria-hidden="true">
-      {products.slice(0, 4).map((p, i) => {
-        const style = therapyStyle(p.category);
-        return (
-          <div
-            key={p.id}
-            className={`relative rounded-2xl flex items-center justify-center p-5 shadow-[0_24px_48px_-20px_rgba(0,0,0,0.45)] transition-transform duration-500 hover:rotate-0 hover:scale-[1.03] ${layout[i]}`}
-            style={{ background: style.tint }}
-          >
-            <img src={p.image} alt="" className="max-h-full max-w-full object-contain mix-blend-multiply" />
-            {productBadges.firstToMarket.includes(p.id) && i === 0 && (
-              <span className="absolute top-3 left-3 tag bg-brand-green text-brand-darkBlue">First to market</span>
-            )}
-          </div>
-        );
-      })}
-    </div>
-  );
-}
-
 // Therapy-area tiles that double as the main category filter.
 export function TherapyTiles({ categories, products, value, onChange }) {
   return (
@@ -198,9 +195,8 @@ export function TherapyTiles({ categories, products, value, onChange }) {
 // Large featured cards for first-to-market launches.
 export function Spotlight({ products, onOpen }) {
   return (
-    <Reveal stagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <Reveal stagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 items-start">
       {products.map((p) => {
-        const style = therapyStyle(p.category);
         return (
           <button
             key={p.id}
@@ -208,8 +204,8 @@ export function Spotlight({ products, onOpen }) {
             onClick={() => onOpen(p)}
             className="group text-left rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-brand-green transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
           >
-            <span className="aspect-[4/3] p-6 flex items-center justify-center relative" style={{ background: style.tint }}>
-              <ProductVisual product={p} imgClassName="transition-transform duration-500 group-hover:scale-110" />
+            <span className="block relative overflow-hidden">
+              <ProductVisual fill product={p} />
             </span>
             <span className="block p-5">
               <span className="block text-[11px] font-bold uppercase tracking-[0.16em] text-brand-green">{p.category}</span>
@@ -231,11 +227,10 @@ export function ProductCard({ product, onOpen, actionLabel }) {
       <button
         type="button"
         onClick={() => onOpen(product)}
-        className="relative aspect-[4/3] flex items-center justify-center p-8 overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
-        style={{ background: style.tint }}
+        className="relative block w-full overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
         aria-label={`View ${product.name}`}
       >
-        <ProductVisual product={product} imgClassName="transition-transform duration-500 group-hover:scale-110" />
+        <ProductVisual fill product={product} />
         {highlights.length > 0 && (
           <span className="absolute top-3 left-3 flex flex-col items-start gap-1">
             {highlights.map((h) => (
@@ -274,8 +269,17 @@ export function ProductCard({ product, onOpen, actionLabel }) {
   );
 }
 
+// Staggered columns: each card's photo keeps its own proportions, so cards in a
+// row differ in height instead of cropping or padding the photos.
 export function ProductGrid({ children }) {
-  return <Reveal stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">{children}</Reveal>;
+  return (
+    <Reveal
+      stagger
+      className="columns-1 sm:columns-2 lg:columns-3 gap-x-6 [&>*]:mb-6 [&>*]:break-inside-avoid"
+    >
+      {children}
+    </Reveal>
+  );
 }
 
 export function EmptyState({ onReset }) {

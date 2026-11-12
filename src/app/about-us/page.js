@@ -72,30 +72,24 @@ export default function AboutUsPage() {
                 <dd className="col-span-2 font-display text-xl text-brand-navy">{contentData.site.markets.commercial.join(', ')}</dd>
               </div>
               <div className="grid grid-cols-3 gap-4 py-4 border-b border-brand-border">
-                <dt className="field-label !mb-0 pt-1">Warehouse locations</dt>
-                <dd className="col-span-2">
-                  <ul className="space-y-3">
-                    {contentData.warehouses.map((w) => (
-                      <li key={w.name}>
-                        <span className="block font-display text-xl text-brand-navy">{w.name}</span>
-                        <span className="block text-sm text-ink-60 mt-0.5">{w.location}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </dd>
-              </div>
-              <div className="grid grid-cols-3 gap-4 py-4 border-b border-brand-border">
                 <dt className="field-label !mb-0 pt-1">Portfolio</dt>
                 <dd className="col-span-2 text-ink-80">Branded pharmaceuticals, generics, nutraceuticals and OTC products</dd>
               </div>
             </dl>
           </div>
           <aside className="lg:col-span-6 bg-brand-navy text-brand-paper rounded-md p-8 sm:p-12 flex flex-col justify-between gap-10">
-            <p className="eyebrow !text-brand-green">{contentData.drugStore.approval}</p>
-            <div>
-              <p className="font-display text-3xl sm:text-4xl leading-tight">{contentData.drugStore.name}</p>
-              <p className="mt-2 text-brand-onDarkMuted">{contentData.drugStore.location}</p>
-              <p className="mt-6 text-lg leading-relaxed">{contentData.drugStore.role}</p>
+            <p className="eyebrow !text-brand-green">Warehouse locations</p>
+            <ul className="space-y-8">
+              {contentData.warehouses.map((w) => (
+                <li key={w.name}>
+                  <p className="font-display text-3xl sm:text-4xl leading-tight">{w.name}</p>
+                  <p className="mt-2 text-brand-onDarkMuted">{w.location}</p>
+                </li>
+              ))}
+            </ul>
+            <div className="border-t border-white/15 pt-6">
+              <p className="text-sm font-bold text-brand-green">{contentData.drugStore.approval}</p>
+              <p className="mt-2 text-lg leading-relaxed">{contentData.drugStore.role}</p>
             </div>
           </aside>
         </div>

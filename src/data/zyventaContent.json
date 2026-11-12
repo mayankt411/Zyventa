@@ -448,7 +448,7 @@
       "isRx": true,
       "prescription": "Prescription (Rx)",
       "closingLine": "Everyday nutritional support for healthier nerve function.",
-      "image": "/assets/images/nevral-pack.png",
+      "image": "/assets/images/nevral.jpg",
       "therapy": "Therapy - CNS & Neurology",
       "isStore": true,
       "isWholesale": true
@@ -510,7 +510,7 @@
       "isRx": true,
       "prescription": "Prescription (Rx)",
       "closingLine": "Soothing local care where comfort matters most.",
-      "image": "/assets/images/calmivenal-gel.png",
+      "image": "/assets/images/calmivenal-gel.jpg",
       "therapy": "Therapy - Gastroenterology",
       "isStore": true,
       "isWholesale": true
@@ -530,7 +530,7 @@
       "isRx": true,
       "prescription": "Prescription (Rx)",
       "closingLine": "Targeted relief that goes straight to the area of discomfort.",
-      "image": "/assets/images/troximetacin-gel.png",
+      "image": "/assets/images/troximetacin-gel.jpg",
       "therapy": "Therapy - Orthopedic & Pain Care",
       "isStore": false,
       "isWholesale": true
@@ -678,7 +678,7 @@
     },
     {
       "question": "How does Zyventa manage its distribution network?",
-      "answer": "We supply hospitals, government bodies, retail pharmacy chains and online channels through Zyventa Trading, our MOH-approved Bait Al Mas drug store, and a network of licensed local distributors. Stock is held at two warehouse locations: Bait Al Mas Drug Store LLC, Abu Shagara, Sharjah, UAE, and Zyventa Biocare, Al Qusais 4, Dubai, UAE."
+      "answer": "We supply hospitals, government bodies, retail pharmacy chains and online channels through Zyventa Trading, our MOH-approved Bait Al Mas drug store, Zyventa Biocare, and a network of licensed local distributors."
     }
   ],
   "blogs": [
@@ -848,8 +848,8 @@
       "description": "Brand strategy and commercialisation for own and partner products."
     },
     {
-      "title": "Bait Al Mas Drug Store",
-      "description": "Company-owned, licensed drug store approved by the UAE Ministry of Health."
+      "title": "Bait Al Mas Drug Store & Zyventa Biocare",
+      "description": "Company-owned, licensed drug store approved by the UAE Ministry of Health (Sharjah), alongside Zyventa Biocare (Dubai)."
     },
     {
       "title": "E-commerce",

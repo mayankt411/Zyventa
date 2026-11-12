@@ -6,10 +6,11 @@ import { ArrowRight, ArrowDown, X } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import ProductDetailModal from '@/components/ProductDetailModal';
 import HomeCta from '@/components/HomeCta';
-import { CountUp, Parallax } from '@/components/Motion';
+import { CountUp } from '@/components/Motion';
+import HeroSlideshow from '@/components/HeroSlideshow';
 import {
   SearchField, ChipGroup, ProductCard, ProductGrid, EmptyState,
-  PackCollage, TherapyTiles, Spotlight, therapyStyle,
+  TherapyTiles, Spotlight, therapyStyle, hasPackShot,
 } from '@/components/Catalog';
 
 const RX_OPTIONS = [
@@ -18,8 +19,6 @@ const RX_OPTIONS = [
   { value: 'OTC', label: 'OTC' },
 ];
 
-// Pack shots whose images match the product, used in the hero collage.
-const COLLAGE_IDS = ['nourisil-md', 'calmi-relax', 'troximetacin-gel', 'calmivenal-gel'];
 const SPOTLIGHT_IDS = ['troximetacin-gel', 'calmivenal-gel', 'nourisil-md'];
 
 export default function OurRangeProductsPage() {
@@ -32,6 +31,13 @@ export default function OurRangeProductsPage() {
   const { products } = contentData;
   const therapyAreas = (contentData.categories || []).filter((c) => c !== 'All');
   const byId = (ids) => ids.map((id) => products.find((p) => p.id === id)).filter(Boolean);
+
+  // Hero slideshow: every product with a real pack shot, first-to-market launches first.
+  const firstToMarket = contentData.productBadges.firstToMarket;
+  const slideshowProducts = [
+    ...byId(firstToMarket),
+    ...products.filter((p) => !firstToMarket.includes(p.id)),
+  ].filter(hasPackShot);
 
   const filteredProducts = products.filter((p) => {
     const searchLower = searchTerm.toLowerCase();
@@ -63,25 +69,36 @@ export default function OurRangeProductsPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-brand-navy text-brand-paper pt-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 grid lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-6 reveal">
+      <section className="relative bg-brand-darkBlue text-brand-paper pt-20 overflow-hidden isolate">
+        {/* Depth: soft amber and plum glows over the navy, plus a faint grid */}
+        <div
+          className="absolute inset-0 -z-10"
+          aria-hidden="true"
+          style={{
+            background:
+              'radial-gradient(55% 70% at 88% 18%, rgb(var(--c-accent) / 0.16), transparent 62%), radial-gradient(45% 60% at 4% 100%, rgb(var(--c-plum) / 0.38), transparent 65%), linear-gradient(135deg, rgb(var(--c-navy)) 0%, rgb(var(--c-navy-dark)) 100%)',
+          }}
+        />
+        <div
+          className="absolute inset-0 -z-10 opacity-[0.06]"
+          aria-hidden="true"
+          style={{
+            backgroundImage: 'linear-gradient(rgb(255 255 255) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255) 1px, transparent 1px)',
+            backgroundSize: '56px 56px',
+            maskImage: 'radial-gradient(70% 90% at 70% 40%, black, transparent)',
+            WebkitMaskImage: 'radial-gradient(70% 90% at 70% 40%, black, transparent)',
+          }}
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24 grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+          <div className="lg:col-span-5 reveal">
             <p className="eyebrow !text-brand-green">Wholesale catalogue</p>
-            <h1 className="display !text-brand-paper mt-6 text-5xl sm:text-6xl lg:text-7xl">
+            <h1 className="display !text-brand-paper mt-6 text-5xl sm:text-6xl xl:text-7xl">
               Our <em>range</em> of products.
             </h1>
-            <p className="mt-6 max-w-lg text-lg text-brand-onDarkMuted leading-relaxed">
+            <p className="mt-6 max-w-md text-lg text-brand-onDarkMuted leading-relaxed">
               Branded pharmaceuticals, generics, nutraceuticals and OTC products at competitive wholesale rates for pharmacies, clinics and hospitals.
             </p>
-            <dl className="mt-10 grid grid-cols-3 gap-6 border-t border-white/15 pt-6 max-w-lg">
-              {stats.map((s) => (
-                <div key={s.label}>
-                  <dd className="font-display text-4xl sm:text-5xl"><CountUp value={s.value} /></dd>
-                  <dt className="mt-1 text-xs text-brand-onDarkMuted">{s.label}</dt>
-                </div>
-              ))}
-            </dl>
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-9 flex flex-wrap gap-3">
               <button type="button" onClick={() => pickArea('All')} className="btn btn-accent">
                 Browse catalogue <ArrowDown className="w-4 h-4" aria-hidden="true" />
               </button>
@@ -89,11 +106,17 @@ export default function OurRangeProductsPage() {
                 Request wholesale pricing
               </Link>
             </div>
+            <dl className="mt-12 grid grid-cols-3 max-w-md rounded-xl bg-white/[0.06] ring-1 ring-white/10 backdrop-blur-sm divide-x divide-white/10">
+              {stats.map((s) => (
+                <div key={s.label} className="px-4 py-4 first:pl-5">
+                  <dd className="font-display text-3xl sm:text-4xl leading-none text-brand-paper"><CountUp value={s.value} /></dd>
+                  <dt className="mt-2 text-[11px] leading-snug text-brand-onDarkMuted">{s.label}</dt>
+                </div>
+              ))}
+            </dl>
           </div>
-          <div className="lg:col-span-6 reveal" style={{ animationDelay: '.15s' }}>
-            <Parallax speed={-0.06}>
-              <PackCollage products={byId(COLLAGE_IDS)} />
-            </Parallax>
+          <div className="lg:col-span-7 reveal" style={{ animationDelay: '.15s' }}>
+            <HeroSlideshow products={slideshowProducts} onOpen={setActiveProductModal} />
           </div>
         </div>
       </section>

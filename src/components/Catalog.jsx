@@ -94,7 +94,7 @@ export function productHighlights(id) {
   return out;
 }
 
-// Shared building blocks for the wholesale range and online store pages.
+// Shared building blocks for the product range and online store pages.
 
 export function SearchField({ value, onChange, placeholder, compact = false }) {
   if (compact) {

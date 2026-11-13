@@ -72,8 +72,8 @@ export default function OnlineStorePage() {
       <HomeCta
         eyebrow="Ordering"
         title="Ordering for a pharmacy or clinic?"
-        accent="Buy at wholesale rates."
-        primary={{ href: '/our-range-products', label: 'Wholesale range' }}
+        accent="Partner with us directly."
+        primary={{ href: '/our-range-products', label: 'Product range' }}
         secondary={{ href: '/contact-us', label: 'Contact us' }}
       />
 

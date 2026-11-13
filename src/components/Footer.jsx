@@ -139,7 +139,7 @@ export default function Footer() {
               <ul className="space-y-3 text-sm text-slate-300">
                 <li>
                   <Link href="/our-range-products" className="hover:text-brand-green transition-colors">
-                    Wholesale Products
+                    Our Products
                   </Link>
                 </li>
                 <li>

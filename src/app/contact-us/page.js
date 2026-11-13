@@ -122,7 +122,7 @@ export default function ContactUsPage() {
                     {contentData.partnerModels.map((m) => (
                       <option key={m.id} value={m.title}>{m.title}</option>
                     ))}
-                    <option value="Wholesale Bulk Rates">Wholesale bulk purchase</option>
+                    <option value="Product Distribution & Supply">Product distribution & supply</option>
                     <option value="Regulatory Support">Regulatory support</option>
                     <option value="Careers">Careers</option>
                   </select>

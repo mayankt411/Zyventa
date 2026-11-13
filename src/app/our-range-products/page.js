@@ -91,19 +91,19 @@ export default function OurRangeProductsPage() {
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24 grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           <div className="lg:col-span-5 reveal">
-            <p className="eyebrow !text-brand-green">Wholesale catalogue</p>
+            <p className="eyebrow !text-brand-green">Product catalogue</p>
             <h1 className="display !text-brand-paper mt-6 text-5xl sm:text-6xl xl:text-7xl">
               Our <em>range</em> of products.
             </h1>
             <p className="mt-6 max-w-md text-lg text-brand-onDarkMuted leading-relaxed">
-              Branded pharmaceuticals, generics, nutraceuticals and OTC products at competitive wholesale rates for pharmacies, clinics and hospitals.
+              Branded pharmaceuticals, generics, nutraceuticals and OTC products for pharmacies, clinics and hospitals.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <button type="button" onClick={() => pickArea('All')} className="btn btn-accent">
                 Browse catalogue <ArrowDown className="w-4 h-4" aria-hidden="true" />
               </button>
               <Link href="/contact-us?type=distribution" className="btn btn-on-dark">
-                Request wholesale pricing
+                Request product pricing
               </Link>
             </div>
             <dl className="mt-12 grid grid-cols-3 max-w-md rounded-xl bg-white/[0.06] ring-1 ring-white/10 backdrop-blur-sm divide-x divide-white/10">
@@ -194,7 +194,7 @@ export default function OurRangeProductsPage() {
                   key={product.id}
                   product={product}
                   onOpen={setActiveProductModal}
-                  actionLabel="Request wholesale quote"
+                  actionLabel="Request product quote"
                 />
               ))}
             </ProductGrid>
@@ -205,8 +205,8 @@ export default function OurRangeProductsPage() {
       </section>
 
       <HomeCta
-        eyebrow="Wholesale"
-        title="Need bulk supply for your pharmacy or clinic?"
+        eyebrow="Commercial Supply"
+        title="Need product supply for your pharmacy or clinic?"
         accent="Ask for a quote."
         primary={{ href: '/contact-us?type=distribution', label: 'Request pricing' }}
         secondary={{ href: '/online-store', label: 'Online store' }}

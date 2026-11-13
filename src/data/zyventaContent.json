@@ -26,9 +26,9 @@
   },
   "stats": [
     {
-      "value": "29",
+      "value": "46",
       "suffix": "",
-      "label": "Products, 46 SKUs",
+      "label": "Products",
       "description": "Up from 6 products in FY 2022"
     },
     {
@@ -38,10 +38,10 @@
       "description": "UAE, Saudi Arabia, Oman, Bahrain and Qatar"
     },
     {
-      "value": "8",
+      "value": "",
       "suffix": "",
-      "label": "Principal countries",
-      "description": "Partners from the USA, UK, Europe, India and the GCC"
+      "label": "Worldwide Principal Partners",
+      "description": "USA, UK, Europe, India, GCC, etc."
     },
     {
       "value": "20",
@@ -106,11 +106,11 @@
     {
       "id": "distribution",
       "name": "Distribution",
-      "title": "Seamless Wholesale & Pharmacy Distribution",
-      "description": "Distribution of pharmaceuticals, nutraceuticals and OTC products to hospitals, pharmacies and wholesalers.",
+      "title": "Seamless Healthcare & Pharmacy Distribution",
+      "description": "Distribution of pharmaceuticals, nutraceuticals and OTC products to hospitals, pharmacies and healthcare networks.",
       "points": [
         "Full coverage of UAE and GCC pharmacy chains and independent retailers",
-        "Affordable wholesale rates for bulk medicine purchases",
+        "Reliable commercial supply for healthcare institutions",
         "Direct-to-hospital and government tenders fulfillment",
         "Robust stock availability and reliable order delivery"
       ],
@@ -135,7 +135,7 @@
     },
     {
       "title": "Pharmaceutical Distribution",
-      "description": "Seamless wholesale and retail distribution of prescription medications and healthcare items.",
+      "description": "Seamless healthcare and retail distribution of prescription medications and healthcare items.",
       "icon": "Truck"
     },
     {
@@ -144,8 +144,8 @@
       "icon": "ShoppingCart"
     },
     {
-      "title": "Bulk Wholesale Medicine",
-      "description": "Competitive wholesale rates for hospitals, clinics, and bulk medicine buyers.",
+      "title": "Institutional Supply",
+      "description": "Reliable supply solutions for hospitals, clinics, and medical buyers.",
       "icon": "Package"
     },
     {
@@ -162,7 +162,8 @@
     },
     {
       "name": "Pure Pharmaceuticals",
-      "logo": "/assets/logos/partners/pure-pharmaceuticals.png"
+      "logo": "/assets/logos/partners/pure-pharmaceuticals.png",
+      "country": "UAE"
     },
     {
       "name": "Pharma Bavaria International",
@@ -196,7 +197,8 @@
     },
     {
       "name": "Akses Swiss",
-      "logo": "/assets/logos/partners/akses-swiss.png"
+      "logo": "/assets/logos/partners/akses-swiss.png",
+      "country": "Lithuania"
     },
     {
       "name": "Liquidsun",
@@ -215,16 +217,18 @@
     },
     {
       "name": "Unexo Life Sciences",
-      "logo": "/assets/logos/partners/unexo-life-sciences.png"
+      "logo": "/assets/logos/partners/unexo-life-sciences.png",
+      "country": "India"
     },
     {
       "name": "Incepta",
-      "logo": "/assets/logos/partners/incepta.png"
+      "logo": "/assets/logos/partners/incepta.png",
+      "country": "Bangladesh"
     },
     {
       "name": "Amdis",
       "logo": "/assets/logos/partners/amdis.png",
-      "country": "India"
+      "country": "UAE"
     },
     {
       "name": "Al Yari Pharmacy",
@@ -238,11 +242,13 @@
     },
     {
       "name": "Pharmasol",
-      "logo": "/assets/logos/partners/pharmasol.png"
+      "logo": "/assets/logos/partners/pharmasol.png",
+      "country": "UAE"
     },
     {
       "name": "Lab Botanic Bavaria",
-      "logo": "/assets/logos/partners/lab-botanic-bavaria.png"
+      "logo": "/assets/logos/partners/lab-botanic-bavaria.png",
+      "country": "Germany"
     },
     {
       "name": "Akriti",
@@ -258,11 +264,6 @@
       "name": "Vetprom",
       "logo": "/assets/logos/partners/vetprom.png",
       "country": "Bulgaria"
-    },
-    {
-      "name": "Metromed",
-      "logo": "/assets/logos/partners/metromed.png",
-      "country": "UAE"
     },
     {
       "name": "Menapharm Consulting",
@@ -298,8 +299,8 @@
     },
     {
       "year": "Digital Transformation",
-      "title": "Online Store & Bulk Supply",
-      "description": "Launched online digital commerce channels alongside competitive wholesale supply for medical facilities."
+      "title": "Online Store & Digital Supply",
+      "description": "Launched online digital commerce channels alongside reliable commercial supply for medical facilities."
     },
     {
       "year": "Today",
@@ -666,7 +667,7 @@
     },
     {
       "question": "What services does Zyventa offer?",
-      "answer": "Zyventa integrates five core divisions: Business Development & Partnerships, Regulatory Affairs & Compliance, Strategic Marketing, Medical Sales Detailing, and Seamless Wholesale & Retail Distribution."
+      "answer": "Zyventa integrates five core divisions: Business Development & Partnerships, Regulatory Affairs & Compliance, Strategic Marketing, Medical Sales Detailing, and Seamless Healthcare & Retail Distribution."
     },
     {
       "question": "How does Zyventa ensure compliance with regulatory requirements?",
@@ -719,7 +720,7 @@
     },
     {
       "year": "Today",
-      "products": 29
+      "products": 46
     }
   ],
   "portfolioMix": [
@@ -743,24 +744,24 @@
         "use": "Haemorrhoids"
       },
       {
-        "name": "Breezex",
-        "use": "Cold therapy for pain"
+        "name": "Nervease",
+        "use": "Neuropathic pain"
       },
       {
         "name": "Zynatis",
         "use": "Lidocaine 4% patch"
       },
       {
+        "name": "Vildagard",
+        "use": "Diabetes"
+      },
+      {
         "name": "Zyflex",
-        "use": "Muscle stiffness patch"
+        "use": "Warm and cold patch"
       },
       {
-        "name": "Nervease",
-        "use": "Neuropathic pain"
-      },
-      {
-        "name": "Cardiovive",
-        "use": "Heart health"
+        "name": "Breezex",
+        "use": "Cold therapy patch for pain"
       },
       {
         "name": "Nourisil MD",

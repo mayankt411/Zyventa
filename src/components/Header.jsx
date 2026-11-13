@@ -17,7 +17,7 @@ const NAV_LINKS = [
 ];
 
 const PRODUCT_LINKS = [
-  { href: '/our-range-products', label: 'Our range', description: 'Wholesale rates for bulk medicine purchases', Icon: Truck },
+  { href: '/our-range-products', label: 'Our range', description: 'Comprehensive portfolio across multiple therapeutic areas', Icon: Truck },
   { href: '/online-store', label: 'Online store', description: 'Consumer healthcare, derma and CNS products', Icon: Layers },
 ];
 
